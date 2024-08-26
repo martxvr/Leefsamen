@@ -130,24 +130,24 @@
         "text_m7bi7c": {
           "type": "text",
           "settings": {
-            "title": "Ik raad het iedereen aan",
-            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "title": "Volledige beveiliging",
+            "review": "Beveiligd door alle sensoren van Leefsamen.",
             "main_image": "shopify:\/\/shop_images\/helpdesk.png"
           }
         },
         "text_egtbr7": {
           "type": "text",
           "settings": {
-            "title": "Ik raad het iedereen aan",
-            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "title": "Inbraak",
+            "review": "In de nacht of als u thuis bent.",
             "main_image": "shopify:\/\/shop_images\/huis.png"
           }
         },
         "text_WQpUrC": {
           "type": "text",
           "settings": {
-            "title": "Ik raad het iedereen aan",
-            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "title": "Dwalen",
+            "review": "Bij beweging en\/of open deur.",
             "main_image": "shopify:\/\/shop_images\/happy.png"
           }
         }
