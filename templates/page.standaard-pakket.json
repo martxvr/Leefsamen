@@ -89,6 +89,17 @@
         "my_checkbox": true
       }
     },
+    "image_and_text_4E8h7T": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "De noodknop met ketting",
+        "text": "Dit is de armband noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
+        "main_image": "shopify:\/\/shop_images\/httpslo.cafe.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": true
+      }
+    },
     "image_and_text_acjmcT": {
       "type": "image-and-text",
       "settings": {
