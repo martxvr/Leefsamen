@@ -126,12 +126,39 @@
             "review": "Bruikbaar binnen en rondom het huis.",
             "main_image": "shopify:\/\/shop_images\/huis.png"
           }
+        },
+        "text_m7bi7c": {
+          "type": "text",
+          "settings": {
+            "title": "Ik raad het iedereen aan",
+            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "main_image": "shopify:\/\/shop_images\/helpdesk.png"
+          }
+        },
+        "text_egtbr7": {
+          "type": "text",
+          "settings": {
+            "title": "Ik raad het iedereen aan",
+            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "main_image": "shopify:\/\/shop_images\/huis.png"
+          }
+        },
+        "text_WQpUrC": {
+          "type": "text",
+          "settings": {
+            "title": "Ik raad het iedereen aan",
+            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn",
+            "main_image": "shopify:\/\/shop_images\/happy.png"
+          }
         }
       },
       "block_order": [
         "text_qQJekB",
         "text_nBPU8R",
-        "text_gr6bQ6"
+        "text_gr6bQ6",
+        "text_m7bi7c",
+        "text_egtbr7",
+        "text_WQpUrC"
       ],
       "custom_css": [
         "p {color: #000;}"
