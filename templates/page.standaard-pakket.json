@@ -130,8 +130,8 @@
         "text_m7bi7c": {
           "type": "text",
           "settings": {
-            "title": "Volledige beveiliging",
-            "review": "Beveiligd door alle sensoren van Leefsamen.",
+            "title": "Geen beweging",
+            "review": "Na een in te stellen periode geen beweging.",
             "main_image": "shopify:\/\/shop_images\/helpdesk.png"
           }
         },
