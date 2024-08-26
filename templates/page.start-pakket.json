@@ -80,6 +80,10 @@
     },
     "image_and_text_AQF3gz": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "De noodknop met armband",
         "text": "Dit is de armband noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
@@ -91,6 +95,10 @@
     },
     "image_and_text_4E8h7T": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "De noodknop met ketting",
         "text": "Dit is de armband noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
@@ -102,6 +110,10 @@
     },
     "image_and_text_acjmcT": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "Het Leefsamen kastje",
         "text": "Dit kastje (ook wel centrale genoemd) zorgt ervoor dat alle sensoren van Leefsamen bereik hebben. De noodknop armband werkt alleen binnen & buiten rondom het huis in een straal van 30 tot 50 meter.",
