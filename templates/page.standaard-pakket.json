@@ -80,6 +80,10 @@
     },
     "image_and_text_AQF3gz": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "De armband noodknop",
         "text": "Dit is de armband noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
@@ -91,6 +95,10 @@
     },
     "image_and_text_9FcR4m": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "De noodknop met ketting",
         "text": "Dit is de ketting noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
@@ -102,6 +110,10 @@
     },
     "image_and_text_acjmcT": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}"
+      ],
       "settings": {
         "title": "De centrale",
         "text": "De centrale zorgt ervoor dat alle sensoren van Leefsamen bereik hebben. De noodknop armband werkt alleen wanneer die in bereik is van de centrale. (Binnen & buiten rondom het huis.",
