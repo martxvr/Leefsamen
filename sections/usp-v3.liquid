@@ -1,0 +1,186 @@
+{% schema %}
+{
+  "name": "USP-V3",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button-url",
+      "label": "Button URL",
+      "default": "#standaard"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button Text",
+      "default": "Start vandaag"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_visible",
+      "label": "Toon knop",
+      "default": true
+    }
+  ],
+   "presets": [
+    {
+      "name": "USP-V3",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.usp-v3-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 50px;
+}
+
+.usp-v3-container h1 {
+  font-weight: 700;
+}
+
+.first3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.usp-v3 {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    gap: 10px;
+    justify-content: left;
+}
+
+.usp-v3 p {
+    text-align: left;
+}
+
+.usp-v3 h2 {
+    text-align: left;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.usp-v3-container h1 {
+    text-align: center;
+}
+
+.usp-v3 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.usp-v3-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 960px) {
+    .usp-v3 {
+        width: calc(50% - 40px); /* 50% voor 2 naast elkaar op kleinere schermen */
+        justify-content: center;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .usp-v3-container {
+        width: auto;
+    }
+
+    .first3{
+      gap: 50px;
+      margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .usp-v3 {
+        width: calc(100% - 40px); /* 100% voor 1 per rij op nog kleinere schermen */
+        justify-content: left;
+    }
+    .first3 {
+      gap: 50px;
+      margin-bottom: 0px;
+    }
+}
+
+.usp-v3 h2 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+p {
+    color: #000;
+}
+{% endstylesheet %}
+
+<div class="usp-v3-container">
+    <h1 class="scroll-trigger animate--slide-in">Uit welke alarmering u kunt kiezen</h1>
+    <div class="first3 scroll-trigger animate--slide-in">       
+                <div class="usp-v3">                 
+                        <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/nood_7dc5ce3a-db1c-4c73-a8f4-db7326679fdd.png?v=1723730439" alt="" height="50px" width="50px">                   
+                    <div class="usp-v3-text">
+                      <h2>Nood</h2>
+                      <p>Bij een druk op een knop.</p>
+                    </div>
+                </div>
+                <div class="usp-v3">                 
+                  <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/inbraak_bd1819fd-0756-4f69-9de4-2f225ce3a969.png?v=1723730440" alt="" height="50px" width="50px">                   
+              <div class="usp-v3-text">
+                <h2>Inbraak</h2>
+                <p>In de nacht of als u thuis bent.</p>
+              </div>
+          </div>
+          <div class="usp-v3">                 
+            <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/rook.png?v=1723730440" alt="" height="50px" width="50px">                   
+        <div class="usp-v3-text">
+          <h2>Rook</h2>
+          <p>Bij rook of brand in de woning.</p>
+        </div>
+    </div>
+    <div class="usp-v3">                 
+      <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/geen-beweging_c210600b-0b8d-4a00-a612-18c831e50a95.png?v=1723730440" alt="" height="50px" width="50px">                   
+  <div class="usp-v3-text">
+    <h2>Geen beweging</h2>
+    <p>Na een in te stellen periode geen beweging.</p>
+  </div>
+</div>
+<div class="usp-v3">                 
+  <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/laatste-beweging_d07aa240-f25f-495a-9284-c6c50733273a.png?v=1723730439" alt="" height="50px" width="50px">                   
+<div class="usp-v3-text">
+<h2>Laatste beweging</h2>
+<p>Laatste beweging in de woning.</p>
+</div>
+</div>
+<div class="usp-v3">                 
+  <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/dwalen_9816c2ea-ece3-42a9-929f-96bc3ea455c3.png?v=1723730439" alt="" height="50px" width="50px">                   
+<div class="usp-v3-text">
+<h2>Dwalen</h2>
+<p>Bij beweging en/of open deur.</p>
+</div>
+</div>
+    </div>
+    {% if section.settings.button_visible %}
+        <a href="{{ section.settings.button-url }}" class="leefsamen-btn">{{ section.settings.button-text }}</a>
+    {% endif %}
+</div>

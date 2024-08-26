@@ -1,0 +1,146 @@
+<style>
+  /* Stijl voor teamleden */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px; /* Bottom margin toegevoegd */
+  margin-top: 25px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  border: 0;
+  border-radius: 30px;
+  padding: 6% 3%;
+  font-size: 1em;
+  box-shadow: 0em 0em 2em 0em rgba(0,0,0,0.08);
+  max-width: 327px; /* Maximale breedte van elke team-member */
+}
+
+
+  .team-member img {
+    max-width: {{ section.settings.team_member_width }};
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    /* Op schermen kleiner dan 1200px, maximaal drie teamleden naast elkaar */
+    .team-member {
+      flex: 0 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Op mobiele apparaten, teamleden onder elkaar weergeven */
+    .team-member {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+<h2 style="text-align: center;">{{ section.settings.title | escape }}</h2>
+
+{%- if section.blocks.size > 0 -%}
+  <div class="team-members">
+    {%- for block in section.blocks -%}
+      <div class="team-member">
+        {%- if block.settings.image != blank -%}
+          <img src="{{ block.settings.image | img_url: '250x250' }}" alt="{{ block.settings.image.alt }}" loading="lazy">
+        {%- endif -%}
+        <h3>{{ block.settings.name }}</h3>
+        <p style="color: #9dc43d;">{{ block.settings.role }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Team Section",
+  "class": "index-section",
+  "max_blocks": 16,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Team"
+    },
+    {
+      "type": "select",
+      "id": "team_member_width",
+      "label": "Team Member Image Width",
+      "default": "250px",
+      "options": [
+        {
+          "label": "Small",
+          "value": "150px"
+        },
+        {
+          "label": "Medium",
+          "value": "200px"
+        },
+        {
+          "label": "Large",
+          "value": "250px"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team_member",
+      "name": "Team Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Members",
+      "category": "People",
+      "blocks": [
+        {
+          "type": "team_member"
+        },
+        {
+          "type": "team_member"
+        },
+        {
+          "type": "team_member"
+        },
+        {
+          "type": "team_member"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

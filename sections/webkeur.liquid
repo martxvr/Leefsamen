@@ -1,0 +1,151 @@
+{% stylesheet %}
+body {
+    margin: 0px;
+}
+
+.webkeur-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.webkeur-content {
+    position: relative;
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.webkeur-content img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.webkeur-text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: left;
+    padding: 20px;
+}
+
+h2.webkeur-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+p.webkeur-paragraph {
+    font-size: 14px;
+    max-width: 400px;
+    color: #000;
+}
+
+.webkeur-widget {
+    display: flex;
+    flex: 1 1 280px;
+    max-width: 280px;
+}
+
+.webkeur-mobile {
+    display: none;
+}
+
+.webkeur-mobile-iframe {
+    display: none; /* Standaard niet tonen */
+    margin-top: 20px; /* Ruimte boven het iframe */
+}
+
+  a.leefsamen-btn {
+    display: none;
+  }
+
+@media screen and (max-width:1200px) {
+    .webkeur-container {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .webkeur-widget {
+        display: none !important;
+    }
+
+    .webkeur-mobile {
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+    .webkeur-desktop {
+        display: none !important;
+    }
+
+    .webkeur-content img {
+        border-radius: 0px;
+    }
+
+    .webkeur-text-overlay {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white !important;
+        text-align: center;
+        width: 90%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    h2.webkeur-heading {
+        color: #fff;
+        text-shadow: 2px 2px 14px rgba(0, 0, 0, 1.8);
+    }
+
+    p.webkeur-paragraph {
+        max-width: 100%;
+        color: #fff;
+        text-shadow: 2px 2px 14px rgba(0, 0, 0, 1.8);
+    }
+
+    a.leefsamen-btn {
+        display: block;
+        width: 100%;
+        margin: 20px auto 0; /* Bovenruimte om de button te scheiden van de paragraaf */
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .webkeur-mobile-iframe {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+{% endstylesheet %}
+
+<div class="webkeur-container">
+    <div class="webkeur-content">
+        <div class="webkeur-overlay"></div>
+        <div class="webkeur-text-overlay">
+            <h2 class="webkeur-heading">Alarmering bij nood</h2>
+            <p class="webkeur-paragraph">Slimme sensoren alarmeren als er iets met u gebeurt. 
+              Uw naasten houden een oogje in het zeil en ontvangen een alarm als het nodig is. Geen naasten in de buurt? Dan helpt onze servicecentrale u. Probeer het uit met onze gratis proefperiode.</p>
+            <a href="/alarmeringen" class="leefsamen-btn" style="text-shadow: none;">Naar onze alarmering</a> <!-- Verplaatst naar hier -->
+        </div>
+        <a href="/alarmeringen">
+            <img class="webkeur-desktop" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/alarmering_bij_nood_1.jpg?v=1723646106" alt="" width="680" height="290">
+            <img class="webkeur-mobile" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Untitled-3.jpg?v=1723713312" alt="">
+        </a>
+        <!-- Voeg hier het iframe toe voor mobiel -->
+        <iframe src="https://dashboard.webwinkelkeur.nl/webshops/widget_html?id=1220313&layout=new_button-text&theme=light&color=%23FE008C&show=yes&view=slider&amount=6&width=manual&width_amount=270px&height=45px&interval=5000&language=nld" scrolling="no" class="wwk-widget-iframe wwk-widget--new_button-text wwk-widget--new_button-text--light webkeur-mobile-iframe" style="border: 0; height: 45px!important; width: 270px!important;"></iframe>
+    </div>
+    <div class="webkeur-widget">
+        <iframe src="https://dashboard.webwinkelkeur.nl/webshops/widget_html?id=1220313&layout=new_badges&theme=dark&color=%23FE008C&show=yes&view=slider&amount=6&width=manual&width_amount=280px&height=290px&interval=5000&language=nld" scrolling="no" class="wwk-widget-iframe wwk-widget--new_badges wwk-widget--new_badges--dark" style="border: 0; height: 290px!important; width: 280px!important;"></iframe>
+    </div>
+</div>

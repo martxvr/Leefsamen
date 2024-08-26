@@ -1,0 +1,613 @@
+{% schema %}
+{
+  "name": "FAQ",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "FAQ"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{%  stylesheet %}
+        .faq-container h1 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #2E2A39;
+        }
+
+        .faq-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+
+        .faq-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .category {
+            width: calc(33.33% - 40px); /* Bereken de breedte voor 3 naast elkaar met marges */
+            margin: 20px 20px 20px 20px;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 20px 20px 20px 20px;
+            box-shadow: 0em 0em 2em 0em rgba(0,0,0,0.05);
+        }
+
+        @media only screen and (max-width: 800px) {
+            .category {
+                width: 100%; /* Volledige breedte op kleinere schermen */
+            }
+        }
+
+        .category h2 {
+            color: #2E2A39;
+        }
+
+        .question {
+        cursor: pointer;
+        border: 1px solid #1a94a6;
+        border-radius: 12px;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #fff;
+        transition: background-color, color, margin, 0.5s ease;
+        }
+
+        .question.active,
+        .question:hover {
+            background-color: #1a94a6;
+            color: #fff;
+            border-radius: 12px;
+            transition: background-color, margin, 0.5s ease;
+        }
+
+        .question.active {
+            margin: 20px 0px;
+            box-shadow: 0 10px 25px #ccd9ff;
+        }
+
+        .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height, 0.5s ease-in-out;
+        color: #fff;
+        }
+
+        .answer.active {
+        margin-top: 20px;
+        max-height: 1000px; /* Stel hier een geschikte waarde in op basis van je content */
+        transition: max-height, margin-top, 0.5s ease-in-out;
+        border-top: 1px solid #fff;
+        padding-top: 10px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+         .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+   @media only screen and (max-width: 800px) {
+            .search-container {
+                width: 80%;
+                margin: auto;
+                justify-content: center;
+        }
+        }
+
+  {%  endstylesheet %}
+
+
+<head>
+
+{{ 'faq.js' | asset_url | script_tag }}
+
+</head>
+<div class="faq-container scroll-trigger animate--slide-in">
+        <h1>Veel gestelde vragen</h1>
+
+        <div class="search-container">
+                <input type="text" id="search" placeholder="Zoeken...">
+            </div>
+
+        <div class="faq-category">
+        
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Inloggen</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat zijn mijn inlog gegevens
+                <div class="answer">
+                    Uw e-mailadres wat u aan ons hebt doorgegeven en een zelfgekozen wachtwoord. Bent u het wachtwoord vergeten, klik dan op wachtwoord vergeten en vul uw e- mailadres in. U ontvangt een sms/e-mail met een nieuw tijdelijk wachtwoord. Vergeet daarna niet een zelfgekozen wachtwoord te gebruiken. Deze stelt u in bij 'mijn gegevens' in het linkermenu.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Ik weet niet meer met welk e-mailadres ik moet inloggen?
+                <div class="answer">
+                    Vraag de beheerder om in te loggen als u contactpersoon bent. De beheerder kan zien met welk e-mailadres u kunt inloggen. Bent u zelf beheerder? Probeer dan de verschillende e-mailadressen die u gebruikt. Weet u het dan nog steeds niet meer? Bel dan naar 040 780 0641. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik het beste ingelogd blijven in de mobiele app van Leefsamen?
+                <div class="answer">
+                    Ja. U hoeft niet uit te loggen bij de mobiele app, anders moet u telkens het wachtwoord opnieuw invoeren.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kunnen er meerdere mensen met 1 account inloggen?
+                <div class="answer">
+                    Nee. Dat kan niet, iedereen moet gebruik maken van zijn/haar eigen account.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Abonnementen</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Voor wie is Leefsamen geschikt?
+                <div class="answer">
+                    Leefsamen is vooral gemaakt voor mensen die veilig thuis willen blijven wonen, zonder daar naar te hoeven omkijken en het fijn vinden als ze omgeven worden door een netwerk van naasten die komen helpen als dat nodig is.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Waarom heeft Leefsamen alleen abonnementen voor het gebruik van de sensoren?
+                <div class="answer">
+                    Leefsamen levert een alarmerings- en monitoringsdienst. Wij vinden dat dit niet kan door alleen sensoren en bijvoorbeeld een app met push notificaties aan te bieden. Alarmering, zeker van brand, inbraak, panieksituaties en andere incidenten, is van levensbelang en met dat uitgangspunt is Leefsamen door ons ontwikkeld, zodat u bijvoorbeeld ook automatisch gebeld wordt bij een alarm.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe werkt het abonnement op de Servicecentrale?
+                <div class="answer">
+                    Dit abonnement is een optie die u kunt afnemen, waarbij 24x7 opvolging door een lokaal beveiligingsbedrijf plaatsvindt. Dit abonnement is maandelijks opzegbaar.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe kunt u het abonnement opzeggen?
+                <div class="answer">
+                    U kunt het beste bellen met 040 780 0641 of een e-mail sturen met de adresgegevens van de bewoner (bij voorkeur vanuit het e-mailadres van de bewoner of beheerder) met de vraag om het abonnement op te zeggen. U ontvangt dan een e-mail met instructies om de sensoren over te nemen of terug te sturen. 
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Facturatie / afschrijvingen</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wanneer betaal ik mijn abonnement?
+                <div class="answer">
+                    Als u de eerste keer een Leefsamen pakket met abonnement hebt besteld,  wordt het abonnement bij de eerstvolgende incassoronde (meestal begin van de maand)  meegerekend. Daarna wordt het abonnement maandelijks afgeschreven. Het abonnement is maandelijks opzegbaar. 
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Bestellen</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Ik weet niet precies wat ik moet bestellen, wat nu?
+                <div class="answer">
+                    Bel ons op 040 780 0641 dan helpen we u telefonisch met een advies wat u kunt bestellen. Ook kunt u onze whatsapp hulp inschakelen. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik ook een advies krijgen door een expert die naar mijn situatie komt om te bekijken wat nodig is?
+                <div class="answer">
+                    Ja zeker. Bel ons op 040 780 0641 om een afspraak te maken. Dit advies kost € 75 per uur, inclusief voorrijkosten. Een normaal advies duurt ongeveer 1 uur. 
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Installatie</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Is Leefsamen eenvoudig zelf te installeren?
+                <div class="answer">
+                    Dat hangt van het pakket af. Het basis pakket en mobiele alarm pakket stellen wij helemaal voor u in en hoeft u alleen nog maar aan te zetten. De sensoren zijn allemaal draadloos te plaatsen. Het enige wat u hoeft te doen, is de centrale aan uw WiFi-router koppelen via bijgeleverde kabels en vervolgens de sensoren plaatsen in uw woning. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik Leefsamen ook laten installeren door een monteur?
+                <div class="answer">
+                    Ja. Het pakket personenalarmering compleet komt standaard met installatiemonteur. De andere pakketten kunt u optioneel een monteur bij aanvragen. Dit kunt u aangeven bij uw bestelling. De monteur neemt dan telefonisch contact met u op voor een installatie-afspraak.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Ik krijg valse meldingen. Wat moet ik nu doen?
+                <div class="answer">
+                    De meeste valse meldingen komen door een rookmelder die per ongeluk af kan gaan door een stofje of vochtige lucht in de woning. Ook kunt u een valse melding krijgen van een deurcontact dat niet goed zit. 
+                    Een derde valse melding die u kunt krijgen is een inactiviteitsalarm, als er geen beweging in de woning kan worden waargenomen. 
+                    
+                    In het geval van een vals rookalarm is het zaak om de rookmelder met de stofzuiger schoon te zuigen. 
+                    
+                    In het geval van een deurcontact dat niet goed zit, maakt u een foto van het deurcontact en stuurt u deze naar helpdesk@leefsamen.nl 
+                    Wij zullen u dan adviseren wat te doen.
+                    
+                    Bij een valse inactiviteitsmelding kan het zijn dat uw bewegingsmelder niet meer werkt om verschillende redenen. Als u op vakantie bent, bent u vergeten het vakantieschema in te vullen of inactiviteit uit te zetten. 
+                    Als u niet op vakantie bent, maar toch meldingen krijgt, stuur ook dan een foto van de bewegingsmelder, controleer de batterijen en zorg ervoor dat de melder op de meest gebruikte plek in de woning geplaatst is.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Inboedel- opstalverzekering</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik korting krijgen op mijn inboedel of opstalverzekering?
+                <div class="answer">
+                    Dat verschilt per verzekeraar. Er zijn verzekeraars die geven korting op hun inboedel- en/of opstalverzekering bij inzet van een alarmsysteem. Leefsamen is onafhankelijk en is niet verbonden met één specifieke verzekeraar, zodat je gedwongen bent om met die specifieke verzekeraar je huis te verzekeren.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Samenwerking met gemeenten</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Waarom is deelname via een gemeente gratis?
+                <div class="answer">
+                    Leefsamen werkt samen met gemeenten en vaak ook andere lokale organisaties om de kosten voor deelname voor u weg te nemen. Op die manier kunnen deelnemers kennis maken met Leefsamen en na de gratis periode besluiten om wel/niet klant te worden. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik in mijn gemeente gebruik maken van Leefsamen?
+                <div class="answer">
+                    Dat hangt er van af of u in aanmerking komt voor de specifieke actievoorwaarden. We werken door het hele land samen met partners, waardoor we in sommige gevallen de sensoren kosteloos aanbieden. U wordt daarover altijd per brief of per e-mail benaderd. Wilt u weten welke acties we momenteel hebben lopen? Neem dan contact op met ons op 040 780 0641 of stuur via deze website een bericht.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat is de wettelijke  basis van onze samenwerkingen met lokale partijen?
+                <div class="answer">
+                    Een gemeente neemt deel aan een gemeenschappelijke regeling i.h.k.v. de Wet veiligheidsregio’s, waaronder het voorkomen (pro-actie/preventie) van brand en incidenten een belangrijke taak. Het versterken van de verbinding en de samenredzaamheid van het netwerk van ouderen en naasten staan bij Leefsamen centraal. Door hulp uit de omgeving kunnen incidenten, slachtoffers en schade worden voorkomen (preventie) en voelen mensen zich veiliger in huis. De rookmelderverplichting (2022) is ook een belangrijke ontwikkeling hierin. De inzet van Leefsamen is domeinoverstijgend met raakvlakken op het gebied van zorg/welzijn, veiligheid en wonen. Daarbij zetten we in op preventie en bewustwording vanuit een samenwerking met verschillende partijen. De rol van de gemeente is in dit project beperkt tot het verzenden van een brief met het wijzen op de mogelijkheid deel te nemen aan dit project, tussen samenwerkende partijen. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat als ik na de gratis periode voor deelname via de gemeente Leefsamen niet meer wil gebruiken?
+                <div class="answer">
+                    U ontvangt automatisch aan het einde van de gratis periode een brief met de vraag of u gebruikt wilt blijven maken van Leefsamen. Indien u dit wilt, vult u het incassoformulier in om het maandelijkse abonnement af te schrijven. Indien u Leefsamen niet wilt blijven gebruiken, heeft u twee opties: u neemt de sensoren over voor eenmalig € 75, of u stuurt de sensoren terug naar: Akkedeer B.V. - Daalakkersweg 2, kamer 70 - 5641 JA Eindhoven. 
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Samenwerking met verhuurders (woningcorporaties)</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan ik als huurder van een woningcorporatie gratis mee doen?
+                <div class="answer">
+                    Als een gemeente u benaderd om mee te doen met Leefsamen, dan kunt u als huurder van een woningcorporatie meestal ook mee doen. Mocht Leefsamen nog geen samenwerking met uw woningcorporatie hebben, dan sluiten we u toch aan, tenzij uw aanmelding buiten het budget van de samenwerking met de gemeente valt.  Mocht dat zo zijn, dan vragen we u contact op te nemen met uw verhuurder, zodat ze kunnen bepalen of ze de kosten voor het aansluiten van Leefsamen voor u vergoeden.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe weet ik of mijn verhuurder meedoet met een project van Leefsamen?
+                <div class="answer">
+                    Indien uw verhuurder meedoet, wordt dat aangegeven op de brochure die u van de gemeente ontvangt. In veel gevallen stuurt de woningcorporatie u zelf ook een brief, zodat u weet dat u mee kunt doen. Twijfelt u? Bel dan met uw woningcoporatie of met Leefsamen.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat is de wettelijke basis van onze samenwerkingen met lokale partijen?
+                <div class="answer">
+                    Een gemeente neemt deel aan een gemeenschappelijke regeling i.h.k.v. de Wet veiligheidsregio’s, waaronder het voorkomen (pro-actie/preventie) van brand en incidenten een belangrijke taak. Het versterken van de leefbaarheid,  verbinding en de samenredzaamheid van het netwerk van ouderen en naasten staan bij Leefsamen centraal. Door hulp uit de omgeving kunnen incidenten, slachtoffers en schade worden voorkomen (preventie) en voelen mensen zich veiliger in huis. De rookmelderverplichting (2022) is ook een belangrijke ontwikkeling hierin. De inzet van Leefsamen is domeinoverstijgend met raakvlakken op het gebied van zorg/welzijn, veiligheid en wonen. Daarbij zetten we in op preventie en bewustwording vanuit een samenwerking met verschillende partijen. De rol van de gemeente is in dit project beperkt tot het verzenden van een brief met het wijzen op de mogelijkheid deel te nemen aan dit project, tussen samenwerkende partijen. Vanuit woningcorporaties draagt de inzet van Leefsamen vaak bij aan de prestatie-afspraken met gemeenten en wordt de dienst in bepaalde projecten ook als DAEB (Dienst van Algemeen Economisch Belang) aangemerkt.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+               Wat als ik als huurder na de gratis periode voor deelname via de gemeente Leefsamen niet meer wil gebruiken?
+                <div class="answer">
+                    U ontvangt automatisch aan het einde van de gratis periode een brief met de vraag of u gebruikt wilt blijven maken van Leefsamen. Indien u dit wilt, vult u het incassoformulier in om het maandelijkse abonnement af te schrijven. Indien u Leefsamen niet wilt blijven gebruiken en Leefsamen heeft een samenwerking met uw woningcorporatie, dan kunnen de sensoren meestal in uw woning blijven. Mocht dit niet zo zijn, dan ontvangt u daar apart bericht over.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Garantie</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoelang is de garantie op de sensoren?
+                <div class="answer">
+                    Al onze sensoren hebben een garantie van 1 jaar.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat als er binnen de garantietermijn een sensor kapot gaat?
+                <div class="answer">
+                    Als dit buiten uw schuld is, sturen wij kosteloos een nieuwe op. §
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Contacten</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoeveel contacten kan ik opvoeren voor alarmering?
+                <div class="answer">
+                    Onbeperkt, je mag zoveel mensen uitnodigen als je wilt. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kunnen andere contacten Leefsamen bedienen?
+                <div class="answer">
+                    Nee. Alleen de beheerder kan de instellingen van Leefsamen aanpassen. Contacten kunnen wel de app downloaden en gebruiken met hun eigen account, maar alleen om alarmeringen op te volgen en indien nodig te monitoren.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Servicecentrale</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Voor wie werkt de servicecentrale?
+                <div class="answer">
+                    Als er een melding niet opgevolgd kan worden door u of uw contacten, kunt u het alarm direct laten doorverbinden naar een beveiliger bij u in de regio.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe werkt de servicecentrale?
+                <div class="answer">
+                    De servicecentrale heeft landelijke dekking in samenwerking met lokale beveiligingsbedrijven. Als er een melding niet opgevolgd kan worden door uw contacten, gaat het alarm direct naar de beveiliger die bij u in de regio rond rijdt. Deze volgt het alarm op door eerst naar uw woning te bellen en dan, indien nodig, naar uw woning toe te gaan om hulp te bieden. De prijzen en voorwaarden van de servicecentrale vindt u in het menu bij 24/7 Servicecentrale
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Werking sensoren / alarmering</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Werkt Leefsamen via elke internetverbinding?
+                <div class="answer">
+                    Ja. De huiscentrale van Leefsamen wordt aangesloten op een vrije poort van uw WiFi router met een bijgeleverde UTP-kabel. Wij adviseren bij voorkeur een stabiele glasvezelaansluiting voor een optimale verbinding met ons alarmerings- en monitoringsplatform.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wat betekent het rode gezichtje bij 'mijn sensoren' van mijn online account?
+                <div class="answer">
+                    Dit betekent dat de sensor de verbinding heeft verloren met de centrale. Dat kan gebeurt zijn doordat een sensor te ver van de centrale geplaatst is, of omdat de batterij leeg is. Soms kan een rookmelder ook een rood gezicht laten zien, omdat deze langdurig geen contact heeft gemaakt met de centrale. Dit is niet erg, het gezichtje wordt vanzelf weer groen als u de testknop een keer indrukt op de zijkant van de rookmelder.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe ver is het bereik van de draadloze sensoren van Leefsamen?
+                <div class="answer">
+                    Vrijwel alle sensoren hebben een bereik van 30 tot 50 meter in en rondom de woning. Dit kunt u eenvoudig testen door de sensor op de plek te houden die u wenst en te bekijken of er dan nog contact is met de thuiscentrale via uw online account. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Kan Leefsamen ook gekoppeld worden met andere apparaten in huis?
+                <div class="answer">
+                    Dat verschilt per apparaat, heeft u specifieke vragen daarover neem dan contact met ons op. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoeveel sensoren kunnen er gekoppeld worden aan de centrale?
+                <div class="answer">
+                    Per centrale (het kastje dat via uw internetverbinding werkt) kunnen er 15 sensoren gekoppeld worden. Meer centrales per pand zijn mogelijk, dus u kunt zoveel sensoren koppelen als u wilt. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Is de bewegingsmelder huisdiervriendelijk?
+                <div class="answer">
+                    Ja. Deze is zo ontworpen dat de kijkhoek niet naar beneden is, maar rechtdoor en naar boven. Daardoor worden rondlopende huisdieren niet gedetecteerd. 
+                </div>
+                </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Op welke smartphones werkt de app van Leefsamen?
+                <div class="answer">
+                    Ja. Deze is zo ontworpen dat de kijkhoek niet naar beneden is, maar rechtdoor en naar boven. Daardoor worden rondlopende huisdieren niet gedetecteerd. 
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Onderhoud sensoren</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hebben de sensoren onderhoud nodig?
+                <div class="answer">
+                    Wij adviseren alle sensoren en de werking daarvan maandelijks te controleren. Dit doet u door in uw account in te loggen en de status van de sensoren te bekijken. Daarnaast hebben de slimme rookmelders ook fysiek onderhoud nodig, door ze regelmatig schoon te maken. Bekijk op deze pagina alle tips & tricks voor onderhoud van uw slimme rookmelder.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wanneer moet ik de batterijen vervangen?
+                <div class="answer">
+                    Je ontvangt automatisch in de app, of per sms of e-mail (afhankelijk van uw instellingen) als beheerder een bericht wanneer de batterijen van de sensoren leeg dreigen te raken. Je kan dan op tijd de batterijen vervangen. De sensor werkt direct na het vervangen van de batterijen weer. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoelang gaan de batterijen van de sensoren mee?
+                <div class="answer">
+                    Dat verschilt per sensor en is afhankelijk van het gebruik. De noodknop (paniekknop) gaat gemiddeld 4 jaar mee. De batterij van de bewegingsmelder zo'n 2 tot 4 jaar (afhankelijk van het aantal bewegingen in huis). De deurcontacten ook zo'n 2 tot 4 jaar, afhankelijk van het aantal open deurbewegingen. De batterijen van de slimme rookmelders gaan zeker 4 tot 6 en soms nog langer mee, afhankelijk van het gebruik. U kunt de batterijcapaciteit van de sensoren bekijken in de mobiele app van Leefsamen.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Krijg ik ook een melding als een sensor geen verbinden meer heeft met de Leefsamen centrale?
+                <div class="answer">
+                    Ja. Bij uitval of bij ‘buiten bereik’ status van een sensor krijgt u daar een melding van. Ook is de status van de sensor te zien in de mobiele app van Leefsamen.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+
+        <div class="category scroll-trigger animate--slide-in">
+            <h2>Databeheer</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wordt de sensor data opgeslagen in mijn account?
+                <div class="answer">
+                    Dat bepaal je zelf. Vanuit privacy oogpunt, kan je het opslaan van de data van de sensoren uit zetten. De alarmering blijft dan wel gewoon werken, maar je ziet geen data meer in je online account. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe worden de sensoren, die Akkedeer B.V. in mijn huis plaatst gemonitord?
+                <div class="answer">
+                    De technische werking van de sensoren wordt 24/7 gemonitord t.b.v. de leveringszekerheid van de dienst (bv. wat is de batterijstatus van een rookmelder). De daadwerkelijk monitoring t.b.v. alarmering/opvolging wordt bepaald door de bewoner zelf. De bewoner kan in overleg met zijn naaste(n) de instellingen beheren en wel of niet sensor- en alarmeringsdata delen met hun naasten. 
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wordt er bijvoorbeeld ook data verzameld via mijn WiFi netwerk?
+                <div class="answer">
+                    Nee. De dienst werkt niet via WiFi. De dienst is via een port op de internetrouter aangesloten die afgesloten is van het reguliere internetverkeer. De sensor- en alarmeringsdata behoort tot data van de bewoner en wordt niet gedeeld met derden. Akkedeer beheert de dienstverlening. De sensoren kunnen niemand ‘zien’ zij registreren enkel een ‘event’ (gebeurtenis), wanneer er iets gebeurt, bijvoorbeeld bij rook, een open deur, of een druk op de knop. De sensoren werken via een beveiligde ZigBee-protocol, dat ook wordt toegepast in andere conventionele toepassingen.
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+
+        </div>
+
+          <div class="category scroll-trigger animate--slide-in">
+            <h2>Herroepingsrecht</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Voor welke producten geldt het?
+                <div class="answer">
+                  Het herroepingsrecht werkt voor alle bestellingen.
+                  </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Hoe kan de klant gebruik maken van herroepingsrecht?
+                <div class="answer">
+            Om het herroepingsrecht uit te oefenen, moet de Klant Akkedeer via een ondubbelzinnige verklaring (bijvoorbeeld schriftelijk per post, of e-mail) op de hoogte stellen van zijn beslissing de Overeenkomst te herroepen. De Klant kan hiervoor gebruikmaken van het modelformulier voor herroeping, maar is hiertoe niet verplicht.
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                Wanneer vervalt het herroepingsrecht?
+                <div class="answer">
+                  De Klant heeft het recht om binnen een termijn van veertien (14) dagen zonder opgave van redenen de Overeenkomst te herroepen. Deze herroepingstermijn verstrijkt veertien (14) dagen na de dag waarop de Klant of een door de Klant aangewezen derde, die niet de vervoerder is, het Product fysiek in bezit krijgt.</div>
+            </div>
+
+             <div class="question" onclick="toggleAnswer(this)">
+                Hoelang duurt het voordat het gehele bedrag wordt teruggestort?
+                <div class="answer">
+                    Akkedeer zal de terugbetaling verrichten met hetzelfde betaalmiddel als waarmee de Klant de oorspronkelijke transactie heeft verricht, tenzij de Klant uitdrukkelijk anderszins heeft ingestemd; in ieder geval zullen voor de terugbetaling geen kosten in rekening worden gebracht. Akkedeer mag wachten met terugbetaling totdat hij de Producten heeft teruggekregen, of totdat de Klant heeft aangetoond dat hij de Producten heeft teruggezonden, al naar gelang welk tijdstip eerst valt.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(this)">
+                Moet de klant retourkosten zelf betalen?
+                <div class="answer">
+                    De directe kosten van het terugzenden van het Product komen voor rekening van de Klant.</div>
+            </div>
+            <!-- Add more questions as needed -->
+
+
+        </div>
+
+          <div class="category scroll-trigger animate--slide-in">
+            <h2>De Leefsamen App</h2>
+            <div class="question" onclick="toggleAnswer(this)">
+                Geluid van de Leefsamen app wanneer de stand 'niet storen' is ingesteld:
+                <div class="answer">
+                  Bij Android telefoons open je de algemene instellingen van je telefoon (tandwiel icoon) <br> <br>
+Klik op "Meldingen" en op "Niet storen" <br> <br>
+Klik op "App meldingen" en op +TEKEN om de Leefsamen app toe te voegen <br> <br>
+Klik op het "Leefsamen app icoon" en op "Gereed"
+                  </div>
+            </div>
+         
+            <!-- Add more questions as needed -->
+
+
+        </div>
+
+    </div>
+  
+</div>
+
+{% javascript %}
+  
+function toggleAnswer(question) {
+    var answer = question.querySelector('.answer');
+
+    if (answer.classList.contains('active')) {
+        answer.classList.remove('active');
+        question.classList.remove('active'); // Voeg deze regel toe
+    } else {
+        // Verwijder eerst de 'active'-klasse van alle antwoorden en vragen
+        var allAnswers = document.querySelectorAll('.answer');
+        var allQuestions = document.querySelectorAll('.question');
+        allAnswers.forEach(function (otherAnswer) {
+            otherAnswer.classList.remove('active');
+        });
+        allQuestions.forEach(function (otherQuestion) {
+            otherQuestion.classList.remove('active');
+        });
+
+        // Voeg vervolgens de 'active'-klasse toe aan het huidige antwoord en vraag
+        answer.classList.add('active');
+        question.classList.add('active'); // Voeg deze regel toe
+    }
+}
+
+function searchFAQ() {
+    var input = document.getElementById('search').value.toLowerCase();
+    var categories = document.querySelectorAll('.category');
+
+    categories.forEach(function(category) {
+        var questions = category.querySelectorAll('.question');
+        
+        questions.forEach(function(question) {
+            var text = question.textContent.toLowerCase();
+
+            if (text.includes(input)) {
+                category.style.display = 'block';
+                question.style.display = 'block';
+            } else {
+                question.style.display = 'none';
+            }
+        });
+
+        // Laat de categorie zien als er overeenkomende vragen zijn, anders verberg deze
+        var visibleQuestions = category.querySelectorAll('.question[style="display: block;"]');
+        category.style.display = visibleQuestions.length > 0 ? 'block' : 'none';
+    });
+}
+
+document.getElementById('search').addEventListener('input', searchFAQ);
+
+{% endjavascript %}

@@ -1,0 +1,114 @@
+<head>
+  <!-- Other head elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+{% schema %}
+{
+  "name": "Waarom Leefsamen",
+  "class": "index-section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Waarom Leefsamen"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Discover the Benefits"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "waarom",
+      "name": "Unique Selling Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "waarom_title",
+          "label": "waarom"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Waarom Leefsamen",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "waarom"
+        },
+        {
+          "type": "waarom"
+        },
+        {
+          "type": "waarom"
+        },
+        {
+          "type": "waarom"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .waarom-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  h2.section-title {
+    text-align: center;
+    color: black !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .waarom {
+    width: 48%; /* Adjust as needed, considering margin and padding */
+    margin: 10px;
+    text-align: left;
+  }
+
+.waarom i {
+  font-size: 24px;
+  color: #000000; /* Verander naar zwart (#000000) */
+  margin-top: 20px;
+}
+
+
+  p.waarom-title {
+    color: black !important;
+    text-align: left; /* Adjusted text alignment */
+    margin: 10px 0; /* Adjusted margin to 10px top and bottom */
+  }
+
+  @media (max-width: 767px) {
+    .waarom {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+<h2 style="text-align: center;" class="section-title">{{ section.settings.section_title }}</h2>
+
+<div class="waarom-section">
+  {% for block in section.blocks %}
+    <div class="waarom">
+      <i class="fas fa-check"></i>
+      <p style="color: black;" class="waarom-title">{{ block.settings.waarom_title }}</p>
+    </div>
+  {% endfor %}
+</div>

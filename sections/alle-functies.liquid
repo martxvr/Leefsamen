@@ -1,0 +1,111 @@
+{% schema %}
+{
+  "name": "Alle Functies",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Leefsamen alarmeringen in één overzicht"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Hieronder vindt u een volledig overzicht van onze complete alarmeringen. Gebruikt door veel zelfstandig wonende ouderen door heel Nederland. Leefsamen begint bij de sensoren / noodknop in een woning. Deze worden afgestemd op de persoonlijke instellingen van de bewoner(s). Dat gebeurt in het Leefsamen online account en de mobiele app. Optioneel is er de servicecentrale uitbreiding voor 24x7 professionele hulp bij alarm."
+    },
+    {
+      "type": "text",
+      "id": "vragen",
+      "label": "Heeft u vragen?",
+      "default": "Vragen? Wij staan voor je klaar"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Foto"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alle Functies",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.storingen {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.storingen-content {
+    padding: 20px;
+    max-width: 610px;
+}
+
+.storingen-vragen {
+    padding: 30px;
+    max-width: 420px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 20px;
+}
+
+.storing-text {
+    margin-bottom: 50px;
+}
+
+.storing-text h1 {
+    font-weight: 700;
+}
+
+.storing-text h2 {
+  font-weight: 700;
+}
+  
+{% endstylesheet %}
+
+ <div class="storingen">
+        <div class="storingen-content">
+            <div class="storing-text">
+                <h1>{{ section.settings.title }}</h1>
+            </div>
+            <div class="storing-text">
+                <p>{{ section.settings.text }}</p>
+            </div>
+        </div>
+        <div class="storingen-vragen" style="margin-top: 50px;">
+            <h2 style="color: #1a94a6; margin-top: 0;">{{ section.settings.vragen }}</h2>
+               {% if section.settings.main_image %}
+            <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="" style="max-width: 64px; height: 64px;     border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-top-left-radius: 50em;
+    border-top-right-radius: 50em;
+    border-bottom-right-radius: 50em;
+    border-bottom-left-radius: 50em;
+    box-shadow: 0em 0em 2em 0em rgba(0,0,0,0.16);">
+        {% endif %} 
+            <p style="color: rgb(112, 111, 111); font-size: 25px">Ons telefoonnummer</p>
+            <a style="color: #1a94a6; text-decoration: none; font-weight: 700; font-size: 34px;" href="tel:+31407800641" target="_blank">040 7800 641</a>
+            <hr style="margin-bottom: 50px;"></hr>
+        </div>
+    </div>
+    

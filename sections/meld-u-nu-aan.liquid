@@ -1,0 +1,54 @@
+{% schema %}
+{
+  "name": "Meld u nu aan",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Meld u nu aan voor een gratis deelname"
+    },
+     {
+      "type": "text",
+      "id": "beschrijving",
+      "label": "Beschrijving",
+      "default": "Met dit formulier meldt u zich aan voor een kosteloze deelname aan Leefsamen."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meld u nu aan",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.meld-u-nu-aan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 50px;
+}
+
+.meld-u-nu-aan-container h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.meld-u-nu-aan-container p {
+    text-align: center;
+}
+  
+{% endstylesheet %}
+
+    <div id="meld-u-nu-aan" class="meld-u-nu-aan-container scroll-trigger animate--slide-in">
+        <h1>{{ section.settings.title }}</h1>
+        <p>{{ section.settings.beschrijving }}</p>
+    </div>

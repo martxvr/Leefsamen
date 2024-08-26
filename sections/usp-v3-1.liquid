@@ -1,0 +1,206 @@
+{% schema %}
+{
+  "name": "USP-V3-1",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button-url",
+      "label": "Button URL",
+      "default": "#standaard"
+    },
+    {
+      "type": "text",
+      "id": "heading-text",
+      "label": "Heading Text",
+      "default": "De voordelen van het Start Pakket"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button Text",
+      "default": "Start vandaag"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_visible",
+      "label": "Toon knop",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Titel",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Titel",
+          "default": "Ik raad het iedereen aan"
+        },
+        {
+          "id": "review",
+          "type": "text",
+          "label": "Review",
+          "default": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“"
+        },
+        {
+          "id": "main_image",
+          "type": "image_picker",
+          "label": "Hoofdafbeelding"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP-V3-1",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.usp-v3-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 50px;
+}
+
+.usp-v3-container h1 {
+  font-weight: 700;
+}
+
+.first3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 60px;
+}
+
+.usp-v3 {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    gap: 10px;
+    justify-content: left;
+}
+
+.usp-v3 p {
+    text-align: left;
+}
+
+.usp-v3 h2 {
+    text-align: left;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.usp-v3-container h1 {
+    text-align: center;
+}
+
+.usp-v3 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.usp-v3-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 960px) {
+    .usp-v3 {
+        width: calc(50% - 40px); /* 50% voor 2 naast elkaar op kleinere schermen */
+        justify-content: center;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .usp-v3-container {
+        width: auto;
+    }
+
+    .first3 {
+      gap: 50px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .usp-v3 {
+        width: calc(100% - 40px); /* 100% voor 1 per rij op nog kleinere schermen */
+        justify-content: left;
+    }
+    .first3 {
+      gap: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+.usp-v3 h2 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+p {
+    color: #000;
+}
+{% endstylesheet %}
+
+<div class="usp-v3-container">
+    <h1 class="scroll-trigger animate--slide-in">{{ section.settings.heading-text }}</h1>
+    <div class="first3 scroll-trigger animate--slide-in">
+        {% for block in section.blocks %}
+            {% if forloop.index <= 3 %}
+                <div class="usp-v3">
+                    {% if block.settings.main_image %}
+                        <img src="{{ block.settings.main_image | img_url: 'large' }}" alt="" height="50px" width="50px">
+                    {% endif %}
+                    <div class="usp-v3-text">
+                      <h2>{{ block.settings.title }}</h2>
+                      <p>{{ block.settings.review }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="second3 scroll-trigger animate--slide-in">
+        {% for block in section.blocks %}
+            {% if forloop.index > 3 %}
+                <div class="usp-v3">
+                    {% if block.settings.main_image %}
+                        <img src="{{ block.settings.main_image | img_url: 'large' }}" alt="" height="50px" width="50px">
+                    {% endif %}
+                    <div class="usp-v3-text">
+                      <h2>{{ block.settings.title }}</h2>
+                      <p>{{ block.settings.review }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% if section.settings.button_visible %}
+        <a href="{{ section.settings.button-url }}" class="leefsamen-btn">{{ section.settings.button-text }}</a>
+    {% endif %}
+</div>

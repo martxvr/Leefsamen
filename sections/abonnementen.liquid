@@ -1,0 +1,546 @@
+{% schema %}
+{
+  "name": "Abonnementen",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "basis",
+      "label": "Basis abonnement prijs:",
+      "default": "€8,50"
+    },
+    {
+      "type": "text",
+      "id": "plus",
+      "label": "Plus abonnement prijs:",
+      "default": "€17,50"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Omschrijving",
+      "default": "U kunt na de proefperiode kiezen uit twee abonnementen. Het abonnement is voor de alarmering en toegang tot de mobiele app. Beide abonnementen zijn maandelijks opzegbaar. "
+    }
+  ],
+  "presets": [
+    {
+      "name": "Abonnementen",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.pricing-abonnement {
+    margin: auto;
+    display: flex;
+    max-width: 1440px;
+    padding: 0px 128px 72px 128px;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    border-radius: 4px;
+    background: var(--Shades-White, #FFF);
+}
+
+.title {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.frame80 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.frame80 h3 {
+    margin: 0 0 15px 0;
+    width: 566px;
+    color: var(--Neutral-800, #191D23) !important;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 50px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.frame80 p {
+    margin: 0 0;
+    color: var(--Neutral-800, #191D23);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.abonnementen {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.free {
+    display: flex;
+    padding: 40px 24px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 383px;
+    gap: 40px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--Shades-White, #FFF);
+    transition: background 0.5s ease;
+}
+
+#standaard-abonnement {
+    background: #1A94A6;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px 0px #CCD9FF;
+    transition: background 0.5s ease;
+}
+
+#standaard-title {
+    color: #fff;
+}
+
+#standaard-p {
+    color: #fff;
+}
+
+#standaard-currencyprice {
+    color: #fff;
+}
+
+#standaard-priceandbutton-p {
+    color: #fff;
+}
+
+#standaard-bottom p {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.plans-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    align-self: stretch;
+}
+
+.plans-header h4 {
+    margin: 0 0;
+    align-self: stretch;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.plans-header p {
+    margin: 0 0;
+    align-self: stretch;
+    color: var(--Neutral-500, #64748B);
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.priceandbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px !imporant;
+    align-self: stretch;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.price .currencyprice {
+    margin: 0 0;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.price p {
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cta {
+  display: flex;
+  height: 44px;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1.5px solid #ff9756;
+  background: #e96411;
+  transform: scale(1.00);
+  transition: box-shadow 0.5s ease, transform 0.5s;
+}
+
+.cta:hover {
+  box-shadow: 0px 10px 25px 0px #CCD9FF;
+  transform: scale(1.05);
+  transition: box-shadow 0.5s ease, transform 0.5s;
+}
+  
+  #standaard-abonnement .cta:hover {
+    box-shadow: 0px 10px 25px 0px #0A6C7B;
+    transform: scale(1.05);
+    transition: box-shadow 0.5s ease, transform 0.5s;
+  }
+
+.frame81 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.frame81 a {
+    padding: 10px 105px;
+    color: #fff;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    align-self: stretch;
+}
+
+.frame74 {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Primary-Blue-50, #E8EDFB);
+}
+
+.frame74.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.feature p {
+    margin: 10px 0;
+    flex: 1 0 0;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.frame75 {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Neutral-50, #F7F8F9);
+}
+
+.frame75.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.frame82 {
+    width: 173px;
+    height: 61px;
+    position: absolute;
+    left: 99.333px;
+    top: -33px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle1 {
+    width: 173px;
+    height: 61px;
+    flex-shrink: 0;
+    fill: #F5721D;
+}
+
+.frame82 p {
+    color: #FFF;
+    font-family: Aller;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+     .pricing-abonnement {
+        display: flex;
+        width: auto;
+        padding: 0px 0px 72px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px; 
+        border-radius: 4px;
+        background: var(--Shades-White, #FFF);
+    }
+  
+
+
+    .title {
+        display: flex;
+        width: 392px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+    }
+  
+
+
+    .frame80 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+    }
+  
+
+
+    .frame80 h3 {
+        width: 313px;
+        color: var(--Neutral-800, #191D23);
+        text-align: center;
+        font-family: DM Sans;
+        font-size: 35px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+  
+
+
+    .frame80 p {
+        color: var(--Neutral-800, #191D23);
+        text-align: center;
+        font-family: DM Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal; 
+        padding: 0px 30px;
+    }
+  
+
+
+    .abonnementen {
+        display: flex;
+        width: auto;
+        height: auto !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        flex-shrink: 0;
+        padding: 10px;
+        margin: 0 auto;
+    }
+  
+
+
+    .plans-header h4 {
+        font-size: 34px;
+    }
+  
+
+
+    #standaard-abonnement {
+        display: flex;
+        height: 721px;
+        padding: 40px 24px;
+        border-radius: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        flex-shrink: 0;
+        align-self: stretch;
+        background: #1A94A6;
+    }
+  }
+
+  
+  
+{% endstylesheet %}
+
+<div class="pricing-abonnement scroll-trigger animate--slide-in">
+        <div style="display: block" class="title">
+            <div class="frame80">
+                <h3 style="font-family: aller;">Onze abonnementen</h3>
+                <p style="font-family: aller; color: #333333; max-width: 700px;">{{ section.settings.text }} </p>
+            </div>
+        </div>
+        <div class="abonnementen">
+            <div class="free scroll-trigger animate--slide-in" style="--animation-order: 1; border: 3px solid #1a94a6;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px #ccd9ff;">
+                <div class="container">
+                    <div class="plans-header">
+                        <h4 style="color: #e76424;">Basis</h4>
+                        
+                    </div>
+                    <div style="gap: 0;" class="priceandbutton">
+                        <div class="price">
+                            <p class="currencyprice">{{ section.settings.basis }}</p>
+                            <p>per maand</p>
+                        </div>
+                        <p style="color: #333333; margin: 0; font-size: 12px;">incl. btw</p>
+              
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Onbeperkt alarmering naar naasten</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Continu controle van de sensoren en batterijen</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Mobiele app </p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Telefonische klantenservice</p>
+                    </div>
+                </div>
+            </div>
+            <div id="standaard-abonnement" class="free scroll-trigger animate--slide-in" style="--animation-order: 3;">
+                <div class="container">
+                    <div class="plans-header">
+                        <h4 style="color: #ff9756;" id="standaard-title">Plus</h4>
+                        
+                    </div>
+                    <div class="priceandbutton" style="gap: 0;">
+                        <div class="price">
+                            <p id="standaard-currencyprice" class="currencyprice">{{ section.settings.plus }}</p>
+                            <p id="standaard-priceandbutton-p">per maand</p>
+                        </div>
+                        <p style="color: #fff; margin: 0; font-size: 12px;">incl. btw</p>
+                    </div>
+                </div>
+                <div id="standaard-bottom" class="bottom">
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Alles uit het basis abonnement</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Alarmering naar een professionele hulpverlener uit de regio via onze servicecentrale</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Beveiliger komt indien nodig naar de woning (€ 55 per keer)</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Sleutelplan (€ 75 eenmalig)</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

@@ -1,0 +1,714 @@
+{% schema %}
+{
+  "name": "Pricing",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "price1",
+      "label": "Start pakket prijs:",
+      "default": "€75"
+    },
+    {
+      "type": "text",
+      "id": "price2",
+      "label": "Standaard pakket prijs:",
+      "default": "€155"
+    },
+    {
+      "type": "text",
+      "id": "price3",
+      "label": "Compleet pakket prijs:",
+      "default": "€210"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pricing",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.pricing {
+    margin: auto;
+    display: flex;
+    max-width: 1440px;
+    padding: 0px 128px 72px 128px;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    border-radius: 4px;
+    background: var(--Shades-White, #FFF);
+}
+
+.title {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.frame80 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.frame80 h3 {
+    margin: 0 0 15px 0;
+    width: 566px;
+    color: var(--Neutral-800, #191D23) !important;
+    text-align: center;
+    font-family: Aller;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.frame80 p {
+    margin: 0 0;
+    color: var(--Neutral-800, #191D23);
+    text-align: center;
+    font-family: Aller;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.plans {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.free {
+    display: flex;
+    padding: 40px 24px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 383px;
+    gap: 40px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--Shades-White, #FFF);
+    transition: background 0.5s ease;
+    border: 3px solid #1a94a6;
+    box-shadow: 0 10px 25px #ccd9ff;
+}
+
+#standaard {
+    background: #1A94A6;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px 0px #CCD9FF;
+    transition: background 0.5s ease;
+}
+
+  @media screen and (max-width: 1000px) {
+  #standaard {
+    max-width: fit-content;
+  }
+}
+
+#standaard-title {
+    color: #fff;
+}
+
+#standaard-p {
+    color: #fff;
+}
+
+#standaard-currencyprice {
+    color: #fff;
+}
+
+#standaard-priceandbutton-p {
+    color: #fff;
+}
+
+#standaard-bottom p {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.plans-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    align-self: stretch;
+}
+
+.plans-header h4 {
+    margin: 0 0;
+    align-self: stretch;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.plans-header p {
+    margin: 0 0;
+    align-self: stretch;
+    color: var(--Neutral-500, #64748B);
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.priceandbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.price .currencyprice {
+    margin: 0 0;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.price p {
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cta {
+  display: flex;
+  height: 44px;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: none;
+  background: #e96411;
+  transform: scale(1.00);
+  transition: box-shadow 0.5s ease, transform 0.5s;
+}
+
+  a.leefsamen-btn:hover {
+  box-shadow: 0px 10px 25px 0px #CCD9FF;
+  transform: scale(1.05);
+  transition: box-shadow 0.5s ease, transform 0.5s;
+}
+  
+  #standaard a:hover {
+    box-shadow: 0px 10px 25px 0px #0A6C7B;
+    transform: scale(1.05);
+    transition: box-shadow 0.5s ease, transform 0.5s;
+  }
+
+.frame81 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.frame81 a {
+    padding: 10px 115px;
+    color: #fff;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    align-self: stretch;
+}
+
+.frame74 {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Primary-Blue-50, #E8EDFB);
+}
+
+.frame74.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.feature p {
+    margin: 10px 0;
+    flex: 1 0 0;
+    color: var(--Neutral-800, #191D23);
+    font-family: Aller;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.frame75 {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Neutral-50, #F7F8F9);
+}
+
+.frame75.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.frame82 {
+    width: 173px;
+    height: 61px;
+    position: absolute;
+    left: 99.333px;
+    top: -33px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle1 {
+    width: 173px;
+    height: 61px;
+    flex-shrink: 0;
+    fill: #F5721D;
+}
+
+.frame82 p {
+    color: #FFF;
+    font-family: Aller;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .pricing {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0px 0px 72px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px; 
+        border-radius: 4px;
+        background: var(--Shades-White, #FFF);
+    }
+
+      .free {
+            border: none;
+            box-shadow: none;
+            max-width: 100%;
+                border: 3px solid #1a94a6;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px #ccd9ff;
+      }
+  
+
+
+    .title {
+        display: flex;
+        width: 392px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+    }
+  
+
+
+    .frame80 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+    }
+  
+
+
+    .frame80 h3 {
+        width: 313px;
+        color: var(--Neutral-800, #191D23);
+        text-align: center;
+        font-family: Aller;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+  
+
+
+    .frame80 p {
+        color: var(--Neutral-800, #191D23);
+        text-align: center;
+        font-family: Aller;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;   
+    }
+  
+
+
+    .plans {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        gap: 60px;
+        flex-shrink: 0;
+        padding: 10px;
+    }
+  
+
+
+    .plans-header h4 {
+        font-size: 34px;
+    }
+  
+
+
+    #standaard {
+        display: flex;
+        height: 100%;
+        padding: 40px 24px;
+        border-radius: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        flex-shrink: 0;
+        align-self: stretch;
+        background: #1A94A6;
+        border: 3px solid #1a94a6;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px #ccd9ff;
+        max-width: 100%
+    }
+  }
+
+
+  
+  
+{% endstylesheet %}
+
+<div class="pricing">
+        <div class="title">
+            <div class="frame80">
+                <h3>Alarmering voor elke situatie</h3>
+                <p>Kies een pakket dat bij u past</p>
+            </div>
+        </div>
+        <div class="plans">
+          <div id="standaard" class="free scroll-trigger animate--slide-in" style="--animation-order: 1;">
+              <span class="meest-gekozen" style="
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 700;
+    color: #E96412;
+    text-transform: uppercase;
+    position: absolute;
+    top: -22px;
+    background-color: #F6B788;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+">Meest Gekozen</span>
+                <div class="container">
+                    <div class="plans-header">
+                        <h4 id="standaard-title">Standaard</h4>
+                        <p id="standaard-p">Het meest gekozen pakket met alle alarmeringen, geschikt voor een normale woning.</p>
+                    </div>
+                    <div class="priceandbutton">
+                        <div class="price">
+                            <p id="standaard-currencyprice" class="currencyprice">{{ section.settings.price2 }}</p>
+                            <p id="standaard-priceandbutton-p">incl. btw</p>
+                        </div>
+                        <div style="margin: 0 auto;">
+                            <div class="frame81">
+                                <a style="display: block !important" class="leefsamen-btn" href="https://shop.leefsamen.nl/products/standaard-pakket">Kies pakket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="standaard-bottom" class="bottom">
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Armband of alarmknop met ketting</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Mobiele app voor naasten</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Persoonlijke service (helpdesk)</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p><span style="color: #ff9756; font-weight: 700;">Gratis proefperiode</span> van 3 maanden</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Deurcontact</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Rookmelder</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Bewegingsmelder</p>
+                    </div>
+                     <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Centrale uitbreidbaar tot max 24 sensoren</p>
+                    </div>
+                </div>
+            </div>
+            <div class="free scroll-trigger animate--slide-in" style="--animation-order: 3;">
+                <div class="container">
+                    <div class="plans-header">
+                        <h4>Start</h4>
+                        <p>Voor iedereen die snel hulp nodig heeft bij een noodsituatie in de woning.<br><br></p>
+                    </div>
+                    <div class="priceandbutton">
+                        <div class="price">
+                            <p class="currencyprice">{{ section.settings.price1 }}</p>
+                            <p>incl. btw</p>
+                        </div>
+                        <div style="margin: 0 auto;">
+                            <div class="frame81">
+                                <a style="display: block !important" class="leefsamen-btn" href="https://shop.leefsamen.nl/products/persoonlijke-alarmering-start">Kies pakket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Armband of alarmknop met ketting</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Mobiele app voor naasten</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Persoonlijke service (helpdesk)</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p><span style="color: #e96411; font-weight: 700;">Gratis proefperiode</span> van 3 maanden</p>
+                    </div>
+                                  <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Centrale uitbreidbaar tot max 24 sensoren</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="free scroll-trigger animate--slide-in" style="--animation-order: 5;">
+                <div class="container">
+                    <div class="plans-header">
+                        <h4>Compleet</h4>
+                        <p>Het uitgebreide pakket met alle alarmeringen, geschikt voor een normale tot grote woning.</p>
+                    </div>
+                    <div class="priceandbutton">
+                        <div class="price">
+                            <p class="currencyprice">{{ section.settings.price3 }}</p>
+                            <p>incl. btw</p>
+                        </div>
+                        <div style="margin: 0 auto;">
+                            <div class="frame81">
+                                <a style="display: block !important" class="leefsamen-btn" href="https://shop.leefsamen.nl/products/persoonlijke-alarmering-compleet">Kies pakket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Armband of alarmknop met ketting</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Mobiele app voor naasten</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Persoonlijke service (helpdesk)</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p><span style="color: #e96411; font-weight: 700;">Gratis proefperiode</span> van 3 maanden</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>2x Deurcontacten</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>2x Rookmelders</p>
+                    </div>
+                    <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>1x Bewegingsmelder</p>
+                    </div>
+                      <div class="feature">
+                        <div class="frame74">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8162 4.20701C14.0701 4.47369 14.0597 4.89567 13.793 5.14953L6.08929 12.4829C5.95773 12.6081 5.78078 12.6742 5.59933 12.666C5.41788 12.6577 5.24766 12.5758 5.12803 12.4391L2.16506 9.05451C1.92254 8.77747 1.95052 8.35629 2.22755 8.11377C2.50459 7.87125 2.92577 7.89923 3.16829 8.17626L5.67342 11.0379L12.8737 4.1838C13.1404 3.92994 13.5624 3.94033 13.8162 4.20701Z" fill="#1A94A6"/>
+                              </svg>
+                        </div>
+                        <p>Centrale uitbreidbaar tot max 24 sensoren</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

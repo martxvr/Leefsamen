@@ -1,0 +1,67 @@
+{% schema %}
+{
+  "name": "mogelijk-gemaakt",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Uw deelname wordt mogelijk gemaakt door:"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "main Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "mogelijk-gemaakt",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.mogelijk-gemaakt {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    margin: 100px;
+}
+
+.mogelijk-gemaakt h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.mogelijk-gemaakt img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .mogelijk-gemaakt {
+    margin: 10px;
+  }
+}
+  
+{% endstylesheet %}
+
+   <div class="mogelijk-gemaakt scroll-trigger animate--slide-in">
+  <h1>{{ section.settings.title }}</h1>
+  {% if section.settings.main_image %}
+    <!-- Gebruik een specifiekere maat voor de img_url filter en schaal naar 2 voor betere resolutie -->
+    <img src="{{ section.settings.main_image | img_url: '300x300', scale: 2 }}" alt="" class="responsive-img">
+  {% endif %}
+</div>

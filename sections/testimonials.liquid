@@ -1,0 +1,139 @@
+<style>
+/* CSS-stijlen voor testimonials-sectie */
+
+.testimonials-section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  flex-basis: calc(33.33% - 20px);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center; /* Centreren van inhoud in testimonial */
+  padding: 10px 10px 10px 10px;
+  transition-property: background, background-color;
+  transition-duration: 0.5s;
+  border-radius: 18px;
+}
+
+.testimonial .testimonial-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block; /* Om de afbeeldingen te centreren */
+}
+
+.testimonial .testimonial-name {
+  font-weight: bold; /* Maak de naam vetgedrukt */
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial {
+    flex-basis: 100%; /* Verander naar 100% breedte voor mobiel */
+  }
+}
+
+</style>
+
+
+
+<!-- HTML voor de testimonials sectie -->
+<div class="testimonials-section">
+  {% for i in (1..3) %}
+    <!-- rest van je huidige HTML-code voor testimonials -->
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Testimonials Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "testimonial_1_name",
+      "label": "Naam testimonial 1",
+      "default": "Naam 1"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_1_message",
+      "label": "Bericht testimonial 1",
+      "default": "Bericht 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_1_image",
+      "label": "Afbeelding testimonial 1"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_2_name",
+      "label": "Naam testimonial 2",
+      "default": "Naam 2"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_2_message",
+      "label": "Bericht testimonial 2",
+      "default": "Bericht 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_2_image",
+      "label": "Afbeelding testimonial 2"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_3_name",
+      "label": "Naam testimonial 3",
+      "default": "Naam 3"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_3_message",
+      "label": "Bericht testimonial 3",
+      "default": "Bericht 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_3_image",
+      "label": "Afbeelding testimonial 3"
+    }
+    // Voeg meer testimonials toe op dezelfde manier indien nodig
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Testimonials Section"
+    }
+  ]
+}
+
+{% endschema %}
+
+<!-- HTML voor de testimonials sectie -->
+<div class="testimonials-section">
+  {% assign animation_order = 0 %}
+  {% for i in (1..3) %}
+    {% assign current_name = 'testimonial_' | append: i | append: '_name' %}
+    {% assign current_image = 'testimonial_' | append: i | append: '_image' %}
+    {% assign current_message = 'testimonial_' | append: i | append: '_message' %}
+    {% if section.settings[current_name] != blank %}
+      {% assign animation_order = animation_order | plus: 2 %}
+      <div class="testimonial scroll-trigger animate--slide-in" style="--animation-order: {{ animation_order }};">
+        <img class="testimonial-image" src="{{ section.settings[current_image] | img_url: 'medium' }}" alt="{{ section.settings[current_name] }}">
+        <div class="testimonial-name">{{ section.settings[current_name] }}</div>
+        <div class="testimonial-message">{{ section.settings[current_message] }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+

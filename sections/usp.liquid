@@ -1,0 +1,136 @@
+{% schema %}
+{
+  "name": "USP Section",
+  "class": "index-section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Unique Selling Points"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "Unique Selling Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "usp_title",
+          "label": "USP Title"
+        },
+        {
+          "type": "textarea",
+          "id": "usp_description",
+          "label": "USP Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "usp_image",
+          "label": "USP Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP Section",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.usp-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1900px; /* Maximaal 1600px breedte voor de container */
+  margin: 0 auto; /* Centreert de container op de pagina */
+  color: #fff;
+  border-radius: 25px;
+}
+
+  @media (max-width: 767px) {
+    .usp-section {
+      margin-bottom: 37px;
+    }
+
+  }
+  
+.usp h3 {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+p {
+  color: #ffffffbf;
+}
+
+.usp {
+  width: 222px;
+  margin: 10px; /* Ruimte tussen USP's */
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+  border-radius: 12px;
+  transform: scale(1.00);
+  transition-property: background-color, transform;
+  transition-duration: 0.5s;
+  margin-bottom: 20px;
+}
+
+.usp img {
+  max-width: 40px; /* Maximale breedte van afbeelding */
+  max-height: 40px; /* Maximale hoogte van afbeelding */
+  margin-top: 20px;
+}
+
+
+
+@media (max-width: 767px) {
+  .usp {
+    width: 100%; /* Elke USP neemt 100% van de breedte in op mobiel */
+  }
+}
+
+@media (max-width: 767px) {
+  .usp-section {
+    padding-top: 130px;
+  }
+}
+{% endstylesheet %}
+
+
+
+<div class="usp-container scroll-trigger animate--slide-in">
+<div class="usp-section">
+  {% for block in section.blocks %}
+    <div class="usp">
+      {% if block.settings.usp_image %}
+        <img src="{{ block.settings.usp_image | img_url: '100x100' }}" alt="Afbeelding">
+      {% else %}
+        <img src="https://via.placeholder.com/100x100" alt="Standaardafbeelding">
+      {% endif %}
+      <h3>{{ block.settings.usp_title }}</h3>
+      <p>{{ block.settings.usp_description }}</p>
+    </div>
+  {% endfor %}
+</div>
+  </div>

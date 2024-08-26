@@ -1,0 +1,293 @@
+{% schema %}
+{
+  "name": "Probeer het uit",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Probeer het abonnement gratis uit"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Tijdens de proefperiode maakt u 3 maanden kosteloos gebruik van Leefsamen. Leefsamen Basis is standaard voor iedereen. Indien nodig, leveren we ook Plus tijdens de proefperiode."
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Bekijk pakketten"
+    },
+    {
+      "type": "text",
+      "id": "button-container-text",
+      "label": "Text naast/onder button",
+      "default": "Geldt voor Basis & Plus"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Probeer het uit!"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Probeer het uit",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{%  stylesheet %}
+    .ls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    }
+  
+  .ls-section {
+  width: 1000px;
+  background-color: #1a94a6;
+  padding: 60px;
+  position: relative;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 25px #ccd9ff;
+}
+
+.inner-content {
+  width: 1000px;
+  height: 336px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-content {
+  width: 70%;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.image-content {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: -150px;
+}
+
+.button-note-container {
+  margin-top: 75px;
+  gap: 30px;
+  display: flex;
+  flex-direction: row; /* Rijopstelling */
+  align-items: center;
+}
+
+  
+  .text-content.h1 {
+    font-size: 52px;
+    margin: 0;
+    color: #333333;
+    padding-bottom: 20px;
+  }
+  
+  .text-content.p {
+    font-size: 18px;
+    color: #4F4F4F;
+  }
+  
+
+  .ls-button {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 14px;
+  background-color: #e96411;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.5s, box-shadow 0.5s;
+  border: 1.5px solid #ff9756;
+}
+
+.ls-button:hover {
+  box-shadow: 0 10px 25px #0A6C7B;
+  transform: scale(1.05);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+  
+.note {
+  font-size: 14px;
+  color: #4F4F4F;
+  margin-left: 10px;
+}
+
+.quote {
+  text-align: right;
+  color: #4F4F4F;
+}
+
+  
+  .quote img {
+    width: 600px;
+    height: auto;
+    position: absolute;
+    bottom: -205px;
+    right: 6px;
+    transform: scale(0.95);
+    clip-path: inset(0 170px 200px 160px); /* Cuts the image with a square shape */
+  }
+
+  .quote p {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    font-size: 16px;
+  }
+
+  .speech {
+  /* (A1) FONT & COLORS */
+  font-size: 1.2em;
+  color: #333333;
+  background: #fff;
+
+  /* (A2) DIMENSIONS */
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  position: absolute;
+  right: 200px;
+  bottom: 310px;
+  box-shadow: 0px 10px 20px rgb(51 51 51 / 0.2);
+  transform: rotate(7deg);
+}
+
+
+@media only screen and (max-width: 1100px){
+
+  .ls-container {
+        height: auto;
+        width: auto;
+        display: block;
+    }
+
+    .ls-section {
+        height: auto;
+        width: auto;
+        border-radius: 25px;
+        transform: scale(0.9);
+        padding: 0;
+    }
+
+    .content {
+        height: 703px;
+    }
+
+    .inner-content {
+        display: flex;  
+        flex-direction: column;
+        max-width: 400px;
+        height: 100%;
+    }
+
+    .text-content{
+        position: absolute;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        left: auto;
+        top: 0;
+        width: 100%;
+        bottom: auto;
+        right: 0;
+        padding: 30px;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .text-content h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .text-content p{
+        font-size: 18px;
+    }
+
+    .image-content{
+        position: absolute;
+        left: 375px;
+        top: 850px;
+    }
+
+    .ls-button {
+        padding: 12px 30px;
+        font-size: 22px;;
+    }
+
+    p.note {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .button-note-container {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: left !important;
+    }
+
+    .image-content {
+        display: none;
+    }
+
+    .image-content img {
+        clip-path: inset(0 0 355px 0); /* Cuts the image with a square shape */
+    }
+
+}
+  {%  endstylesheet %}
+
+  <div class="ls-container scroll-trigger animate--slide-in">
+        <section class="ls-section">
+          <div class="content">
+            <div class="inner-content">
+              <div class="text-content">
+                <h1>{{ section.settings.title }}</h1>
+                <p>{{ section.settings.text }}</p>
+                <div class="button-note-container">
+                  <div class="button-container">
+                    <a href="/alarmeringen" class="leefsamen-btn">{{ section.settings.button }}</a>
+                  </div>
+                  <p class="note">{{ section.settings.button-container-text }}</p>
+                </div>
+              </div>
+              <div class="image-content">
+                <div class="quote">
+                  <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Ontwerpzondertitel_7-removebg-preview.png?v=1707397590" alt="Spraakwolk">
+                  <div class="speech down">{{ section.settings.quote }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>

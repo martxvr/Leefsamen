@@ -1,0 +1,240 @@
+{% schema %}
+{
+  "name": "Videos",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Opnieuw koppelen sensor van Leefsamen"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Soms kan een sensor de verbinding verliezen met de centrale. De beheerder van Leefsamen krijgt dan een melding in de mobiele app van Leefsamen dat een sensor geen verbinding meer heeft. Om de verbinding met de sensor te herstellen, moet deze meestal opnieuw gekoppeld worden. Hieronder treft u de handleidingen op Youtube aan om de belangrijkste sensoren opnieuw te koppelen."
+    },
+    {
+      "type": "text",
+      "id": "videotitle1",
+      "label": "Video Title 1",
+      "default": "Koppelen rookmelder"
+    },
+    {
+      "type": "text",
+      "id": "video1",
+      "label": "Embed URL",
+      "default": "Put the embed url here.."
+    },
+    {
+      "type": "text",
+      "id": "videotitle2",
+      "label": "Video Title 2",
+      "default": "Koppelen rookmelder"
+    },
+    {
+      "type": "text",
+      "id": "video2",
+      "label": "Embed URL",
+      "default": "Put the embed url here.."
+    },
+    {
+      "type": "text",
+      "id": "videotitle3",
+      "label": "Video Title 3",
+      "default": "Koppelen rookmelder"
+    },
+    {
+      "type": "text",
+      "id": "video3",
+      "label": "Embed URL",
+      "default": "Put the embed url here.."
+    },
+    {
+      "type": "text",
+      "id": "videotitle4",
+      "label": "Video Title 4",
+      "default": "Koppelen rookmelder"
+    },
+    {
+      "type": "text",
+      "id": "video4",
+      "label": "Embed URL",
+      "default": "Put the embed url here.."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Videos",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+  body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+      ls-video-main {
+        display: block;
+        margin: auto;
+        width: 1100px;
+        margin-top: 20px;
+      }
+
+       video-header {
+            background-color: #fff;
+            color: #4f4f4f;
+            text-align: center;
+            padding: 20px;
+            max-width: 1200px;
+            width: 70%;
+            margin: auto;
+        }
+
+      video-header h1 {
+        font-weight: 700;
+      }
+
+        video-main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .video {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .video p {
+          text-align: center;
+          color: #4f4f4f;
+          font-weight: 700;
+        }
+
+        iframe.videoiframe{
+            border-radius: 14px;
+            transition: transform 0.3s ease;
+            transform: scale(1.00) !important;
+          }
+
+        iframe.videoiframe:hover {
+          transform: scale(1.08) !important;
+          transition: transform 0.3s ease;
+        }
+
+        .video img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image1 {
+              position: relative;
+              top: 145px;
+              right: 202px;
+              z-index: -1;
+              margin-top: -300px;
+              transform: scale(0.8) rotate(-8deg);
+              }
+
+        .image2 {
+              position: relative;
+              top: 147px;
+              left: 900px;
+              z-index: -1;
+              margin-top: -300px;
+              transform: scale(0.8) rotate(15deg);
+        }
+
+         .image3 {
+              position: relative;
+              top: 310px;
+              right: 701px;
+              z-index: -2;
+              margin-top: -300px;
+              transform: scale(.6) rotate(15deg);
+              filter: blur(13px);
+          }
+
+        .image4 {
+              position: relative;
+              top: 245px;
+              left: 644px;
+              z-index: -2;
+              margin-top: -300px;
+              transform: scale(0.80) rotate(-15deg);
+              filter: blur(13px);
+          }
+
+        @media only screen and (max-width: 1200px) {
+            .video {
+                width: 100%;
+            }
+
+            iframe {
+              width: 100%;
+              margin: auto;
+            }
+
+            .image1, .image2, .image3, .image4{
+              display: none
+            }
+
+            ls-video-main {
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+              width: 100%;
+            }
+
+            video-header {
+            width: 100%;
+            }
+        }
+{% endstylesheet %}
+
+<ls-video-main>
+
+    <img width="200px" height="200px" class="image1" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/web.jpg?v=1707487981" alt="Description of the image">
+    <img width="200px" height="200px" class="image2" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/2.jpg?v=1707486871" alt="Description of the image">
+    <img width="200px" height="200px" class="image3" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/1.jpg?v=1707486871" alt="Description of the image">
+    <img width="200px" height="200px" class="image4" src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/web_1.jpg?v=1707493397" alt="Description of the image">
+
+    <video-header>
+        <h1>{{ section.settings.title }}</h1>
+        <p>{{ section.settings.text }}</p>
+    </video-header>
+
+  <video-main>
+      <div class="video-container scroll-trigger animate--slide-in">
+          <div class="video">
+            <p>{{ section.settings.videotitle1 }}</p>
+              <iframe class="videoiframe" width="260" height="168" src="{{ section.settings.video1 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <p>{{ section.settings.videotitle2 }}</p>
+              <iframe class="videoiframe" width="260" height="168" src="{{ section.settings.video2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <p>{{ section.settings.videotitle3 }}</p>
+              <iframe class="videoiframe" width="260" height="168" src="{{ section.settings.video3 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <p>{{ section.settings.videotitle4 }}</p>
+              <iframe class="videoiframe" width="260" height="168" src="{{ section.settings.video4 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+      </div>
+  </video-main>
+</ls-video-main>

@@ -1,0 +1,209 @@
+{% schema %}
+{
+  "name": "image-and-text",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Probeer het abonnement gratis uit"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Tijdens de proefperiode maakt u 3 maanden kosteloos gebruik van Leefsamen. Leefsamen Basis is standaard voor iedereen. Indien nodig, leveren we ook Plus tijdens de proefperiode."
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "main Image"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button URL",
+      "default": "#meld-u-nu-aan"
+    },
+    {
+      "type": "text",
+      "id": "button_Text",
+      "label": "Button text",
+      "default": "Start vandaag"
+    },
+    {
+  "type": "checkbox",
+  "id": "my_checkbox",
+  "label": "Buttons",
+  "default": true
+  }
+  ],
+  "presets": [
+    {
+      "name": "image-and-text",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.image-and-text {
+    width: auto;
+    margin: 25px;
+}
+
+.image-and-text-container {
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    max-width: 1000px;
+    min-height: 450px;
+}
+
+.image-and-text-content {
+    flex: 1; /* Laat de content-container uitrekken om de ruimte in te nemen */
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.image-and-text-content h1 {
+    font-size: 50px;
+    margin: 0;
+    max-width: 360px;
+    font-weight: 700;
+}
+
+.image-and-text-content h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 100;
+    max-width: 360px;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.image-and-text-image {
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding de breedte van de container aanpast */
+    height: auto; /* Behoudt de aspectverhouding van de afbeelding */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.button-orange {
+    background-color: #e76424;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px 35px;
+    border: 1.5px solid #ff9756;
+    box-shadow: 0 10px 25px #bcbbbb;
+}
+
+.button-grey {
+    background-color: #ebebeb;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px 35px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+a.button-orange:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+a.button-orange {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+@media only screen and (max-width: 1000px) {
+    .image-and-text-container {
+        flex-direction: column;
+    }
+
+    .image-and-text {
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .image-and-text-container {
+        width: auto;
+        padding: 10px;
+    }
+
+    .image-and-text-content {
+        width: auto;
+        height: auto;
+    }
+
+    .image-and-text-image {
+        max-width: 350px;
+        padding: 10px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .button-orange {
+        padding: 10px 15px;
+    }
+
+    .button-grey {
+        padding: 10px 15px;
+    }
+
+    .image-and-text-content h2 {
+        font-size: 20px;
+    }
+}
+
+{% endstylesheet %}
+
+<section class="image-and-text">
+    <div class="image-and-text-container scroll-trigger animate--slide-in">
+        <div class="image-and-text-content">
+            <h1>{{ section.settings.title }}</h1>
+            <h2>{{ section.settings.text }}</h2>
+            <div class="cta-buttons" {% unless section.settings.my_checkbox %}style="display: none;"{% endunless %}>
+                <a href="{{ section.settings.button_link }}" class="leefsamen-btn">{{ section.settings.button_Text }}</a>
+            </div>
+        </div>
+        {% if section.settings.main_image %}
+    <img src="{{ section.settings.main_image | img_url: 'large' }}" alt="Main Image" class="image-and-text-image" style="width: 480px; height: 320px;">
+{% endif %}
+
+    </div>
+</section>

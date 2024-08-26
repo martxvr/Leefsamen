@@ -1,0 +1,100 @@
+{% schema %}
+{
+  "name": "USP-V2",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Text.."
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Beschrijving",
+      "default": "Beschrijving.."
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Title2",
+      "default": "Text.."
+    },
+    {
+      "type": "text",
+      "id": "description2",
+      "label": "Beschrijving",
+      "default": "Beschrijving.."
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Title3",
+      "default": "Text.."
+    },
+    {
+      "type": "text",
+      "id": "description3",
+      "label": "Beschrijving",
+      "default": "Beschrijving.."
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP-V2",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .usp-v2 {
+    width: auto;
+    padding: 50px 0px;
+    background: radial-gradient(circle at 18.7% 37.8%, #fafafa, #e1eaee 90%);
+}
+
+.grid-usp-v2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.content-usp-v2 {
+    width: 300px;
+    padding: 10px;
+}
+
+.content-usp-v2 h3 {
+    font-size: 24px;;
+}
+
+.content-usp-v2 p {
+    font-size: 16px;
+    color: #000;
+}
+{%  endstylesheet %}
+
+    <section class="usp-v2">
+        <div class="grid-usp-v2">
+            <div class="content-usp-v2 scroll-trigger animate--slide-in" style="--animation-order: 1;">
+                <h3>{{ section.settings.title }}</h3>
+                <p>{{ section.settings.description }}</p>
+            </div>
+            <div class="content-usp-v2 scroll-trigger animate--slide-in" style="--animation-order: 3;">
+                <h3>{{ section.settings.title2 }}</h3>
+                <p>{{ section.settings.description2 }}</p>
+            </div>
+            <div class="content-usp-v2 scroll-trigger animate--slide-in" style="--animation-order: 5;">
+                <h3>{{ section.settings.title3 }}</h3>
+                <p>{{ section.settings.description3 }}</p>
+            </div>
+        </div>
+    </section>

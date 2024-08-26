@@ -1,0 +1,82 @@
+{% schema %}
+{
+  "name": "Servicecentrale-Partners",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Wijk en Aalburg / Altena"
+    },
+    {
+      "type": "text",
+      "id": "beschrijving",
+      "label": "beschrijving",
+      "default": "Onze landelijke partner die het contact met alle regionale partners onderhoudt is Correct Groep uit Wijk en Aalburg. Correct Groep is een betrokken en proactieve partner op het gebied van facilitaire diensten. Samen met Akkedeer, het bedrijf achter Leefsamen, heeft Correct Groep de servicecentrale ontwikkeld en zorgt Correct ervoor dat de regionale partners de protocollen van Leefsamen alarmeringen goed opvolgen."
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Foto Partner"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Servicecentrale-Partners",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.partners-media {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden; /* voeg overflow: hidden toe om te voorkomen dat de afbeelding buiten de container uitrekt */
+}
+
+.partners-media img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* zorg ervoor dat de afbeelding als een blok wordt weergegeven om margin: auto te kunnen gebruiken voor het centreren */
+    margin: auto; /* hiermee wordt de afbeelding zowel horizontaal als verticaal gecentreerd */
+}
+
+.partners-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+
+  
+{% endstylesheet %}
+
+<div class="partners">
+    <div class="partners-media">
+        {% if section.settings.main_image %}
+            <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="" style="max-width: 100%; height: auto;">
+        {% endif %} 
+    </div>
+    <div class="partners-content">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.beschrijving }}</p>
+    </div>
+</div>

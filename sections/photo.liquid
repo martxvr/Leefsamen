@@ -1,0 +1,55 @@
+{% schema %}
+{
+  "name": "Photo",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Foto"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Photo",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+section.photo {
+    width: auto;
+    background-color: #f4f4f4;
+    padding: 100px;
+}
+
+.photo img {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+    max-width: 1400px;
+    height: auto; /* Behoud de aspectverhouding van de afbeelding */
+}
+
+/* Media query voor mobiele apparaten */
+@media (max-width: 768px) {
+    .photo img {
+        padding: 20px; /* Verminder de padding voor kleinere schermen */
+        max-width: 100%;
+    }
+
+    section.photo {
+      padding: 0;
+    }
+}
+{% endstylesheet %}
+
+<section class="photo">
+    {% if section.settings.main_image %}
+        <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="">
+    {% endif %} 
+</section>

@@ -1,0 +1,102 @@
+{% schema %}
+  {
+    "name": "Awards",
+    "class": "index-section",
+    "settings": [],
+      "presets": [
+    {
+      "name": "Awards",
+      "category": "Text"
+    }
+  ]
+  }
+{% endschema %}
+
+    <section class="awards">
+        <div class="awards-container">
+            <h2>Onze prijzen en erkenningen</h2>
+            <p>Bij Leefsamen zetten we ons in om de beste alarmering aan u te bieden. We zijn dan ook trots dat we onderstaande prijzen hebben gewonnen.</p>
+            <div class="award-photos">
+                <a target="_blank" href="https://www.brandveilig.com/nieuws/gouden-rookmelder-voor-leefsamen-achterhoek-60738"><img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/1_a5f8de4f-23f8-4d14-9e54-fb875c28c95e.png?v=1720686613" alt="" width="150" height="150"></a>
+                <a target="_blank" href="https://dkkgelderland.nl/actueel/leefsamen_achterhoek_is_tweede_geworden_van_europa"><img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/2_bd6554d3-a092-4948-8b9d-0d277e715831.png?v=1720686616" alt="" width="150" height="150"></a>
+                <a target="_blank" href="https://www.habion.nl/nieuws/winnaars-challenge-brandveiligheidsinnovaties/"><img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/3_bc3d846e-1d11-428f-90ae-9ee8f55a6d27.png?v=1720686614" alt="" width="150" height="150"></a>
+                <a target="_blank" href="https://zorginnovatie.nl/innovaties/leefsamen"><img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/4_d0f7c9d3-6235-4de5-8f8f-2124ec22e25f.png?v=1720686613" alt="" width="150" height="150"></a>
+            </div>
+            <p>Deze prijzen geven ons de erkenning dat we een stukje bijdragen aan de levenskwaliteit en veiligheid van onze klanten. </p>
+        </div>
+    </section>
+
+    {% stylesheet %}
+    .awards {
+}
+
+.awards-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.awards-container h2 {
+    font-size: 50px;
+    color: #000;
+    font-weight: 700;
+}
+
+.awards-container p {
+    font-size: 18px;
+    color: #000;
+}
+
+.award-photos {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.awards-container h2 {
+  font-size: 52px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .awards-container {
+        width: auto;
+        padding: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    .award-photos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        width: auto;
+    }
+
+    .award-photos img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .awards-container h2 {
+      font-size: 35px;
+    }
+
+    .awards-container p {
+      font-size: 18px;
+    }
+    
+    
+}
+    {% endstylesheet %}

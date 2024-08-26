@@ -1,0 +1,125 @@
+{% schema %}
+{
+  "name": "review-1",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Ik raad het iedereen aan"
+    },
+    {
+      "type": "text",
+      "id": "review",
+      "label": "Review",
+      "default": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "main Image"
+    },
+     {
+      "type": "text",
+      "id": "name",
+      "label": "Naam",
+      "default": "Riet"
+    }
+  ],
+  "presets": [
+    {
+      "name": "review-1",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+section.review-1 {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+.review-1-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 100%; /* Verander max-width naar 100% */
+    margin: 0 auto;
+    height: 600px;
+}
+
+.review-1-container h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.review-1-container p {
+    font-size: 24px;
+    text-align: center;
+    color: #888888 !important;
+    margin: 0;
+    max-width: 500px;
+    text-align: center;
+}
+
+.review-1-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-1-content p {
+    font-weight: 100;
+    color: #333333 !important;
+    text-align: center;
+}
+
+  @media screen and (max-width: 600px){
+    .review-1-container {
+      width: auto !important;
+    }
+
+    .review-1-container p {
+      width: auto;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .review-1-content {
+      gap: 0px
+    }
+
+    .review-1-content p {
+      width: 125px;
+    }
+   }
+
+  
+{% endstylesheet %}
+
+    <section class="review-1">
+        <div class="review-1-container scroll-trigger animate--slide-in">
+            <h1>{{ section.settings.title }}</h1>
+            <p> {{ section.settings.review }} </p>
+            <div class="review-1-content">
+                {% if section.settings.main_image %}
+          <img src=" {{ section.settings.main_image | img_url: 'small' }} " alt="" height="50px" width="50px">
+                {% endif %} 
+                <p>{{ section.settings.name }}</p>
+            </div>
+        </div>
+    </section>
+    

@@ -1,0 +1,369 @@
+{% schema %}
+{
+  "name": "Advies",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Advies"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advies",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+:root {
+    --padding: 1.25rem;
+    --black: 0,0,0;
+    --white: 255,255,255;
+    --dark-1: 28,28,30;
+    --dark-2: 44,44,46;
+    --dark-3: 58,58,60;
+    --dark-4: 72,72,74;
+    --mid-1: 99,99,102;
+    --mid-2: 142,142,147;
+    --mid-3: 174,174,178;
+    --mid-4: 199,199,204;
+    --light-1: 209,209,214;
+    --light-2: 229,229,234;
+    --light-3: 242,242,247;
+    --light-4: 250,250,252;
+    --brand-pink: 236,0,140;
+    --brand-purple: 129,0,140;
+    --brand-blue: 17,36,92;
+    --brand-nhpro: 255,117,0;
+    --brand-v34: 68,0,153;
+    --brand-ha5: 80,192,232;
+    --link: 0,122,255;
+    --success: 52,199,89;
+    --error: 255,59,48;
+    --warning: 255,170,113;
+    --sale: 236,0,140;
+    --brand-peach: 255,179,134;
+    --brand-coconut: 171,226,191;
+    --brand-mango: 242,198,94;
+    --brand-mint: 158,181,203;
+    --brand-watermelon: 236,134,208;
+    --sale-primary: 236,0,140;
+    --sale-secondary: 229,229,234;
+    --sale-tertiary: 252,161,199;
+    --discount-text: 236,0,140;
+    --sale-primary-outline: 192,1,114;
+    --sale-secondary-outline: 195,195,195;
+    --sale-tertiary-outline: 253,90,158;
+    --hero-banner: 236,57,72;
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+    --cpi-font-size: 3.25rem;
+    --cpi-color: var(--discount-text);
+    --cpi-background-color: var(--light-3);
+    --cpi-font-family: font-family: "Aller","Helvetica Neue","Helvetica",Arial,sans-serif;
+    --cpi-top: .5rem;
+    --cpi-bottom: .5rem;
+    --cpi-left: .5rem;
+    --cpi-right: .5rem;
+}
+
+.component-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: calc(1248px + var(--padding) * 2);
+    padding: 0;
+    height: 100%;
+    max-height: 640px;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+.component-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 var(--padding);
+}
+}
+
+@media (min-width: 991px) {
+.component-hero {
+    margin-bottom: 5.5rem;
+}
+}
+
+@media (min-width: 1248px) {
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: var(--padding);
+    padding-left: var(--padding);
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+@media (min-width: 991px) {
+.component-hero__content {
+    margin-right: 2.5rem;
+    max-width: 490px;
+}
+}
+
+@media (min-width: 768px) {
+.component-hero__content {
+    gap: 10px;
+    align-items: flex-start !important;
+    text-align: left !important;
+    max-width: 358px !important;
+    margin-right: 2rem;
+    padding: 0 !important;
+}
+}
+
+.component-hero__content {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding);
+    width: 100%;
+    max-width: 490px;
+}
+
+.home .component-hero__title {
+    max-width: unset;
+}
+
+@media (min-width: 768px) {
+.component-hero__description, .component-hero__title {
+    text-align: left;
+      font-size: 40px !important;
+}
+}
+
+@media (min-width: 1248px) {
+.component-hero__title {
+    margin-bottom: 1.5rem;
+}
+}
+
+@media (min-width: 991px) {
+.component-hero__title {
+    font-size: 40px;
+}
+}
+
+.component-hero__title {
+    font-family: Aller,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.03em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+.component-hero__description, .component-hero__title {
+    text-align: left;
+}
+}
+
+@media (min-width: 768px) {
+.component-hero__description {
+    font-size: 14px !important;
+}
+}
+
+  
+@media (min-width: 991px) {
+.component-hero__description {
+    margin-bottom: 2rem;
+}
+}
+
+.component-hero__description {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 370px;
+    color: rgb(var(--mid-1));
+}
+
+.home .component-hero__button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.component-hero__button-container {
+    width: 100%;
+    max-width: 340px;
+    display: grid;
+    grid-gap: 0.75rem;
+}
+
+.hs-btn-primary {
+    width: max-content;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Aller,Helvetica Neue,Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0 50px;
+    cursor: pointer;
+    border: 1.5px solid #ff9756;
+    outline: 0;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 0 #fff;
+    transform: scale(1.0);
+    transition: transform 0.5s, box-shadow 0.5s;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1rem;
+    background-color: #e96411;
+    color: rgb(var(--white));
+    font-size: 18px;
+}
+
+.hs-btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px #ccd9ff;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.home .component-hero__button-container .hs-btn-primary {
+    width: 100%;
+}
+
+.component-hero__button-container .hs-btn-primary {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+.component-hero__media-content.no-hero-image {
+    margin-bottom: 0;
+}
+}
+
+.component-image-container {
+    border-radius: 10px;
+}
+
+.component-hero__media-content.no-hero-image {
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 991px) {
+.component-hero__media-content {
+    max-width: 720px;
+}
+}
+
+@media (min-width: 768px) {
+.component-hero__media-content {
+    max-width: 360px;
+    margin-bottom: 0;
+}
+}
+
+@media (min-width: 768px) {
+  .component-hero__media-content.no-hero-image
+{
+    margin-bottom: 0 !important;
+  }
+}
+.component-hero__media-content {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 6.5rem;
+}
+
+.component-hero__video-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.component-image.lazyloaded
+{
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.media-insert-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.media-insert-container .media-insert.lazyloaded, .media-insert-container img.lazyloaded {
+    opacity: 1;
+}
+
+.media-insert-container .media-insert, .media-insert-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    object-position: center 0;
+}
+
+.lazyloaded, video.lazyloaded {
+    display: block;
+    opacity: 1;
+    transition: opacity .35s ease-in-out;
+}
+
+:root {
+    --font-body-family: "Aller", sans-serif !important;
+    --font-heading-family: "Aller", sans-serif;
+  }
+{% endstylesheet %}
+<div class="component-hero container-fluid transparent-nav wonka-hero scroll-trigger animate--slide-in"><div class="component-hero__content">
+        
+        <h1 class="component-hero__title">Ons advies<br>voor uw situatie</h1> 
+        <h2 class="component-hero__description">Beantwoord een paar vragen en weet precies wat geschikt is voor u, van het pakket tot het ideale leefsamen abonnement wat in uw situatie het beste uitkomt!</h2>
+            <div class="component-hero__button-container">
+                <a href="https://e8478e.myshopify.com/tools/perfect-product-finder/advies" class="hs-btn-primary">Bekijk ons advies</a>
+            </div>
+    </div> 
+    <div class="component-hero__media-content no-hero-image">
+        <div class="component-hero__video-container">
+            <a href="https://e8478e.myshopify.com/tools/perfect-product-finder/advies">
+                <div class="media-insert-container">
+                    <div class="component-image-container">
+                        <img height="638" width="718" data-src="https://cdn.shopify.com/s/files/1/1525/9812/files/Paullie-Home-Hero-Launch_Desktop_1077x.png?v=1705986502" class="component-image lazyloaded" style="aspect-ratio: 1.12539 / 1;" src="//shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=165 165w, //shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=360 360w, //shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=535 535w, //shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=750 750w, //shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=1070 1070w, //shop.leefsamen.nl/cdn/shop/files/Akkedeer-06026.jpg?v=1701955635&width=1500 1500w">
+                    </div>
+                </div>
+            </a>
+            </div> 
+        </div>
+    </div>
+    

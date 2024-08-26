@@ -1,0 +1,171 @@
+{% schema %}
+{
+  "name": "hero-foto",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Een veilig gevoel"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Direct hulp als er iets met u gebeurt. Behoud uw zelfstandigheid door nu kennis te maken de alarmering van Leefsamen."
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "main Image"
+    },
+    {
+      "type": "text",
+      "id": "button-url",
+      "label": "Button URL",
+      "default": "#standaard"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button text",
+      "default": "Start vandaag"
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero-foto",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+section.hero-foto {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.hero-foto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    padding: 0 20px;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px){
+    .hero-foto-container {
+        width: 95%;
+        gap: 40px;
+    }
+    
+    .hero-foto-content {
+      flex-direction: column !important;
+    }
+
+    a.button2 {
+      text-align: center;
+    }
+
+    section.hero-foto {
+      height: 650px;
+    }
+}
+
+.hero-foto-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.hero-foto-container p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    color: #e7e7e7;
+    line-height: 1.4;
+}
+
+.hero-foto-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+a.button1 {
+    background-color: #e76424;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    border: 1.5px solid #ff9756;
+    box-shadow: 0 10px 25px #131313;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+a.button1:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+a.button2 {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+  
+    .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+  
+{% endstylesheet %}
+
+<section class="hero-foto">
+        {% if section.settings.main_image %}
+          <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="Main Image" class="background-image">
+        {% endif %}
+        <div class="hero-overlay">
+        <div class="hero-foto-container scroll-trigger animate--slide-in">
+            <h1>{{ section.settings.title }}</h1>
+            <p>{{ section.settings.text }}</p>
+            <div class="hero-foto-content">
+                <a href="{{ section.settings.button-url }}" class="leefsamen-btn">{{ section.settings.button-text }}</a>
+            </div>
+        </div>
+    </div>
+    </section>
