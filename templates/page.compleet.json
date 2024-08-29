@@ -154,6 +154,20 @@
         "my_checkbox": true
       }
     },
+    "image_and_text_4g4KrV": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 32px;}"
+      ],
+      "settings": {
+        "title": "Onze toegangsmelder",
+        "text": "Deze toegangsmelder is eenvoudig te bevestigen met plakband op deuren of ramen en detecteert wanneer deze worden geopend of gesloten, wat ideaal is voor beveiligingsdoeleinden.",
+        "main_image": "shopify:\/\/shop_images\/6_eb338599-da7d-4c49-9dfe-2d44132815bf.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": true
+      }
+    },
     "usp_v3_1_g9Vnqw": {
       "type": "usp-v3-1",
       "blocks": {
@@ -370,6 +384,7 @@
     "image_and_text_awgETG",
     "image_and_text_acjmcT",
     "image_and_text_7M8yfY",
+    "image_and_text_4g4KrV",
     "usp_v3_1_g9Vnqw",
     "image_and_text_4MQKKB",
     "image_and_text_yNDywN",
