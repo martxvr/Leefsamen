@@ -143,6 +143,17 @@
         "my_checkbox": true
       }
     },
+    "image_and_text_7M8yfY": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "De Slimme Rookmelder",
+        "text": "Deze slimme rookmelder biedt bescherming door rook te detecteren en direct een luid alarm van 85 dB af te geven, terwijl het ook een waarschuwing stuurt naar ingestelde contacten, wat vooral handig is voor ouderen.",
+        "main_image": "shopify:\/\/shop_images\/5_6edebc18-66ab-49ec-8153-93f3ab32f523.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": true
+      }
+    },
     "usp_v3_1_g9Vnqw": {
       "type": "usp-v3-1",
       "blocks": {
@@ -358,6 +369,7 @@
     "image_and_text_9FcR4m",
     "image_and_text_awgETG",
     "image_and_text_acjmcT",
+    "image_and_text_7M8yfY",
     "usp_v3_1_g9Vnqw",
     "image_and_text_4MQKKB",
     "image_and_text_yNDywN",
