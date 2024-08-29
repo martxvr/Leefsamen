@@ -329,6 +329,7 @@
       "blocks": {
         "collapsible_row_bcVBJj": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Werkt de noodknop ook buiten het huis?",
             "icon": "question_mark",
