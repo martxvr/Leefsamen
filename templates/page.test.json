@@ -1,0 +1,556 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_foto_8mFUqK": {
+      "type": "hero-foto",
+      "settings": {
+        "title": "Een veilig gevoel",
+        "text": "Direct hulp als er iets met u gebeurt. Behoud uw zelfstandigheid door nu kennis te maken de alarmering van Leefsamen.",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_84.jpg",
+        "button-url": "#standaard",
+        "button-text": "Start vandaag"
+      }
+    },
+    "logo_list_UBEk7B": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_XJtpnH": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_2e4d3377-a5f0-42c7-9fa9-4141a23c7d46.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_XJtpnH"
+      ],
+      "custom_css": [
+        "h2 {font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Leefsamen wordt ondersteund door:",
+        "logo_width": "100px"
+      }
+    },
+    "image_and_text_B48ixJ": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "Veilig thuis blijven wonen",
+        "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Probeer het nu gratis uit. Wacht niet te lang, deelname is beperkt tot een maximaal aantal deelnemers.",
+        "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_9D3BpC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YK636k": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Hoe werkt Leefsamen?<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_xQbBm8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gebeurt er iets in uw woning? Bijvoorbeeld een inbraak, brand of noodsituatie? Dan ontvangen de door u geselecteerde contacten direct een alarm.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YK636k",
+        "text_xQbBm8"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "video_p9GJ8p": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/Leefsamen persoonlijke alarmering noodknop, valalarm en meer..mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/Header-Leefsamen-e1669210325839_1.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "stappen_ftVkdN": {
+      "type": "stappen",
+      "settings": {
+        "title": "De mobiele app",
+        "description": "Deze wordt verbonden met de sensoren in een woning. Hou een oogje in het zeil en\/of ontvang een alarm. Met de app kunnen meerdere woning tegelijk bediend worden.",
+        "title2": "Alarm",
+        "description2": "Er gebeurt iets in de woning. Bijvoorbeeld een noodsituatie, val of landurig geen beweging. De geselecteerde contacten ontvangen een alarm.",
+        "title3": "Opvolging",
+        "description3": "Alle gelecteerde contacten ontvangen tegelijk (2 groepen) het alarm en communiceren met elkaar wie het alarm opvolgt. Elk contact ziet de voortgang in de app.",
+        "button-url": "#standaard",
+        "button": "Meld u aan",
+        "button_visible": false
+      }
+    },
+    "usp_v3_qtgpm7": {
+      "type": "usp-v3",
+      "custom_css": [
+        "p {color: #000;}",
+        "@media screen and (max-width: 1000px) {h1 {font-size: 35px; }}"
+      ],
+      "settings": {
+        "button-url": "#standaard",
+        "button-text": "Start vandaag",
+        "button_visible": false
+      }
+    },
+    "review_1_E7xVrc": {
+      "type": "review-1",
+      "custom_css": [
+        "@media screen and (max-width: 1000px) {h1 {font-size: 35px; max-width: 80%; } p {font-size: 18px; max-width: 90%; }}"
+      ],
+      "settings": {
+        "title": "Ik raad het iedereen aan",
+        "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“",
+        "main_image": "shopify:\/\/shop_images\/Riet-1.png",
+        "name": "Riet"
+      }
+    },
+    "rich_text_Ad4BaJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8bMjPg": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Wat gebert er na uw aanmelding?<\/strong>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8bMjPg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_efh7kp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dAnqn3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Stap 1<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dAnqn3"
+      ],
+      "custom_css": [
+        "h2 {color: #e76424;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_and_text_kWDda6": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "We komen bij u op bezoek",
+        "text": "Na uw aanmelding bellen we u voor een afspraak. Onze adviseur komt bij u thuis alles uitleggen en bespreekt met u wat u nodig hebt. Vervolgens worden de alarmeringen die u nodig hebt geactiveerd en kunt u deze 3 maanden gratis uitproberen.",
+        "main_image": "shopify:\/\/shop_images\/Akkedeer-06106_Klein.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_HgRdkW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fYDNt9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Stap 2<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fYDNt9"
+      ],
+      "custom_css": [
+        "h2 {color: #e76424;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_and_text_TN4kjp": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "3 maanden gratis",
+        "text": "De adviseur zorgt ervoor dat alles werkt en uw contacten een alarm kunnen ontvangen. U probeert tijdens de proefperiode (3 maanden) de alarmeringen uit.",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_86.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_Jej4zM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ayE376": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Stap 3<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ayE376"
+      ],
+      "custom_css": [
+        "h2 {color: #e76424;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_and_text_wqAcjW": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "Na de proefperiode",
+        "text": "In de derde maand ontvangt u een brief van ons met de vraag of u met alle informatie om de dienst wel of niet voort te zetten. Bent u tevreden? Dan wordt u klant en is het abonnement maandelijks opzegbaar. Wilt u niet door? Dan zit u nergens aan vast. U kunt dan de sensoren behouden voor later gebruik of ze terugsturen, zodat wij ze opnieuw kunnen inzetten.",
+        "main_image": "shopify:\/\/shop_images\/Ontwerp_zonder_titel_5.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_Hg7HAG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bwDJAH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kosten na de proefperiode<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_H3JUXG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In de derde maand ontvangt u een brief van ons met de vraag of u met alle informatie om de dienst wel of niet voort te zetten.<br\/><br\/>Bent u tevreden? Dan wordt u klant en is het abonnement maandelijks opzegbaar. Wilt u niet door? Dan zit u nergens aan vast. U kunt dan de sensoren behouden voor later gebruik of ze terugsturen, zodat wij ze opnieuw kunnen inzetten.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bwDJAH",
+        "text_H3JUXG"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 700;}",
+        "p {color: #333333;}",
+        ".rich-text {background: radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90% );}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "abonnementen_capWgW": {
+      "type": "abonnementen",
+      "settings": {
+        "basis": "€8,50",
+        "plus": "€17,50",
+        "text": "U kunt na de proefperiode kiezen uit twee abonnementen. Het abonnement is voor de alarmering en toegang tot de mobiele app. Beide abonnementen zijn maandelijks opzegbaar."
+      }
+    },
+    "image_and_text_ajUyCy": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "Geen naasten in de buurt?",
+        "text": "Bespreek dit met onze adviseur. Als het nodig is, activeren we het Plus abonnement met onze servicecentrale. Is er een alarm, dan komt er een professionele hulpverlener naar de woning. Deze optie wordt niet vergoed door de gemeente.",
+        "main_image": "shopify:\/\/shop_images\/Fss_servicecentrale.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_aaUBG6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_V7ejMJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Meld u nu aan voor een gratis deelname<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_mxMGrC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Met dit formulier meldt u zich aan voor een kosteloze deelname aan Leefsamen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_V7ejMJ",
+        "text_mxMGrC"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1724924888b3131fb1": {
+      "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_47xPjN": {
+          "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "JLqz4zzPNyPVROPqYxM1bg",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#ebe9e9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Times New Roman"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_47xPjN"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "logo_list_HAKahq": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_e7EUCB": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_2e4d3377-a5f0-42c7-9fa9-4141a23c7d46.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_e7EUCB"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "title": "Uw deelname wordt mogelijk gemaakt door",
+        "logo_width": "160px"
+      }
+    },
+    "image_and_text_UnMTXE": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "Heeft u nog vragen?",
+        "text": "Wilt u voordat u deelneemt nog vragen stellen? Bel ons en start een gesprek met onze adviseur.",
+        "main_image": "shopify:\/\/shop_images\/Akkedeer-06765_Klein.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "collapsible_content_GULiEM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_By4cYR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Voor wie is Leefsamen geschikt?",
+            "icon": "none",
+            "row_content": "<p>Voor iedereen die zelfstandig thuis woont en de veiligheid in de woning zo goed als mogelijk wil maken<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UWErPA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan ik eerst een gesprek krijgen?",
+            "icon": "none",
+            "row_content": "<p>Ja, als u eerst een gesprek wil over wat voor u het beste werkt kun u bellen op 040 780 06 41. Als u vervolgens Leefsamen wilt uitproberen, kunt u dit<strong>3 maanden gratis<\/strong>doen. Niet goed = geld terug.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7wqXDF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wat gebeurt er na de proefperiode?",
+            "icon": "none",
+            "row_content": "<p>U ontvangt na 2 maanden een brief van ons. Kiest u ervoor om door te gaan? Dan geeft u dat door. Wilt u dit niet? Dan stuurt u de sensoren terug en ontvangt u de aanschaf van de sensoren terug.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yUPT3T": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wordt Leefsamen vergoed door mijn gemeente?",
+            "icon": "none",
+            "row_content": "<p>Dat is volledig afhankelijk van uw situtatie. Om dit na te gaan, belt u met de WMO afdeling van uw gemeente en vraag of 'alarmering' vergoed wordt.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cCedcX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wat is de opzegtermijn?",
+            "icon": "none",
+            "row_content": "<p>U zit nooit vast aan een lang contract, elk abonnement is met een termijn van een maand opzegbaar.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TGhcgP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ik heb niemand in mijn buurt wonen, wat nu?",
+            "icon": "none",
+            "row_content": "<p>Vraag dan ons Plus abonnement aan, zodat er altijd een professionele hulpverlener naar uw woning kan komen bij nood.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_By4cYR",
+        "collapsible_row_UWErPA",
+        "collapsible_row_7wqXDF",
+        "collapsible_row_yUPT3T",
+        "collapsible_row_cCedcX",
+        "collapsible_row_TGhcgP"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "caption": "bekijk onze actuele",
+        "heading": "<strong>Veelgestelde vragen<\/strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_foto_8mFUqK",
+    "logo_list_UBEk7B",
+    "image_and_text_B48ixJ",
+    "rich_text_9D3BpC",
+    "video_p9GJ8p",
+    "stappen_ftVkdN",
+    "usp_v3_qtgpm7",
+    "review_1_E7xVrc",
+    "rich_text_Ad4BaJ",
+    "rich_text_efh7kp",
+    "image_and_text_kWDda6",
+    "rich_text_HgRdkW",
+    "image_and_text_TN4kjp",
+    "rich_text_Jej4zM",
+    "image_and_text_wqAcjW",
+    "rich_text_Hg7HAG",
+    "abonnementen_capWgW",
+    "image_and_text_ajUyCy",
+    "rich_text_aaUBG6",
+    "1724924888b3131fb1",
+    "logo_list_HAKahq",
+    "image_and_text_UnMTXE",
+    "collapsible_content_GULiEM"
+  ]
+}
