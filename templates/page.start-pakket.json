@@ -149,12 +149,21 @@
             "review": "Veel leveranciers zijn niet goed bereikbaar, of alleen per mail. Bij ons belt u gewoon 040 780 0641 en wordt u goed geholpen door onze specialisten.",
             "main_image": "shopify:\/\/shop_images\/huis.png"
           }
+        },
+        "text_7yyYGV": {
+          "type": "text",
+          "settings": {
+            "title": "Ik raad het iedereen aan",
+            "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“",
+            "main_image": "shopify:\/\/shop_images\/Untitled_design_99.jpg"
+          }
         }
       },
       "block_order": [
         "text_qQJekB",
         "text_nBPU8R",
-        "text_gr6bQ6"
+        "text_gr6bQ6",
+        "text_7yyYGV"
       ],
       "custom_css": [
         "p {color: #000; font-size: 14px;}",
