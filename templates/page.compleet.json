@@ -23,14 +23,14 @@
         "heading_FKCm4H": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Wat is het Standaard Pakket?<\/strong>",
+            "heading": "<strong>Wat is het Compleet Pakket?<\/strong>",
             "heading_size": "h1"
           }
         },
         "text_H6KBdV": {
           "type": "text",
           "settings": {
-            "text": "<p>Het <strong>Standaard Pakket<\/strong> is voor mensen meer dan alleen de Noodknop willen en extra veiligheid willen d.m.v. Leefsamen sensoren.<\/p>"
+            "text": "<p>Het <strong>Compleet Pakket<\/strong> is voor mensen meer dan alleen de Noodknop willen en extra veiligheid willen d.m.v. Leefsamen sensoren.<\/p>"
           }
         },
         "button_BNji9w": {
@@ -71,8 +71,8 @@
         "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 30px; }}"
       ],
       "settings": {
-        "title": "Wat krijgt u in het Standaard Pakket?",
-        "text": "In het Standaard Pakket krijgt u 1x het volgende: Noodknop (Armband of Ketting), Centrale, Rookmelder, Deursensor & een Bewegingsensor.",
+        "title": "Wat krijgt u in het Compleet Pakket?",
+        "text": "In het Compleet Pakket krijgt u 1x het volgende: Noodknop (Armband of Ketting), Centrale, Rookmelder, Deursensor & een Bewegingsensor.",
         "main_image": "shopify:\/\/shop_images\/armband.jpg",
         "button_link": "#meld-u-nu-aan",
         "button_Text": "Start vandaag",
@@ -208,7 +208,7 @@
       ],
       "settings": {
         "button-url": "#standaard",
-        "heading-text": "De voordelen van het Standaard Pakket",
+        "heading-text": "De voordelen van het Compleet Pakket",
         "button-text": "Start vandaag",
         "button_visible": false
       }
@@ -223,7 +223,7 @@
       ],
       "settings": {
         "title": "Wat zijn de kosten?",
-        "text": "De knop kost eenmalig € 75. U krijgt eerst een gratis proefperiode waar u 3 maanden kosteloos gebruik kunt maken van het Standaard Pakket. Daarna kost het basis abonnement €8,50 p\/m.",
+        "text": "De knop kost eenmalig € 75. U krijgt eerst een gratis proefperiode waar u 3 maanden kosteloos gebruik kunt maken van het Compleet Pakket. Daarna kost het basis abonnement €8,50 p\/m.",
         "main_image": "shopify:\/\/shop_images\/Untitled_design_84.jpg",
         "button_link": "#meld-u-nu-aan",
         "button_Text": "Start vandaag",
@@ -239,7 +239,7 @@
       ],
       "settings": {
         "title": "Wat voor abonnementen zijn er?",
-        "text": "Bij het Standaard Pakket kunt u gebruik maken van het Basis abonnement en het Plus abonnement. Het Basis abonnement alarmeert alleen naar de naasten. Het Plus abonnement heeft de mogelijk om ook te alarmeren naar een servicecentrale.",
+        "text": "Bij het Compleet Pakket kunt u gebruik maken van het Basis abonnement en het Plus abonnement. Het Basis abonnement alarmeert alleen naar de naasten. Het Plus abonnement heeft de mogelijk om ook te alarmeren naar een servicecentrale.",
         "main_image": "shopify:\/\/shop_images\/Akkedeer-06026_Klein.jpg",
         "button_link": "#meld-u-nu-aan",
         "button_Text": "Start vandaag",
