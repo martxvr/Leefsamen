@@ -1,0 +1,367 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ArtNdf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FKCm4H": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Wat is het Standaard Pakket?<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_H6KBdV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Het <strong>Standaard Pakket<\/strong> is voor mensen meer dan alleen de Noodknop willen en extra veiligheid willen d.m.v. Leefsamen sensoren.<\/p>"
+          }
+        },
+        "button_BNji9w": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FKCm4H",
+        "text_H6KBdV",
+        "button_BNji9w"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_and_text_KG9Xwf": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 30px; }}"
+      ],
+      "settings": {
+        "title": "Wat krijgt u in het Standaard Pakket?",
+        "text": "In het Standaard Pakket krijgt u 1x het volgende: Noodknop (Armband of Ketting), Centrale, Rookmelder, Deursensor & een Bewegingsensor.",
+        "main_image": "shopify:\/\/shop_images\/armband.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "image_and_text_AQF3gz": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 0px; }}"
+      ],
+      "settings": {
+        "title": "De armband noodknop",
+        "text": "Dit is de armband noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_99.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "image_and_text_9FcR4m": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 0px; }}"
+      ],
+      "settings": {
+        "title": "De noodknop met ketting",
+        "text": "Dit is de ketting noodknop, hij is licht van gewicht en heeft een batterij levensduur van 2-3 jaar!",
+        "main_image": "shopify:\/\/shop_images\/httpslo.cafe.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "image_and_text_awgETG": {
+      "type": "image-and-text",
+      "custom_css": [
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 0px; }}",
+        "h1 {font-size: 35px;}",
+        " {background: radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90% );}"
+      ],
+      "settings": {
+        "title": "De bewegingsensor",
+        "text": "Deze sensor alarmeert zodra er na een bepaalde tijd geen beweging meer is in huis. De sensor kan ook gebruikt worden voor diefstal.",
+        "main_image": "shopify:\/\/shop_images\/4_f187a62c-3d96-417e-ad4a-9b2358cd2f74.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "image_and_text_acjmcT": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 0px; }}"
+      ],
+      "settings": {
+        "title": "Het Leefsamen kastje",
+        "text": "Dit kastje (ook wel centrale genoemd) zorgt ervoor dat alle sensoren van Leefsamen bereik hebben. De noodknop armband werkt alleen binnen & buiten rondom het huis in een straal van 30 tot 50 meter.",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_10.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": true
+      }
+    },
+    "usp_v3_1_g9Vnqw": {
+      "type": "usp-v3-1",
+      "blocks": {
+        "text_qQJekB": {
+          "type": "text",
+          "settings": {
+            "title": "Nood\/paniek",
+            "review": "Alarm bij een druk op een knop.",
+            "main_image": "shopify:\/\/shop_images\/nood_7dc5ce3a-db1c-4c73-a8f4-db7326679fdd.png"
+          }
+        },
+        "text_nBPU8R": {
+          "type": "text",
+          "settings": {
+            "title": "Veilig gevoel",
+            "review": "Altijd iemand die klaar staat om uw alarmen op te volgen.",
+            "main_image": "shopify:\/\/shop_images\/happy.png"
+          }
+        },
+        "text_gr6bQ6": {
+          "type": "text",
+          "settings": {
+            "title": "Noodknop bereik",
+            "review": "Bruikbaar binnen en rondom het huis.",
+            "main_image": "shopify:\/\/shop_images\/huis.png"
+          }
+        },
+        "text_m7bi7c": {
+          "type": "text",
+          "settings": {
+            "title": "Geen beweging",
+            "review": "Na een in te stellen periode geen beweging.",
+            "main_image": "shopify:\/\/shop_images\/geen-beweging_c210600b-0b8d-4a00-a612-18c831e50a95.png"
+          }
+        },
+        "text_egtbr7": {
+          "type": "text",
+          "settings": {
+            "title": "Inbraak",
+            "review": "In de nacht of als u thuis bent.",
+            "main_image": "shopify:\/\/shop_images\/inbraak_bd1819fd-0756-4f69-9de4-2f225ce3a969.png"
+          }
+        },
+        "text_WQpUrC": {
+          "type": "text",
+          "settings": {
+            "title": "Dwalen",
+            "review": "Bij beweging en\/of open deur.",
+            "main_image": "shopify:\/\/shop_images\/dwalen_9816c2ea-ece3-42a9-929f-96bc3ea455c3.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_qQJekB",
+        "text_nBPU8R",
+        "text_gr6bQ6",
+        "text_m7bi7c",
+        "text_egtbr7",
+        "text_WQpUrC"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "button-url": "#standaard",
+        "heading-text": "De voordelen van het Standaard Pakket",
+        "button-text": "Start vandaag",
+        "button_visible": false
+      }
+    },
+    "image_and_text_4MQKKB": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}",
+        "h2 {font-size: 15px;}",
+        " {background: radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90% );}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; padding-bottom: 30px; } .image-and-text-container {gap: 30px; }}"
+      ],
+      "settings": {
+        "title": "Wat zijn de kosten?",
+        "text": "De knop kost eenmalig € 75. U krijgt eerst een gratis proefperiode waar u 3 maanden kosteloos gebruik kunt maken van het Standaard Pakket. Daarna kost het basis abonnement €8,50 p\/m.",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_84.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "image_and_text_yNDywN": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 32px;}",
+        "h2 {font-size: 15px;}",
+        "@media screen and (max-width: 1000px) {{padding-top: 30px; } .image-and-text-container {gap: 40px; }}"
+      ],
+      "settings": {
+        "title": "Wat voor abonnementen zijn er?",
+        "text": "Bij het Standaard Pakket kunt u gebruik maken van het Basis abonnement en het Plus abonnement. Het Basis abonnement alarmeert alleen naar de naasten. Het Plus abonnement heeft de mogelijk om ook te alarmeren naar een servicecentrale.",
+        "main_image": "shopify:\/\/shop_images\/Akkedeer-06026_Klein.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
+    "rich_text_VXpbFD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_n3mCkn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Klik hier om het Standaard Pakket te krijgen",
+            "heading_size": "h1"
+          }
+        },
+        "text_Vg98QD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Heeft u nog vragen? Kijk dan hier onder naar de veelgestelde vragen of bel naar onze helpdesk 040 7800 641.<\/p>"
+          }
+        },
+        "button_bmrAN9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Pakket",
+            "button_link": "shopify:\/\/products\/persoonlijke-alarmering-start",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n3mCkn",
+        "text_Vg98QD",
+        "button_bmrAN9"
+      ],
+      "custom_css": [
+        "p {color: #000;}",
+        "h2 {font-weight: bold;}",
+        "a.leefsamen-btn {display: block !important;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_cXjziQ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bcVBJj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Werkt de noodknop ook buiten het huis?",
+            "icon": "question_mark",
+            "row_content": "<p>Ja, de noodknop werkt buiten rondom het huis zolang het binnen het bereik is van de centrale van Leefsamen die is aangesloten aan de router.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kG6PpQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hoelang gaan de batterijen mee?",
+            "icon": "question_mark",
+            "row_content": "<p>De levensduur van de batterijen zijn 2 tot 3 jaar.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gYYixe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Heb ik een installatie monteur nodig?",
+            "icon": "question_mark",
+            "row_content": "<p>Nee, u kunt het makkelijk zelf activeren zodra u de noodknop heeft thuis geleverd. Mocht u toch liever een monteur inschakelen kan dat, de installatie kosten zijn €75.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bcVBJj",
+        "collapsible_row_kG6PpQ",
+        "collapsible_row_gYYixe"
+      ],
+      "custom_css": [
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}",
+        "@media screen and (max-width: 1000px) {h2 {font-size: 30px; }}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Veelgestelde vragen<\/strong>",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_ArtNdf",
+    "image_and_text_KG9Xwf",
+    "image_and_text_AQF3gz",
+    "image_and_text_9FcR4m",
+    "image_and_text_awgETG",
+    "image_and_text_acjmcT",
+    "usp_v3_1_g9Vnqw",
+    "image_and_text_4MQKKB",
+    "image_and_text_yNDywN",
+    "rich_text_VXpbFD",
+    "collapsible_content_cXjziQ"
+  ]
+}
