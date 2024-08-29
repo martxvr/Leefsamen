@@ -108,6 +108,20 @@
         "my_checkbox": true
       }
     },
+    "image_and_text_awgETG": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 35px;}"
+      ],
+      "settings": {
+        "title": "De bewegingsensor",
+        "text": "Deze sensor alarmeert zodra er na een bepaalde tijd geen beweging meer is in huis. De sensor kan ook gebruikt worden voor diefstal.",
+        "main_image": "shopify:\/\/shop_images\/4_f187a62c-3d96-417e-ad4a-9b2358cd2f74.png",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
     "image_and_text_acjmcT": {
       "type": "image-and-text",
       "custom_css": [
@@ -332,6 +346,7 @@
     "image_and_text_KG9Xwf",
     "image_and_text_AQF3gz",
     "image_and_text_9FcR4m",
+    "image_and_text_awgETG",
     "image_and_text_acjmcT",
     "usp_v3_1_g9Vnqw",
     "image_and_text_4MQKKB",
