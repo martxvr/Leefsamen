@@ -90,7 +90,7 @@
         "main_image": "shopify:\/\/shop_images\/Untitled_design_99.jpg",
         "button_link": "#meld-u-nu-aan",
         "button_Text": "Start vandaag",
-        "my_checkbox": true
+        "my_checkbox": false
       }
     },
     "image_and_text_9FcR4m": {
@@ -105,13 +105,14 @@
         "main_image": "shopify:\/\/shop_images\/httpslo.cafe.png",
         "button_link": "#meld-u-nu-aan",
         "button_Text": "Start vandaag",
-        "my_checkbox": true
+        "my_checkbox": false
       }
     },
     "image_and_text_awgETG": {
       "type": "image-and-text",
       "custom_css": [
-        "h1 {font-size: 35px;}"
+        "h1 {font-size: 35px;}",
+        " {background: radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90% );}"
       ],
       "settings": {
         "title": "De bewegingsensor",
