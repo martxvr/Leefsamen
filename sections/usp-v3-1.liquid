@@ -48,7 +48,7 @@
         {
           "id": "main_image",
           "type": "image_picker",
-          "label": "Hoofdafbeelding"
+          "label": "Icoon"
         }
       ]
     }
@@ -174,7 +174,7 @@ p {
     <h1 class="scroll-trigger animate--slide-in">{{ section.settings.heading-text }}</h1>
     <div class="first3 scroll-trigger animate--slide-in">
         {% for block in section.blocks %}
-            {% if forloop.index <= 3 %}
+            {% if forloop.index <= 6 %}
                 <div class="usp-v3">
                     {% if block.settings.main_image %}
                         <img src="{{ block.settings.main_image | img_url: 'large' }}" alt="" height="50px" width="50px">
