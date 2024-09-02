@@ -72,7 +72,7 @@
         "@media screen and (max-width: 1000px) {{margin-top: 50px; }}"
       ],
       "settings": {
-        "title": "<span class=\"orange-gradient\">Gratis<\/span> 3 maanden deelname op proef",
+        "title": "Gratis 3 maanden deelname op proef",
         "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Vraag direct onze gratis brochure of een adviesgesprek aan.",
         "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
         "button_link": "#meld-u-nu-aan",
@@ -181,6 +181,21 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "image_and_text_nQfTcp": {
+      "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 32px;}",
+        "h2 {font-size: 14px;}"
+      ],
+      "settings": {
+        "title": "Wat gebeurt er na 3 maanden?",
+        "text": "Na de gratis proefperiode van 3 maanden besluit u of u Leefsamen wilt blijven gebruiken. U ontvangt dan een brief van ons met verdere instructies om een keuze te maken.",
+        "main_image": "shopify:\/\/shop_images\/Akkedeer-06320_Klein_0bbe568d-569e-43cd-8976-31f8157bf7bd.jpg",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
     }
   },
   "order": [
@@ -190,6 +205,7 @@
     "rich_text_TKgER6",
     "review_1_MzXnn8",
     "video_xwMjdT",
-    "1725279005e07cf224"
+    "1725279005e07cf224",
+    "image_and_text_nQfTcp"
   ]
 }
