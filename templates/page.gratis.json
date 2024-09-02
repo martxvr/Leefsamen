@@ -114,12 +114,46 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_TKgER6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QFKEni": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Een veilig gevoel<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_7iMx98": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stelt u zich voor: een val of een andere noodsituatie in huis.<\/p><p>Met Leefsamen hoeft u zich geen zorgen meer te maken. En uw naasten ook niet.<\/p><p>Slimme sensoren in uw huis sturen bij nood automatisch een alarm naar de mensen die u zelf hebt uitgekozen. Zo komt er altijd snel hulp als u het nodig heeft.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QFKEni",
+        "text_7iMx98"
+      ],
+      "custom_css": [
+        "p {color: #000}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "rich_text_zWEFyg",
     "image_and_text_eaVhk6",
-    "1725279005e07cf224"
+    "1725279005e07cf224",
+    "rich_text_TKgER6"
   ]
 }
