@@ -126,6 +126,20 @@
         "name": "Riet"
       }
     },
+    "video_xwMjdT": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1725279005e07cf224": {
       "type": "apps",
       "blocks": {
@@ -166,21 +180,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "videos_gqmhp3": {
-      "type": "videos",
-      "settings": {
-        "title": "Opnieuw koppelen sensor van Leefsamen",
-        "text": "Soms kan een sensor de verbinding verliezen met de centrale. De beheerder van Leefsamen krijgt dan een melding in de mobiele app van Leefsamen dat een sensor geen verbinding meer heeft. Om de verbinding met de sensor te herstellen, moet deze meestal opnieuw gekoppeld worden. Hieronder treft u de handleidingen op Youtube aan om de belangrijkste sensoren opnieuw te koppelen.",
-        "videotitle1": "Koppelen rookmelder",
-        "video1": "Put the embed url here..",
-        "videotitle2": "Koppelen rookmelder",
-        "video2": "Put the embed url here..",
-        "videotitle3": "Koppelen rookmelder",
-        "video3": "Put the embed url here..",
-        "videotitle4": "Koppelen rookmelder",
-        "video4": "Put the embed url here.."
-      }
     }
   },
   "order": [
@@ -189,7 +188,7 @@
     "image_and_text_eaVhk6",
     "rich_text_TKgER6",
     "review_1_MzXnn8",
-    "1725279005e07cf224",
-    "videos_gqmhp3"
+    "video_xwMjdT",
+    "1725279005e07cf224"
   ]
 }
