@@ -9,6 +9,16 @@
 */
 {
   "sections": {
+    "hero_foto_UCbPdR": {
+      "type": "hero-foto",
+      "settings": {
+        "title": "Gratis uitproberen",
+        "text": "Ervaar rust en een veilig gevoel",
+        "main_image": "shopify:\/\/shop_images\/Untitled_design_84.jpg",
+        "button-url": "#standaard",
+        "button-text": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -236,6 +246,9 @@
       "block_order": [
         "hulk_form_builder_form_block_Hxqaxx"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "include_margins": true
       }
@@ -363,6 +376,7 @@
     }
   },
   "order": [
+    "hero_foto_UCbPdR",
     "main",
     "rich_text_zWEFyg",
     "rich_text_QmFmGB",
