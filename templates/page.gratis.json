@@ -64,6 +64,39 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_QmFmGB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LHcxfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Uniek aanbod<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hDeHK6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Omdat we ervan overtuigd zijn dat Leefsamen heel veel mensen een gerust en veilig gevoel kan bieden, willen we u een eenmalig en uniek aanbod doen: u mag <span style=\"text-decoration:underline\"><strong>Leefsamen gratis 3 maanden lang uitproberen<\/strong><\/span><em><strong>.<\/strong><\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LHcxfL",
+        "text_hDeHK6"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_and_text_eaVhk6": {
       "type": "image-and-text",
       "custom_css": [
@@ -226,6 +259,7 @@
   "order": [
     "main",
     "rich_text_zWEFyg",
+    "rich_text_QmFmGB",
     "image_and_text_eaVhk6",
     "rich_text_TKgER6",
     "review_1_MzXnn8",
