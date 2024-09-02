@@ -105,7 +105,7 @@
         "@media screen and (max-width: 1000px) {{margin-top: 50px; }}"
       ],
       "settings": {
-        "title": "Gratis 3 maanden deelname op proef",
+        "title": "<span class=\"orange-gradient\">Gratis<\/span> 3 maanden deelname op proef",
         "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Vraag direct onze gratis brochure of een adviesgesprek aan.",
         "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
         "button_link": "#meld-u-nu-aan",
