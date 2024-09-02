@@ -68,7 +68,8 @@
       "type": "image-and-text",
       "custom_css": [
         "h1 {font-size: 32px;}",
-        "h2 {font-size: 14px;}"
+        "h2 {font-size: 14px;}",
+        "@media screen and (max-width: 1000px) {{margin-top: 50px; }}"
       ],
       "settings": {
         "title": "<span class=\"orange-gradient\">Gratis<\/span> 3 maanden deelname op proef",
