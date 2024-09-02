@@ -51,6 +51,7 @@
         "text_PhG4Vy",
         "button_wTi4rg"
       ],
+      "disabled": true,
       "custom_css": [
         "P {color: #000;}"
       ],
@@ -60,7 +61,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "image_and_text_eaVhk6": {
