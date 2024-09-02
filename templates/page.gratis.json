@@ -17,53 +17,55 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_G8mHpD": {
-      "type": "image-with-text",
+    "rich_text_zWEFyg": {
+      "type": "rich-text",
       "blocks": {
-        "heading_QLHDMb": {
+        "heading_p6Gprj": {
           "type": "heading",
           "settings": {
-            "heading": "Over Leefsamen",
-            "heading_size": "h2"
+            "heading": "<strong>Gratis uitproberen<\/strong>",
+            "heading_size": "h1"
           }
         },
-        "text_V3Tbc6": {
+        "text_PhG4Vy": {
           "type": "text",
           "settings": {
-            "text": "<p>Leefsamen is een alarmeringsdienst die in 2015 is opgezet in samenwerking met<br\/>Veiligheidsregio's, gemeenten en thuiszorgorganisaties.<\/p><p>Ons doel is om zelfstandig thuiswonende ouderen<br\/>en hun naasten te helpen veilig thuis te wonen, en daarmee een eventuele<br\/>zorgvraag zo lang mogelijk uit te stellen.<\/p><p>We zorgen voor een veilige woning en activeren het netwerk van naasten om een<br\/>oogje in het zeil te houden; dit noemen we samenredzaamheid. Indien<br\/>noodzakelijk, kan professionele hulp ingeschakeld worden. Dit gebeurt via een<br\/>netwerk van regionale beveiligingsbedrijven die, indien nodig, een professional<br\/>naar de woning sturen. <\/p><p>We werken nauw samen met buurtinitiatieven, gemeenten, woningcorporaties,<br\/>vastgoedbeheerders, veiligheidsregio's en verzekeraars, en bieden deze<br\/>organisaties metadata die inzicht geven in de lokale veiligheids- en<br\/>zorgbehoeften. <\/p><p>Onze belangrijkste missie is het veilig thuis<br\/>wonen van ouderen te ondersteunen. Dit doen we dagelijks met veel enthousiasme<br\/>door een team dat diepgaand begrijpt wat ouderen en hun naasten dagelijks<br\/>bezighoudt.<\/p><p>Leefsamen heeft diverse prijzen gewonnen,<br\/>waaronder de Gouden Rookmelder en de European Fire and Safety Award in<br\/>samenwerking met Veiligheidsregio's, de DITSS Veiligheid op maat prijs van<br\/>gemeenten, en de Innovatiechallenge van Woonzorg Nederland, Habion en<br\/>Wooncompagnie in samenwerking met woningcorporaties.\"<\/p>",
-            "text_style": "body"
+            "text": "<p>Ervaar rust en een veilig gevoel<\/p>"
+          }
+        },
+        "button_wTi4rg": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading_QLHDMb",
-        "text_V3Tbc6"
+        "heading_p6Gprj",
+        "text_PhG4Vy",
+        "button_wTi4rg"
       ],
       "custom_css": [
-        "img:hover {height: 105%; transition: height 1s ease;}",
-        "img {transition: height 1s ease;}",
-        "h2 {font-size: 50px; font-weight: 700;}",
-        "p {color: #000;}"
+        "P {color: #000;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Leefsamen_Gouden_Rookmelder_2019.jpg",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "image_with_text_G8mHpD"
+    "rich_text_zWEFyg"
   ]
 }
