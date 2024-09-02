@@ -63,6 +63,17 @@
         "padding_bottom": 52
       }
     },
+    "image_and_text_eaVhk6": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "Veilig thuis blijven wonen",
+        "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Vraag direct onze gratis brochure of een adviesgesprek aan.",
+        "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
+        "button_link": "#meld-u-nu-aan",
+        "button_Text": "Start vandaag",
+        "my_checkbox": false
+      }
+    },
     "1725279005e07cf224": {
       "type": "apps",
       "blocks": {
@@ -108,6 +119,7 @@
   "order": [
     "main",
     "rich_text_zWEFyg",
+    "image_and_text_eaVhk6",
     "1725279005e07cf224"
   ]
 }
