@@ -71,7 +71,7 @@
         "h2 {font-size: 14px;}"
       ],
       "settings": {
-        "title": "<span class=\"orange-gradient\">Gratis<\/span> 3 maanden deelname op proef",
+        "title": "Gratis 3 maanden deelname op proef",
         "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Vraag direct onze gratis brochure of een adviesgesprek aan.",
         "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
         "button_link": "#meld-u-nu-aan",
@@ -166,6 +166,21 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "videos_gqmhp3": {
+      "type": "videos",
+      "settings": {
+        "title": "Opnieuw koppelen sensor van Leefsamen",
+        "text": "Soms kan een sensor de verbinding verliezen met de centrale. De beheerder van Leefsamen krijgt dan een melding in de mobiele app van Leefsamen dat een sensor geen verbinding meer heeft. Om de verbinding met de sensor te herstellen, moet deze meestal opnieuw gekoppeld worden. Hieronder treft u de handleidingen op Youtube aan om de belangrijkste sensoren opnieuw te koppelen.",
+        "videotitle1": "Koppelen rookmelder",
+        "video1": "Put the embed url here..",
+        "videotitle2": "Koppelen rookmelder",
+        "video2": "Put the embed url here..",
+        "videotitle3": "Koppelen rookmelder",
+        "video3": "Put the embed url here..",
+        "videotitle4": "Koppelen rookmelder",
+        "video4": "Put the embed url here.."
+      }
     }
   },
   "order": [
@@ -174,6 +189,7 @@
     "image_and_text_eaVhk6",
     "rich_text_TKgER6",
     "review_1_MzXnn8",
-    "1725279005e07cf224"
+    "1725279005e07cf224",
+    "videos_gqmhp3"
   ]
 }
