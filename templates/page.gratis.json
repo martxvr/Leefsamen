@@ -150,6 +150,11 @@
     },
     "review_1_MzXnn8": {
       "type": "review-1",
+      "custom_css": [
+        "h1 {text-align: center;}",
+        "p {font-size: 20px;}",
+        "@media screen and (max-width: 1000px) {h1 {font-size: 35px; max-width: 80%; } p {font-size: 18px; max-width: 90%; } .review-1-content p {width: 0px; padding: 0px; } .review-1-content {gap: 10px; }}"
+      ],
       "settings": {
         "title": "Ik raad het iedereen aan",
         "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“",
