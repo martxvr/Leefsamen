@@ -65,8 +65,12 @@
     },
     "image_and_text_eaVhk6": {
       "type": "image-and-text",
+      "custom_css": [
+        "h1 {font-size: 32px;}",
+        "h2 {font-size: 14px;}"
+      ],
       "settings": {
-        "title": "Veilig thuis blijven wonen",
+        "title": "<span class=\"orange-gradient\">Gratis<\/span> 3 maanden deelname op proef",
         "text": "Zo lang mogelijk zelfstandig wonen betekent in de eerste plaats dat u veilig bent. Met Leefsamen bent u daar van verzekerd. En u naasten ook, omdat ze direct hulp kunnen bieden als het nodig is. Vraag direct onze gratis brochure of een adviesgesprek aan.",
         "main_image": "shopify:\/\/shop_images\/h9efcJdR9d4lfbUHkrWfwjmLY.webp",
         "button_link": "#meld-u-nu-aan",
@@ -105,6 +109,20 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "review_1_MzXnn8": {
+      "type": "review-1",
+      "custom_css": [
+        "h1 {text-align: center;}",
+        "p {font-size: 20px;}",
+        "@media screen and (max-width: 1000px) {h1 {font-size: 35px; max-width: 80%; } p {font-size: 18px; max-width: 90%; } .review-1-content p {width: 0px; padding: 0px; } .review-1-content {gap: 10px; }}"
+      ],
+      "settings": {
+        "title": "Ik raad het iedereen aan",
+        "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“",
+        "main_image": "shopify:\/\/shop_images\/Riet-1_1.png",
+        "name": "Riet"
       }
     },
     "1725279005e07cf224": {
@@ -147,20 +165,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "review_1_MzXnn8": {
-      "type": "review-1",
-      "custom_css": [
-        "h1 {text-align: center;}",
-        "p {font-size: 20px;}",
-        "@media screen and (max-width: 1000px) {h1 {font-size: 35px; max-width: 80%; } p {font-size: 18px; max-width: 90%; } .review-1-content p {width: 0px; padding: 0px; } .review-1-content {gap: 10px; }}"
-      ],
-      "settings": {
-        "title": "Ik raad het iedereen aan",
-        "review": "“Sinds ik Leefsamen heb, voel ik me echt veiliger thuis. Ik weet dat mijn familie snel op de hoogte is als er hier iets mis gaat, dat zou voor elke oudere mogelijk moeten zijn.“",
-        "main_image": "shopify:\/\/shop_images\/Riet-1_1.png",
-        "name": "Riet"
-      }
     }
   },
   "order": [
@@ -168,7 +172,7 @@
     "rich_text_zWEFyg",
     "image_and_text_eaVhk6",
     "rich_text_TKgER6",
-    "1725279005e07cf224",
-    "review_1_MzXnn8"
+    "review_1_MzXnn8",
+    "1725279005e07cf224"
   ]
 }
