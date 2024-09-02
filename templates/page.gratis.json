@@ -254,6 +254,41 @@
         "button_Text": "Start vandaag",
         "my_checkbox": false
       }
+    },
+    "rich_text_CwaGVi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gBYybq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Bel ons gerust als u vragen heeft<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_arX98e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Voor antwoord op uw vragen kunt u bellen met onze klantenservice. Het telefoonnummer is : 040 7800 641<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gBYybq",
+        "text_arX98e"
+      ],
+      "custom_css": [
+        "p {color: #000;}",
+        "h2 {font-size: 50px;}",
+        "@media screen and (max-width: 1000px) {h2 {font-size: 32px !important; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -266,6 +301,7 @@
     "video_xwMjdT",
     "rich_text_he9xJD",
     "1725279005e07cf224",
-    "image_and_text_nQfTcp"
+    "image_and_text_nQfTcp",
+    "rich_text_CwaGVi"
   ]
 }
