@@ -1,0 +1,598 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_G8mHpD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QLHDMb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Over Leefsamen",
+            "heading_size": "h2"
+          }
+        },
+        "text_V3Tbc6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Leefsamen is een alarmeringsdienst die in 2015 is opgezet in samenwerking met<br\/>Veiligheidsregio's, gemeenten en thuiszorgorganisaties.<\/p><p>Ons doel is om zelfstandig thuiswonende ouderen<br\/>en hun naasten te helpen veilig thuis te wonen, en daarmee een eventuele<br\/>zorgvraag zo lang mogelijk uit te stellen.<\/p><p>We zorgen voor een veilige woning en activeren het netwerk van naasten om een<br\/>oogje in het zeil te houden; dit noemen we samenredzaamheid. Indien<br\/>noodzakelijk, kan professionele hulp ingeschakeld worden. Dit gebeurt via een<br\/>netwerk van regionale beveiligingsbedrijven die, indien nodig, een professional<br\/>naar de woning sturen. <\/p><p>We werken nauw samen met buurtinitiatieven, gemeenten, woningcorporaties,<br\/>vastgoedbeheerders, veiligheidsregio's en verzekeraars, en bieden deze<br\/>organisaties metadata die inzicht geven in de lokale veiligheids- en<br\/>zorgbehoeften. <\/p><p>Onze belangrijkste missie is het veilig thuis<br\/>wonen van ouderen te ondersteunen. Dit doen we dagelijks met veel enthousiasme<br\/>door een team dat diepgaand begrijpt wat ouderen en hun naasten dagelijks<br\/>bezighoudt.<\/p><p>Leefsamen heeft diverse prijzen gewonnen,<br\/>waaronder de Gouden Rookmelder en de European Fire and Safety Award in<br\/>samenwerking met Veiligheidsregio's, de DITSS Veiligheid op maat prijs van<br\/>gemeenten, en de Innovatiechallenge van Woonzorg Nederland, Habion en<br\/>Wooncompagnie in samenwerking met woningcorporaties.\"<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QLHDMb",
+        "text_V3Tbc6"
+      ],
+      "custom_css": [
+        "img:hover {height: 105%; transition: height 1s ease;}",
+        "img {transition: height 1s ease;}",
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Leefsamen_Gouden_Rookmelder_2019.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "awards_zpJJ3z": {
+      "type": "awards",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "rich_text_JBWiEN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HwcTGk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Noaberschap - samenredzaamheid<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_jtjBnG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bekijk hieronder een filmpje over de manier waarop wij <strong>samenredzaamheid <\/strong>organiseren in de Achterhoek, waar het begrip '<strong>noaberschap<\/strong>' precies is wat we met Leefsamen nastreven. Dat mensen binnen gemeenschappen elkaar <strong>helpen<\/strong>, <strong>omkijken naar elkaar. <\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HwcTGk",
+        "text_jtjBnG"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "video_WCgHUR": {
+      "type": "video",
+      "custom_css": [
+        "h2 {text-align: center; font-weight: 700;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/youtu.be\/9ZTrFAxY6Bo?si=PD6viCR_VrP9vOuv",
+        "cover_image": "shopify:\/\/shop_images\/Leefsamen_Achterhoek.png",
+        "description": "Leefsamen Achterhoek alarmering langer veilig thuis",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_nnGwki": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_th7NFB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Het Leefsamen team<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_KrdcaW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bij Leefsamen staat een <strong>goede service<\/strong> centraal. We werken met goed getrainde, nette monteurs die bij de mensen thuis op bezoek komen. Ze kunnen <strong>adviseren en monteren<\/strong>. <\/p><p>Onze <strong>Raad van Advies<\/strong> wordt vertegenwoordigd door <strong>experts <\/strong>op het gebied van <strong>slimme technologie<\/strong> en (WMO) <strong>beleid <\/strong>vanuit onze overheid om ouderen<strong> veilig thuis<\/strong> te laten wonen. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_th7NFB",
+        "text_KrdcaW"
+      ],
+      "custom_css": [
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "95484f2d-246e-4a78-82a1-c1c924f1862f": {
+      "type": "team",
+      "blocks": {
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-1": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bas_rond.png",
+            "name": "Bas van der Kolk",
+            "role": "Directeur"
+          }
+        },
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-2": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dave_rond.png",
+            "name": "Dave Hellings",
+            "role": "Directeur"
+          }
+        },
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-4": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Martijn-Vervoort.jpg",
+            "name": "Martijn Vervoort",
+            "role": "Online Marketeer"
+          }
+        },
+        "6ddbfdd9-502d-4247-aef3-40e8811c9db9": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marleen-Slagboom.jpg",
+            "name": "Marleen Slagboom",
+            "role": "Office Manager"
+          }
+        },
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-3": {
+          "type": "team_member",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cagtay-Esilcimen-1.jpg",
+            "name": "Cagtay Esilcimen",
+            "role": "Helpdesk Medewerker"
+          }
+        },
+        "ff173905-d2b0-4cdc-8d2b-0291cb63a707": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Martijn-rond.png",
+            "name": "Martijn Sips",
+            "role": "Data Analist"
+          }
+        },
+        "9d006b76-a58a-4e03-a522-e250b2464b41": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jules-rond.png",
+            "name": "Jules Hellings",
+            "role": "Installateur"
+          }
+        },
+        "90df0c3c-39c1-4925-a23a-d88f0deab0c8": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mahno-rond.jpg",
+            "name": "Mahno v.d. Kimmenade",
+            "role": "Installateur"
+          }
+        },
+        "62a60b0c-740b-4335-b852-8bceb652f691": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ron-Hoskens-rond.jpg",
+            "name": "Ron Hoskens",
+            "role": "Installateur"
+          }
+        },
+        "9e24c3a3-cb96-4c58-bce1-07bea8da6694": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Erik_rond.png",
+            "name": "Erik Diks",
+            "role": "Developer"
+          }
+        },
+        "a84afba9-eb8b-474e-8e92-77aff279029f": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paul_rond.png",
+            "name": "Paul Sanders",
+            "role": "Developer"
+          }
+        },
+        "100989aa-d9af-4ea0-bb43-fe9b9a42a1f7": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marcel-Louwers.jpg",
+            "name": "Marcel Louwers",
+            "role": "Installateur"
+          }
+        },
+        "def0b134-c013-42d4-9837-2704efa6d3c6": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cees-Links-web.png",
+            "name": "Cees Links",
+            "role": "Raad van Advies"
+          }
+        },
+        "31bc55a8-bc3f-4004-bee6-e1d929d484e1": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bob-Hopstaken-web.png",
+            "name": "Bob Hopstaken",
+            "role": "Raad van Advies"
+          }
+        },
+        "d9a790ae-60a4-40ce-be59-0439b8670ac3": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Annette-Stekelenburg_jpeg.jpg",
+            "name": "Annette Stekelenburg",
+            "role": "Raad van Advies"
+          }
+        },
+        "be3a003e-aac4-4693-ae65-2599e0660603": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Obbink-rond.png",
+            "name": "Obbink Service",
+            "role": "Installatie partner"
+          }
+        }
+      },
+      "block_order": [
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-1",
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-2",
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-4",
+        "6ddbfdd9-502d-4247-aef3-40e8811c9db9",
+        "template--20280316690765__95484f2d-246e-4a78-82a1-c1c924f1862f-team_member-3",
+        "ff173905-d2b0-4cdc-8d2b-0291cb63a707",
+        "9d006b76-a58a-4e03-a522-e250b2464b41",
+        "90df0c3c-39c1-4925-a23a-d88f0deab0c8",
+        "62a60b0c-740b-4335-b852-8bceb652f691",
+        "9e24c3a3-cb96-4c58-bce1-07bea8da6694",
+        "a84afba9-eb8b-474e-8e92-77aff279029f",
+        "100989aa-d9af-4ea0-bb43-fe9b9a42a1f7",
+        "def0b134-c013-42d4-9837-2704efa6d3c6",
+        "31bc55a8-bc3f-4004-bee6-e1d929d484e1",
+        "d9a790ae-60a4-40ce-be59-0439b8670ac3",
+        "be3a003e-aac4-4693-ae65-2599e0660603"
+      ],
+      "custom_css": [
+        "p {text-align: center;}",
+        "h2 {font-weight: 700;}",
+        ".team-member:hover {transform: scale(1.05); transition: transform 0.5s ease; background-color: #fff;}",
+        ".team-member {transition: transform 0.5s ease; background-color: #fff;}"
+      ],
+      "settings": {
+        "title": "",
+        "team_member_width": "150px"
+      }
+    },
+    "collapsible_content_cXjziQ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bcVBJj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Adviseur \/ monteur",
+            "icon": "chat_bubble",
+            "row_content": "<p>Wij zijn continu op zoek naar zzp'ers of installatiebedrijven die in diverse regio's de alarmering bij bewoners kunnen adviseren en installeren. Heb je interesse om in jouw regio aan de slag te gaan? Stuur een mailtje met je contactgegevens naar helpdesk@leefsamen.nl en we nemen contact met je op.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kG6PpQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Medewerker klantenservice",
+            "icon": "chat_bubble",
+            "row_content": "<p>Bijbaan voor studenten of senioren die 1 of 2 dagen in de week onze helpdesk kunnen bemensen. Je neemt de telefoon op en beantwoord vragen van klanten. Interesse? Stuur je motivatie en cv naar: bas@akkedeer.com <\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bcVBJj",
+        "collapsible_row_kG6PpQ"
+      ],
+      "custom_css": [
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "caption": "Bekijk onze actuele",
+        "heading": "<strong>Vacatures<\/strong>",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "298b9f5a-a56b-4c60-b6d8-d2a99c3a6066": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "iframe {display: block; margin: 0 auto;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"map-container\">\n  <iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2486.6302011620833!2d5.520179315767738!3d51.44658487962516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d978db46f331%3A0x2601c29ea290e36c!2sAkkedeer!5e0!3m2!1snl!2snl!4v1677491630254!5m2!1snl!2snl\" width=\"1200px\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_ANacgY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3jeR8U": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Onze partners voor professionele hulpverlening<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_6GrGfb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Onze ervaring is dat de thuiszorg steeds minder capaciteit heeft om een wijkverpleegkundige naar de woning te sturen bij een alarm, denk bijvoorbeeld aan personenalarmering. Daarom hebben wij in samenwerking met een groot aantal regionale partners de 'servicecentale' ontwikkeld. <\/p><p>Bij afname van ons Plus Abonnement, zijn onze klanten verzekerd van 24x7 opvolging door een professionele hulpverlener bij een alarm. <\/p><p>Opvolging betekent dat er iemand naar de woning komt om hulp te bieden. Voor die opvolging werken we samen met geselecteerde bedrijven uit uw eigen regio. Bekijk hieronder met welke partners we samenwerken in uw regio.<\/p><p>Na uw aanmelding voor het Plus abonnement neemt de desbetreffende partner telefonisch contact met u op om kennis te maken en een sleutelplan door te nemen. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3jeR8U",
+        "text_6GrGfb"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_Qm9wxH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9dVYw3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/egdom.png",
+            "title": "Van Egdom security",
+            "text": "<p>In de Regio Tilburg-Eindhoven werken we samen met Van Egdom Security. Van Egdom Security B.V. te Eindhoven levert kwaliteit in een duurzame samenwerking voor nagenoeg alle beveiliging en bewaking gerelateerde onderwerpen. Zij werken met gediplomeerd, gecertificeerd en ervaren beveiligingspersoneel. De gemotiveerde medewerkers van Van Egdom volgen regelmatig aanvullende opleidingen en training.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_x4RzqC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/avdd.jpg",
+            "title": "AVDD beveiliging",
+            "text": "<p>In de Regio Gelderland werken we samen met AVDD beveiliging.<br\/>AVDD Beveiliging is een familiebedrijf en onderdeel van The Wiendels Group (TWG). AVDD is een dienstverlenende organisatie en is daar volledig op ingericht. AVDD is 24\/7 beschikbaar om alarmeringen voor u op te volgen. AVDD Beveiliging heeft alles in eigen beheer.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UiEA67": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FSS-Security.png",
+            "title": "FSS security",
+            "text": "<p>In de regio Den Bosch staam de beveiligers van FSS Security 24\/7 voor u paraat. Elk met zijn of haar eigen kracht, zijn of haar eigen specialisme. Representativiteit, vriendelijkheid, flexibiliteit, proactief handelen en gastheerschap staan bij alle beveiligers centraal. FSS gaat een partnerschap met u aan, waardoor ze u altijd, ook met ad hoc aanvragen, van dienst kunnen zijn. FSS heeft alles in huis om u adequaat en professioneel van het juiste beveiligingsadvies en de juiste service te voorzien. Alles op basis van vertrouwen en partnerschap.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9dVYw3",
+        "column_x4RzqC",
+        "column_UiEA67"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_gePEDM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mNbg6i": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Correct_Logo_Website-216x300-2.png",
+            "title": "Correct beveiliging",
+            "text": "<p>Groep uit Wijk en Aalburg. Correct Groep is een betrokken en proactieve partner op het gebied van facilitaire diensten. Samen met Akkedeer, het bedrijf achter Leefsamen, heeft Correct Groep de servicecentrale ontwikkeld en zorgt Correct ervoor dat de regionale partners de protocollen van Leefsamen alarmeringen goed opvolgen.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9iizML": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RegioControl-Logo-1.jpg",
+            "title": "Regio control",
+            "text": "<p>In de regio Noord Holland werken we samen met Regio Control. Dit beveiligingsbedrijf maakt gebruik van de nieuwste methoden om veiligheid te kunnen monitoren en sneller te kunnen schakelen. Al die technieken functioneren niet zonder daadkrachtige mensen. En dat is iets wat blijft. De medewerkers van Regio Control zijn degenen die uw veiligheid en die van uw wereld garanderen. Zij interpreteren meldingen en nemen de juiste beslissingen. Zij staan klaar wanneer u ze het hardst nodig hebt. En daar werken we elke dag weer keihard voor. Met de juiste mix van mens en techniek staat Regio Control garant voor u en de toekomst.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RBA6xr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pax-Security.png",
+            "title": "PAX security",
+            "text": "<p>In de Regio Groningen-Oost werken we samen met Pax Security.De beveiligers van PAX Security hebben een speciaal trainingsprogramma gevolgd om in elke situatie zorgvuldig te kunnen handelen. Zij zijn tevens in het bezit van een EHBO diploma en ze hebben een BHV (Bedrijfshulpverlening) cursus afgerond. Daarnaast zijn zij breed inzetbaar en weten hoe zij met bepaalde situaties moeten omgaan. De beveiligers zijn vooral gericht op service en gastheerschap, maar zijn zich wel bewust van de risico’s en de mogelijke incidenten die zich kunnen voordoen bij ouderen thuis.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mNbg6i",
+        "column_9iizML",
+        "column_RBA6xr"
+      ],
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_VU6cpt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6UFQ7E": {
+          "type": "heading",
+          "settings": {
+            "heading": "Duurzaam",
+            "heading_size": "h1"
+          }
+        },
+        "text_zm6yDE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In onze samenwerking met gemeenten, zorgen we ervoor dat we onze sensoren zo duurzaam mogelijk inzetten. Daarom is ons beleid om sensoren die retour komen te refurbishen. Oftewel; helemaal in orde maken en opnieuw in te zetten. Daarmee belasten we het milieu zo min mogelijk en kunnen we de kosten van de sensoren zo laag mogelijk houden.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_cVJLXy": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6UFQ7E",
+        "text_zm6yDE",
+        "button_cVJLXy"
+      ],
+      "custom_css": [
+        "h2 {font-size: 50px; font-weight: 700;}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Duurzaam_Leefsamen.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_G8mHpD",
+    "awards_zpJJ3z",
+    "rich_text_JBWiEN",
+    "video_WCgHUR",
+    "rich_text_nnGwki",
+    "95484f2d-246e-4a78-82a1-c1c924f1862f",
+    "collapsible_content_cXjziQ",
+    "298b9f5a-a56b-4c60-b6d8-d2a99c3a6066",
+    "rich_text_ANacgY",
+    "multicolumn_Qm9wxH",
+    "multicolumn_gePEDM",
+    "image_with_text_VU6cpt"
+  ]
+}
