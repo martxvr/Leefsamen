@@ -424,7 +424,8 @@
         "logo_image_e7EUCB"
       ],
       "custom_css": [
-        "h2 {font-weight: bold;}"
+        "h2 {font-weight: bold;}",
+        "@media screen and (max-width: 1000px) {{padding: 10px; }}"
       ],
       "settings": {
         "title": "Uw deelname wordt mogelijk gemaakt door",
