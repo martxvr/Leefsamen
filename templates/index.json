@@ -170,6 +170,7 @@
         "logo_image_epxz6H",
         "logo_image_ByhaEn"
       ],
+      "disabled": true,
       "custom_css": [
         "img:hover {transform: scale(1.1); transition: transform 0.5s ease; background-color: #fff;}",
         "img {transition: transform 0.5s ease; background-color: #fff;}",
@@ -297,6 +298,7 @@
     },
     "image_and_text_7PXMbR": {
       "type": "image-and-text",
+      "disabled": true,
       "settings": {
         "title": "Meer dan een knop",
         "text": "Leefsamen is meer dan alleen een alarmknop.  We dekken alle belangrijke risico's die kunnen voorkomen, zoals vallen, noodsituaties, inbraak en brand. Daarmee woont u écht veilig en geeft het u en uw naasten rust. En dat voor een eerlijke, betaalbare prijs.",
@@ -308,6 +310,7 @@
     },
     "edf33f28-efb1-4a36-9f53-35087c83cd4d": {
       "type": "testimonials",
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -325,6 +328,7 @@
     },
     "hero_foto_TKtFQV": {
       "type": "hero-foto",
+      "disabled": true,
       "custom_css": [
         ".leefsamen-btn:hover {box-shadow: 0 10px 25px #181818; transform: scale(1.05); transition: transform 0.5s, box-shadow 0.5s;}",
         ".leefsamen-btn {transform: scale(1); transition: transform 0.5s, box-shadow 0.5s;}"
@@ -388,6 +392,7 @@
     },
     "usp_v2_dCdkke": {
       "type": "usp-v2",
+      "disabled": true,
       "custom_css": [
         "p {color: #4f4f4f; font-size: 16px;}",
         "h3 {font-weight: 700;}"
@@ -403,6 +408,7 @@
     },
     "probeer_het_uit_z9rWHA": {
       "type": "probeer-het-uit",
+      "disabled": true,
       "custom_css": [
         "h1 {color: #fff; font-weight: 700;}",
         "p {color: #fff;}",
@@ -474,6 +480,7 @@
     },
     "image_and_text_eeGDyH": {
       "type": "image-and-text",
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -580,6 +587,7 @@
     },
     "c1e441ef-c923-4620-ab13-d061f7bdee1f": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         ".x-div {width: 100%; max-width: 750px; margin: 0 auto; border-radius: 10px; overflow: hidden;}",
         ".x-text {padding: 20px; background-color: #f0f0f0; border-radius: 10px; transition: background-color 0.3s ease;}",
@@ -596,6 +604,7 @@
     },
     "6c27e415-c31a-4828-a328-9dc7646f3da3": {
       "type": "featured-blog",
+      "disabled": true,
       "custom_css": [
         ".leefsamen-btn:hover {box-shadow: 0 10px 25px #ccd9ff; transform: scale(1.05); transition: transform 0.5s, box-shadow 0.5s;}",
         ".leefsamen-btn {transform: scale(1); transition: transform 0.5s, box-shadow 0.5s;}",
@@ -722,6 +731,7 @@
         "bf37fc56-dd25-45f2-9f77-74954ddcc232",
         "collapsible_row_dURByY"
       ],
+      "disabled": true,
       "custom_css": [
         "p {color: #4f4f4f;}",
         "h2 {font-size: 50px; font-weight: 700;}"
