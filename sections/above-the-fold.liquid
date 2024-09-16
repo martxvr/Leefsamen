@@ -1,0 +1,191 @@
+{% schema %}
+{
+  "name": "Above The Fold",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Snel hulp bij iedere noodsituatie"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen."
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Bekijk pakketten"
+    },
+    {
+      "type": "text",
+      "id": "button-container-text",
+      "label": "Text naast/onder button",
+      "default": "Geldt voor Basis & Plus"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Probeer het uit!"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Above The fold",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{%  stylesheet %}
+.above-the-fold {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; 
+    background-color: #fff;
+    max-width: 1800px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.heading-p h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.atf-container-2 h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.atf-container-2 ul li {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
+}
+
+.atf-container-2 ul li::marker {
+    font-size: 2.0em;
+}
+
+.atf-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.atf-container-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.atf-container-1 img {
+      border-radius: 8px;
+    }
+
+.atf-container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.leefsamen-btn {
+    position: relative;
+      appearance: none;
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      border: 0px;
+      transform: 0;
+      transition: background-color 0.18s ease-in-out 0s, box-shadow 0.18s ease 0s, border-color 0.18s ease-in-out 0s, color 0.18s ease-in-out 0s, opacity 0.18s ease-in-out 0s, transform 0.5s ease 0s;
+      overflow: hidden;
+      user-select: none;
+      font-weight: bold;
+      outline: none;
+      border-radius: 8px;
+      padding: 20px 56px;
+      font-size: 18px;
+      line-height: 22px;
+      background-color: #e96411;
+      color: #fff;
+      width: 100%;
+  }
+
+
+  .leefsamen-btn:hover {
+    box-shadow: none !important;
+    transform: scale(1.05);
+    transition: background-color 0.18s ease-in-out 0s, box-shadow 0.18s ease 0s, border-color 0.18s ease-in-out 0s, color 0.18s ease-in-out 0s, opacity 0.18s ease-in-out 0s, transform 0.5s ease 0s;
+ }
+
+  @media screen and (max-width: 1000px) {
+    .atf-container {
+        flex-direction: column;
+    }
+
+    .atf-container-1 {
+        width: 100% !important;
+        gap: 10px;
+    }
+
+    .atf-container-1 img {
+      width: 100%;
+      height: auto;
+    }
+
+    .atf-container-2 {
+        width: 100%;
+        gap: 0px;
+    }
+
+    .atf-container-2 ul {
+        padding: 20px;
+        margin: 0px;
+    }
+
+    .atf-container-2 a.leefsamen-btn {
+      margin-bottom: 20px !important;
+    }
+ }
+  {%  endstylesheet %}
+
+<section class="above-the-fold">
+    <div class="heading-p">
+      <h1>{{ section.settings.title }}</h1>
+      <p style="color: #000;">{{ section.settings.text }}</p>
+    </div>
+    <div class="atf-container">
+      <div class="atf-container-1">
+        <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Ontwerp_zonder_titel_5.jpg?v=1701955102" alt="" width="100%" height="auto">
+        <p style="color: grey; font-style: italic;">Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop.</p>
+      </div>
+      <div class="atf-container-2">
+        <h4>Gaat er iets mis in de woning? Dan is vaak snel hulp nodig. Leefsamen is het enige betaalbare systeem waarbij naasten direct melding  krijgen als er nood is.</h4>
+        <ul>
+          <li>Alarmering bij val, inbraak, brand & noodsituaties zoals
+            hartaanval of hersenbloeding.</li>
+          <li>Bewoner heeft een alarmknop, bewegingssensor, deursensor & slimme rookmelder.</li>
+          <li>Bij alarm wordt eerst de bewoner gebeld, daarna worden de buren en de kinderen gealarmeerd via de app en telefonisch.</li>
+          <li>App op telefoon toont 24/7 of de bewoner veilig is.</li>
+          <li>Laagste kosten van alle systemen: vanaf €9,95,- per maand. Géén opstartkosten, géén installatiekosten.</li>
+          <li>Inclusief installatiegarantie.</li>
+        </ul>
+        <a href="#" class="leefsamen-btn" style="display: block;">Direct aanmelden</a>
+        <p style="color: #000;">Gratis proefperiode van 3 maanden, maandelijks opzegbaar.</p>
+      </div>
+    </div>
+   </section>
