@@ -19,6 +19,19 @@
         "quote": "Probeer het uit!"
       }
     },
+    "zekerheden_Pkae6x": {
+      "type": "zekerheden",
+      "custom_css": [
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "title": "Snel hulp bij iedere noodsituatie",
+        "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
+        "button": "Bekijk pakketten",
+        "button-container-text": "Geldt voor Basis & Plus",
+        "quote": "Probeer het uit!"
+      }
+    },
     "webkeur_dCM946": {
       "type": "webkeur",
       "disabled": true,
@@ -780,6 +793,7 @@
   },
   "order": [
     "above_the_fold_yCYTNz",
+    "zekerheden_Pkae6x",
     "webkeur_dCM946",
     "hero_foto_ciErwj",
     "image_banner_hhfNwT",
