@@ -1,6 +1,118 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Zekerheden",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Snel hulp bij iedere noodsituatie"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen."
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Bekijk pakketten"
+    },
+    {
+      "type": "text",
+      "id": "button-container-text",
+      "label": "Text naast/onder button",
+      "default": "Geldt voor Basis & Plus"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Probeer het uit!"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zekerheden",
+      "category": "Text"
+    }
+  ]
+}
 {% endschema %}
+
+{%  stylesheet %}
+section.zekerheden {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.zekerheden h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.zekerheden-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.zekerheden-box {
+    width: 45%;
+}
+
+.zekerheden-box h4 {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1000px) {
+    .zekerheden-container {
+        flex-direction: column;
+    }
+
+    .zekerheden-box {
+        width: 100%;
+    }
+
+    section.zekerheden h1 {
+        font-size: 30px;
+    }
+}
+  {%  endstylesheet %}
+
+   <section class="zekerheden">
+        <h1>De zekerheden van Leefsamen</h1>
+        <div class="zekerheden-container">
+            <div class="zekerheden-box">
+                <h4>Langer zelfstandig blijven wonen</h4>
+                <p>er is te weinig zorg aan huis voor wie zelfstandig thuis wil blijven wonen. Dat tekort wordt alleen maar groter. Leefsamen maakt het mogelijk om langer zelfstandig én veilig in de eigen woning te blijven.</p>
+            </div>
+            <div class="zekerheden-box">
+                <h4>Rust voor de familie</h4>
+                <p>In de Leefsamen app voor IOS & Android zien kinderen of buren 24/7 of de bewoner veilig is. Daardoor hoeven ze zich minder zorgen te maken: ze worden altijd direct gealarmeerd als er iets is.</p>
+            </div>
+            <div class="zekerheden-box">
+                <h4>Voor alle noodsituaties in huis</h4>
+                <p>Gebeurt er buitenshuis iets, dan is hulp dichtbij. Maar de meeste noodsituaties komen juist voor in huis. Dus bestaat Leefsamen uit vier slimme sensoren in de woning voor de meest voorkomende incidenten.</p>
+            </div>
+            <div class="zekerheden-box">
+                <h4>Veiligheid & privacy</h4>
+                <p>Sommige systemen monitoren alle beweging. Leefsamen alleen in de meeste gebruikte ruimte: meestal de woonkamer of keuken. Onze sensoren zien of horen niets: geen camera en geen microfoon.</p>
+            </div>
+            <div class="zekerheden-box">
+                <h4>Betaalbaarste & compleetste systeem</h4>
+                <p>Een alarmknop en een bewegingssensor kost €9,95 per maand. Wilt u ook het deurcontact, de rookmelder & de monteur dan is het €19,95 per maand, maandelijks opzegbaar.</p>
+            </div>
+            <div class="zekerheden-box">
+                <h4>Gratis uitproberen</h4>
+                <p>Probeer de alarmknop en bewegingssensor volledig gratis 3 maanden uit. Daarna zijn de abonnementskosten maar €9,95 per maand. Geen aanschafkosten, geen installatiekosten.</p>
+            </div>
+        </div>
+    </section>
