@@ -22,7 +22,9 @@
     "zekerheden_Pkae6x": {
       "type": "zekerheden",
       "custom_css": [
-
+        "{background-color: #efefef;}",
+        ".zekerheden h1 {margin-top: 50px;}",
+        ".zekerheden-container {margin-bottom: 30px;}"
       ],
       "settings": {
         "title": "Snel hulp bij iedere noodsituatie",
