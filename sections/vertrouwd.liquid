@@ -1,6 +1,183 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Vertrouwd",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Snel hulp bij iedere noodsituatie"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen."
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Bekijk pakketten"
+    },
+    {
+      "type": "text",
+      "id": "button-container-text",
+      "label": "Text naast/onder button",
+      "default": "Geldt voor Basis & Plus"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Probeer het uit!"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vertrouwd",
+      "category": "Text"
+    }
+  ]
+}
 {% endschema %}
+
+{%  stylesheet %}
+section.vertrouwd {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.vertrouwd h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 130px;
+}
+
+.vertrouwd-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.vertrouwd-box h2 {
+    font-size: 25px;
+    color: #000000BD;
+}
+
+.image-container {
+    width: 300px; /* de breedte die je wilt voor de container */
+    height: 100px; /* de hoogte die je wilt voor de container */
+    display: flex
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    overflow: hidden; /* Zorg ervoor dat de afbeelding niet buiten de container komt */
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Zorgt ervoor dat de afbeelding in de container past zonder vervormd te worden */
+  }
+  {%  endstylesheet %}
+
+ <section class="vertrouwd">
+        <h1>Vertrouwd door o.a.</h1>
+        <div class="vertrouwd-container">
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/gemeente_eindhoven_logo_36787901-6af6-44c7-8bce-e78b532a2e5a.jpg?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Eindhoven</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Logo_Apeldoorn_gesneden_0e7ba082-372d-438f-89cf-f1143494999a.jpg?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Apeldoorn</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Logo_gemeente_westerwolde_04dbf7b2-88bc-4b68-ab76-3de59e28a75b.png?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Westerwolde</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/logo-gemeente-helmond.png?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Helmond</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Logo_Zutphen_e9e8492f-25cf-42d6-80d5-997b2f59ae37.png?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Zutphen</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/logo-gemeente-alkmaar.png?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Alkmaar</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/logo_Heusden_cccc6057-8a9f-451e-affd-4204c27f33d3.png?v=1706101080" alt="Logo" />
+                  </div>
+                <h2>Gemeente Heusden</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Gemeente-Doetinchem-logo.jpg?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Doetinchem</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Midden-Drenthe.jpg?v=1726654798" alt="Logo" />
+                  </div>
+                <h2>Gemeente Midden-Drenthe</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Logo_gemeente_Best_transparant_ne4lm2.webp?v=1723801674" alt="Logo" />
+                  </div>
+                <h2>Gemeente Best</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/gemeente_logo_winterswijk_c39f7af9-6b0d-456b-a4ee-cde62d5efe4a.jpg?v=1713451492" alt="Logo" />
+                  </div>
+                <h2>Gemeente Winterswijk</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/westerkwartier.png?v=1726654798" alt="Logo" />
+                  </div>
+                <h2>Gemeente Westerkwartier</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Logo_veldhoven.jpg?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Veldhoven</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Gemeente-Bronckhorst.jpg?v=1713451451" alt="Logo" />
+                  </div>
+                <h2>Gemeente Bronckhorst</h2>
+            </div>
+            <div class="vertrouwd-box">
+                <div class="image-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/logo_etten_leur.jpg?v=1713451453" alt="Logo" />
+                  </div>
+                <h2>Gemeente Etten-Leur</h2>
+            </div>
+        </div>
+    </section>
