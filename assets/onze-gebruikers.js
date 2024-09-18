@@ -1,4 +1,8 @@
-var TrandingSlider = new Swiper('.tranding-slider', {
+
+
+
+
+      var TrandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
@@ -13,8 +17,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullets: true,  // Hiermee worden dynamische bullets ingeschakeld
-    dynamicMainBullets: 5, // Maximaal 6 bullets zichtbaar (5 naast de actieve bullet)
   },
   navigation: {
     nextEl: '.swiper-button-next',
