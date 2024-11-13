@@ -19,31 +19,6 @@
         "quote": "Probeer het uit!"
       }
     },
-    "zekerheden_Pkae6x": {
-      "type": "zekerheden",
-      "custom_css": [
-        "{background-color: #efefef;}",
-        ".zekerheden h1 {margin-top: 50px;}",
-        ".zekerheden-container {margin-bottom: 30px;}"
-      ],
-      "settings": {
-        "title": "Snel hulp bij iedere noodsituatie",
-        "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
-        "button": "Bekijk pakketten",
-        "button-container-text": "Geldt voor Basis & Plus",
-        "quote": "Probeer het uit!"
-      }
-    },
-    "vertrouwd_HzBjWk": {
-      "type": "vertrouwd",
-      "settings": {
-        "title": "Snel hulp bij iedere noodsituatie",
-        "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
-        "button": "Bekijk pakketten",
-        "button-container-text": "Geldt voor Basis & Plus",
-        "quote": "Probeer het uit!"
-      }
-    },
     "webkeur_dCM946": {
       "type": "webkeur",
       "disabled": true,
@@ -63,8 +38,6 @@
   },
   "order": [
     "above_the_fold_yCYTNz",
-    "zekerheden_Pkae6x",
-    "vertrouwd_HzBjWk",
     "webkeur_dCM946",
     "onze_gebruikers_2_Eh46YD"
   ]
