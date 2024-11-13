@@ -1,0 +1,192 @@
+{% schema %}
+{
+  "name": "Onze gebruikers 2.0",
+  "class": "index-section",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "Onze gebruikers 2.0",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{%  stylesheet %}
+
+          section.onze-gebruikers-2 {
+            font-family: Aller, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        /* Grijze container */
+        .testimonial-container {
+            position: relative;
+            width: 1200px;
+            height: 623px;
+            background-color: #efefef;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            border-radius: 40px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .swiper {
+            width: 1045px;
+            height: 300px;
+        }
+
+        .swiper-slide {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            gap: 40px;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 30px !important;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            right: 30px !important;
+            color: #000;
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: 30px !important;
+            color: #000;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .testimonial-container {
+            width: 100% !important;
+          }
+
+          .testimonial-container h1 {
+            font-size: 30px;
+          }
+
+          .swiper {
+            width: 100% !important;
+          }
+        }
+  
+  {%  endstylesheet %}
+
+<section class="onze-gebruikers-2">
+<div class="testimonial-container">
+    <h1 style="margin-right: auto; margin-left: 55px; font-size: 45px; font-weight: bold; margin-bottom: 50px;">Dit zeggen onze gebruikers</h1>
+    <!-- Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Boumans_gemeente_Doetinchem_met_bewoonster.jpg?v=1727099114" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://huurtoeslagaanvragen.nl/wp-content/uploads/2022/12/Yt-WfPA84CX6oIl2.png" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Doetinchem</p>
+                            <p style="margin: 0; font-size: 12px;">Burgemeester Boumans</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Bewoonster</p>
+                    <p style="font-style: italic; font-size: 12px;">“Fijn dat mijn buren helpen. Hier doen we dat gewoon voor elkaar.”</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Besselink_eerste_installatie_Bronckhorst.jpg?v=1727099007" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNgJ6vzzASp6a58xK4XxqWpgAX4Ti2pwvjg&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Bronckhorst</p>
+                            <p style="margin: 0; font-size: 12px;">Burgemeester Besselink</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Bewoonster en familie</p>
+                    <p style="font-style: italic; font-size: 12px;">"Zelfs mijn kleindochter heeft de app, dat geeft me een heel veilig gevoel."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+              <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Besselink_eerste_installatie_Bronckhorst.jpg?v=1727099007" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNgJ6vzzASp6a58xK4XxqWpgAX4Ti2pwvjg&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Bronckhorst</p>
+                            <p style="margin: 0; font-size: 12px;">Burgemeester Besselink</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Bewoonster en familie</p>
+                    <p style="font-style: italic; font-size: 12px;">"Zelfs mijn kleindochter heeft de app, dat geeft me een heel veilig gevoel."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+
+        </div>
+
+    </div>
+    <div class="s-cta-box" style="display: flex; flex-direction: row; gap: 20px; margin-right: auto; margin-left: 55px; margin-top: 50px;">
+        <a href="pages/probeer-het-uit" style="padding: 20px; text-align: center; background-color: #D9D9D9; border-radius: 12px; font-weight: bold; color: #000; text-decoration: none;">Brochure aanvragen</a>
+        <a href="/pages/alarmeringen" style="padding: 20px; text-align: center; background-color: #FF6F00; border-radius: 12px; font-weight: bold; color: #fff; text-decoration: none;">Direct aanmelden</a>
+    </div>
+            <!-- Swiper Navigatie -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Swiper Pagina-indicatoren -->
+            <div class="swiper-pagination"></div>
+</div>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        centeredSlides: false,
+        slidesPerView: 2,  // Laat twee kaarten naast elkaar zien
+        spaceBetween: 20, // Afstand tussen de kaarten
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+</script>
+   
+{% javascript %}
+
+  
+  {% endjavascript %}
