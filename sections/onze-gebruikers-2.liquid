@@ -73,6 +73,10 @@
         }
 
         @media screen and (max-width: 1000px) {
+          section.onze-gebruikers-2 {
+            height: 900px !important;
+          }
+          
           .testimonial-container {
             width: 100% !important;
             height: auto;
@@ -91,6 +95,7 @@
             width: 100% !important;
             height: auto !important;
             flex-direction: column !important;
+            justify-content: center !important;
           }
 
           .s-cta-box {
@@ -182,9 +187,9 @@
 <script>
     const swiper = new Swiper('.swiper', {
         loop: true,
-        centeredSlides: false,
-        slidesPerView: 2,  // Laat twee kaarten naast elkaar zien
-        spaceBetween: 20, // Afstand tussen de kaarten
+        slidesPerView: 2, // Standaard voor desktopweergave
+        centeredSlides: true,
+        spaceBetween: 20,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -196,6 +201,16 @@
         autoplay: {
             delay: 3000,
         },
+        breakpoints: {
+            1000: {
+                slidesPerView: 2,
+                centeredSlides: true,
+            },
+            0: { // Voor mobiele weergave onder de 1000px breedte
+                slidesPerView: 1,
+                centeredSlides: false, // Voorkomt het halverwege stoppen
+            }
+        }
     });
 </script>
    
