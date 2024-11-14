@@ -184,11 +184,12 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper', {
+    // Initieer Swiper met basisinstellingen
+    let swiper = new Swiper('.swiper', {
         loop: true,
-        centeredSlides: false,
-        slidesPerView: 2,  // Laat twee kaarten naast elkaar zien
-        spaceBetween: 20, // Afstand tussen de kaarten
+        slidesPerView: 2,  // Standaard: twee kaarten voor desktop
+        centeredSlides: false, // Standaard niet gecentreerd voor desktop
+        spaceBetween: 20,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -201,6 +202,24 @@
             delay: 3000,
         },
     });
+
+    // Functie om slider-instellingen aan te passen op basis van schermgrootte
+    function updateSwiperSettings() {
+        if (window.innerWidth <= 768) { // Mobiele schermgrootte (aanpassen indien nodig)
+            swiper.params.slidesPerView = 1;
+            swiper.params.centeredSlides = true;
+        } else {
+            swiper.params.slidesPerView = 2;
+            swiper.params.centeredSlides = false;
+        }
+        swiper.update(); // Pas de wijzigingen toe
+    }
+
+    // Initialiseer de instellingen bij het laden van de pagina
+    updateSwiperSettings();
+
+    // Pas instellingen aan bij het wijzigen van de schermgrootte
+    window.addEventListener('resize', updateSwiperSettings);
 </script>
    
 {% javascript %}
