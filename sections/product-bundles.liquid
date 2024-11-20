@@ -1,6 +1,79 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<!-- product-bundles.liquid -->
+<section class="product-bundles">
+  <div class="bundle-wrapper">
+    <h2>Combineer en bespaar</h2>
+    
+    {% comment %} Hier controleren we of er bundels zijn ingesteld voor dit product {% endcomment %}
+    {% assign product_handle = product.handle %}
+    {% assign bundles = site.metafields.bundles[product_handle] %}
+
+    {% if bundles %}
+      <div class="bundles-list">
+        {% for bundle in bundles %}
+          <div class="bundle-item">
+            <h3>{{ bundle.title }}</h3>
+            <p>{{ bundle.description }}</p>
+            
+            {% comment %} Toon producten binnen de bundel {% endcomment %}
+            <ul>
+              {% for item in bundle.products %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a> - {{ item.price | money }}
+                </li>
+              {% endfor %}
+            </ul>
+
+            <p class="bundle-price">
+              Bundelprijs: {{ bundle.price | money }}
+            </p>
+
+            <button class="add-bundle-to-cart" data-bundle-id="{{ bundle.id }}">
+              Voeg bundel toe aan winkelwagen
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Geen bundels beschikbaar voor dit product.</p>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+.bundle-wrapper {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+}
+.bundles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.bundle-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: white;
+}
+.add-bundle-to-cart {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.add-bundle-to-cart:hover {
+  background: #0056b3;
+}
+</style>
+
+<script>
+  document.querySelectorAll('.add-bundle-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      const bundleId = this.getAttribute('data-bundle-id');
+      
+      // Voeg de bundel toe aan de winkelwagen (dummy script, pas aan op basis van je behoeften)
+      alert(`Bundel ${bundleId} toegevoegd aan winkelwagen!`);
+    });
+  });
+</script>
