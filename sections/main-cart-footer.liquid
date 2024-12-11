@@ -38,6 +38,52 @@
       {%- endif -%}
 
       <div class="cart__blocks">
+        <div class="bullet-html-container">
+    <div style="margin: 16px 0; color: inherit; line-height: inherit;">
+        <div class="b-b-b-container">
+            <div class="b-b-b-bullet-row" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <div class="b-b-b-bullet-icon-container" style="margin-right: 10px; font-size: inherit; width: 20px; height: 20px;">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Screenshot_2024-06-21_at_12.16.11.png?v=1718965010" alt="Icon 3" style="width: 100%; height: 100%;">
+                </div>
+                <div class="b-b-b-dropdown-text" style="font-size: inherit; max-width: 80%;">
+                    30 dagen uitproberen. Niet tevreden? Ontvang de aanschaf terug.
+                </div>
+            </div>
+            <div class="b-b-b-bullet-row" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <div class="b-b-b-bullet-icon-container" style="margin-right: 10px; font-size: inherit; width: 20px; height: 20px;">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Screenshot_2024-06-21_at_12.16.11.png?v=1718965010" alt="Icon 3" style="width: 100%; height: 100%;">
+                </div>
+                <div class="b-b-b-dropdown-text" style="font-size: inherit; max-width: 80%;">
+                    2 jaar garantie
+                </div>
+            </div>
+            <div class="b-b-b-bullet-row" style="display: flex; align-items: center;">
+                <div class="b-b-b-bullet-icon-container" style="margin-right: 10px; font-size: inherit; width: 20px; height: 20px;">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Screenshot_2024-06-21_at_12.16.11.png?v=1718965010" alt="Icon 3" style="width: 100%; height: 100%;">
+                </div>
+                <div class="b-b-b-dropdown-text" style="font-size: inherit; max-width: 80%;">
+                    Hulp nodig? Bel onze klantenservice: 040 780 0641
+                </div>
+            </div>
+            <div class="b-b-b-bullet-row" style="display: flex; align-items: center;">
+                <div class="b-b-b-bullet-icon-container" style="margin-right: 10px; font-size: inherit; width: 20px; height: 20px;">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Screenshot_2024-06-21_at_12.16.11.png?v=1718965010" alt="Icon 3" style="width: 100%; height: 100%;">
+                </div>
+                <div class="b-b-b-dropdown-text" style="font-size: inherit; max-width: 80%;">
+                    Veilig afrekenen via iDEAL
+                </div>
+            </div>
+            <div class="b-b-b-bullet-row" style="display: flex; align-items: center;">
+                <div class="b-b-b-bullet-icon-container" style="margin-right: 10px; font-size: inherit; width: 20px; height: 20px;">
+                    <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Screenshot_2024-06-21_at_12.16.11.png?v=1718965010" alt="Icon 3" style="width: 100%; height: 100%;">
+                </div>
+                <div class="b-b-b-dropdown-text" style="font-size: inherit; max-width: 80%;">
+                    Gratis verzending met PostNL
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -98,11 +144,7 @@
                 </button>
               </div>
 
-              {%- if additional_checkout_buttons -%}
-                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                  {{ content_for_additional_checkout_buttons }}
-                </div>
-              {%- endif -%}
+              
           {%- endcase -%}
         {% endfor %}
 
