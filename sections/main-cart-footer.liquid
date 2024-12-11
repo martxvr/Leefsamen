@@ -23,7 +23,9 @@
   data-id="{{ section.id }}"
 >
   <div class="page-width">
-    <div class="cart__footer isolate section-{{ section.id }}-padding">
+    <div class="cart__footer isolate section-{{ section.id }}-padding" style="background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 20px;">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
@@ -97,6 +99,14 @@
 
         .cart__blocks {
           width: 35em !important;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .cart__footer {
+          background-color: none;
+          padding: 0px;
+          border-radius: 0px;
         }
       }
       </style>
