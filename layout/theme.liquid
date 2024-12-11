@@ -366,50 +366,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {%- endif -%}
     <script>
     {{"https://cdn.shopify.com/s/files/1/0693/0287/8457/files/leefsamen.js"|script_tag}}
-    // Functie om gegevens op te halen van de API
-async function fetchAddress(postcode, huisnummer) {
-    try {
-        // Voer een API-aanroep uit naar de proxy server
-        const response = await fetch(`https://pure-mesa-16635-33c6ed47baeb.herokuapp.com/api/postcode/${postcode}/${huisnummer}`);
-        
-        // Check of de response succesvol was
-        if (!response.ok) {
-            throw new Error('Adresgegevens konden niet worden opgehaald');
-        }
-        
-        const data = await response.json();
-        
-        // Vul de straat en woonplaats in met de gegevens uit de API
-        if (data && data.address) {
-            document.getElementById('custom#straat').value = data.address.street || '';
-            document.getElementById('custom#woonplaats').value = data.address.city || '';
-        }
-    } catch (error) {
-        console.error('Fout bij het ophalen van adresgegevens:', error);
-    }
-}
-
-// Event listener voor de postcode en huisnummer velden
-document.getElementById('custom#postcode').addEventListener('blur', function() {
-    const postcode = document.getElementById('custom#postcode').value.trim();
-    const huisnummer = document.getElementById('custom#huisnummer').value.trim();
-
-    // Als zowel postcode als huisnummer zijn ingevuld, haal dan het adres op
-    if (postcode && huisnummer) {
-        fetchAddress(postcode, huisnummer);
-    }
-});
-
-// Event listener voor het huisnummer (voor het geval de gebruiker het huisnummer bijwerkt)
-document.getElementById('custom#huisnummer').addEventListener('blur', function() {
-    const postcode = document.getElementById('custom#postcode').value.trim();
-    const huisnummer = document.getElementById('custom#huisnummer').value.trim();
-
-    // Als zowel postcode als huisnummer zijn ingevuld, haal dan het adres op
-    if (postcode && huisnummer) {
-        fetchAddress(postcode, huisnummer);
-    }
-});
-  </script>
+    </script>
   </body>
 </html>
