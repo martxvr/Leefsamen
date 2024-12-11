@@ -37,8 +37,7 @@
         </cart-note>
       {%- endif -%}
 
-      <div class="cart__blocks">
-        <div class="bullet-html-container">
+      <div class="bullet-html-container">
     <div style="margin: 16px 0; color: inherit; line-height: inherit;">
         <div class="b-b-b-container">
             <div class="b-b-b-bullet-row" style="display: flex; align-items: center; margin-bottom: 10px;">
@@ -84,6 +83,9 @@
         </div>
     </div>
 </div>
+      
+      <div class="cart__blocks">
+        
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
