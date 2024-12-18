@@ -7,13 +7,13 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Snel hulp bij iedere noodsituatie"
+      "default": "Snel hulp bij iedere noodsituatie in huis"
     },
     {
       "type": "text",
       "id": "text",
       "label": "Description",
-      "default": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen."
+      "default": "Binnen een paar seconden krijgen familie, buren of bekenden een alarm en komen helpen. Wel zo’n gerust gevoel."
     },
     {
       "type": "text",
@@ -53,7 +53,14 @@
     max-width: 1200px;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 60px;
 }
+
+  @media screen and (max-width: 1000px) {
+    .above-the-fold {
+      margin-bottom: 0px;
+    }
+  }
 
 .heading-p h1 {
     font-size: 45px;
@@ -158,7 +165,7 @@
     }
 
     .atf-container-2 ul {
-        padding: 20px;
+        padding: 20px !important;
         margin: 0px;
     }
 
@@ -173,28 +180,27 @@
   {%  endstylesheet %}
 
 <section class="above-the-fold">
-    <div class="heading-p">
+    <div class="heading-p scroll-trigger animate--slide-in">
       <h1>{{ section.settings.title }}</h1>
       <p style="color: #000;">{{ section.settings.text }}</p>
     </div>
     <div class="atf-container">
-      <div class="atf-container-1">
-        <img src="https://placehold.co/1000" alt="" width="100%" height="auto">
+      <div class="atf-container-1 scroll-trigger animate--slide-in">
+        <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/1._2.jpg?v=1726734644" alt="" width="100%" height="auto">
         <p style="color: grey; font-style: italic;">Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop.</p>
       </div>
-      <div class="atf-container-2">
-        <h4>Gaat er iets mis in de woning? Dan is vaak snel hulp nodig. Leefsamen is het enige betaalbare systeem waarbij naasten direct melding  krijgen als er nood is.</h4>
+      <div class="atf-container-2 scroll-trigger animate--slide-in">
+        <h4>Leefsamen is het meest complete en betaalbare systeem wat bij nood een alarm stuurt naar familie of bekenden. Want gaat er iets mis in huis? Dan is snel hulp nodig. </h4>
         <ul>
-          <li>Alarmering bij val, inbraak, brand & noodsituaties zoals
-            hartaanval of hersenbloeding.</li>
-          <li>Bewoner heeft een alarmknop, bewegingssensor, deursensor & slimme rookmelder.</li>
-          <li>Bij alarm wordt eerst de bewoner gebeld, daarna worden de buren en de kinderen gealarmeerd via de app en telefonisch.</li>
-          <li>App op telefoon toont 24/7 of de bewoner veilig is.</li>
-          <li>Laagste kosten van alle systemen: vanaf €9,95 per maand. Géén opstartkosten, géén installatiekosten.</li>
-          <li>Inclusief installatiegarantie.</li>
+          <li>Alarm bij val, inbraak, brand & noodsituaties.</li>
+          <li>Kies zelf de sensoren voor in huis; alarmknop, bewegingssensor, deursensor, slimme rookmelder.</li>
+          <li>Bij alarm bellen we eerst de bewoner, daarna gaat een melding naar familie, buren of bekenden via de app en telefonisch.</li>
+          <li>Familie, buren of bekenden stemmen via de app af wie de melding opvolgt.</li>
+          <li>De app toont 24 uur per dag of de bewoner veilig is.</li>
+          <li>Eerste 3 maanden gratis, daarna vanaf €8,50 per maand.</li>
+          <li>Eenvoudig te installeren: inclusief installatiegarantie.</li>
         </ul>
-        <a href="#" class="leefsamen-btn" style="display: block;">Direct aanmelden</a>
-        <p style="color: #808080;">Gratis proefperiode van 3 maanden, maandelijks opzegbaar.</p>
+        <a href="/pages/alarmeringen" class="leefsamen-btn" style="display: block;">Direct aanmelden</a>
       </div>
     </div>
    </section>
