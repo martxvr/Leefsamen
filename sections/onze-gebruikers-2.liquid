@@ -20,9 +20,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: auto;
             margin: 0;
-            background-color: #fff;
+            background-color: #efefef;
         }
 
         /* Grijze container */
@@ -56,6 +56,7 @@
         }
 
         .swiper-pagination {
+            display: none;
             position: absolute;
             bottom: 30px !important;
         }
@@ -72,6 +73,7 @@
             color: #000;
         }
 
+
         @media screen and (max-width: 1000px) {
           section.onze-gebruikers-2 {
             height: 950px !important;
@@ -80,13 +82,14 @@
           .testimonial-container {
             width: 100% !important;
             height: 950px !important;
+            border-radius: 0px !important;
           }
 
           .testimonial-container h1 {
             font-size: 30px !important;
             margin-left: 0px !important;
             margin-right: 0px !important;
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px !important;
           }
 
@@ -105,6 +108,7 @@
           .s-cta-box {
             flex-direction: column !important;
             margin: 20px auto !important;
+            width: 100% !important;
           }
 
         }
@@ -120,7 +124,7 @@
 
             <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Boumans_gemeente_Doetinchem_met_bewoonster.jpg?v=1727099114" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Boumans_gemeente_Doetinchem_met_bewoonster.jpg?v=1727099114" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://huurtoeslagaanvragen.nl/wp-content/uploads/2022/12/Yt-WfPA84CX6oIl2.png" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -138,7 +142,7 @@
 
             <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Besselink_eerste_installatie_Bronckhorst.jpg?v=1727099007" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Besselink_eerste_installatie_Bronckhorst.jpg?v=1727099007" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNgJ6vzzASp6a58xK4XxqWpgAX4Ti2pwvjg&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -156,7 +160,7 @@
 
               <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Willem_Krooneman_gemeente_Elburg_met_Carla_Cats_VNOG_en_bewoonster_mevrouw_Goedens.png?v=1726669261" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Willem_Krooneman_gemeente_Elburg_met_Carla_Cats_VNOG_en_bewoonster_mevrouw_Goedens.png?v=1726669261" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="data:image/png;base64,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" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -174,7 +178,7 @@
 
                         <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Miet_Geudens_pers_ED_Bergeijk_jan_24.jpg?v=1726669421" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Miet_Geudens_pers_ED_Bergeijk_jan_24.jpg?v=1726669421" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQCK4MZ4CJFBp585nEp2CYbT3YL81ykPe5X9R6HM7Wnof0uuHNnJmxT6X3TsjNMrODyus&usqp=CAU" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -192,7 +196,7 @@
 
             <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Jimmy_Korswagen_van_Veiligheidsregio_Noord_Oost_Gelderland_met_de_Gouden_Rookmelder_2019.jpg?v=1726669565" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Jimmy_Korswagen_van_Veiligheidsregio_Noord_Oost_Gelderland_met_de_Gouden_Rookmelder_2019.jpg?v=1726669565" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSWFFc6Yy_femIdLpTCbwD3ThN2bkz8z4FTg&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -210,7 +214,7 @@
 
                       <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Joris_Bengevoord_gemeente_Winterswijk_met_bewoonster_en_dochter_familie_Arendsen.jpg?v=1726669934" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Burgemeester_Joris_Bengevoord_gemeente_Winterswijk_met_bewoonster_en_dochter_familie_Arendsen.jpg?v=1726669934" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://i.ytimg.com/vi/lD-J8On0Wn8/hqdefault.jpg" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -226,9 +230,9 @@
             </div>
             <!-- end testimonial -->
 
-                                <!-- testimonial -->
+             <!-- testimonial -->
             <div class="swiper-slide">
-                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Bewoonster_Loes_Bodifee_gemeente_Waalre_56c9615b-991b-40b9-a87f-0a55c0ff8a37.jpg?v=1726671351" alt="" width="197px" height="262px" style="border-radius: 20px;">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Bewoonster_Loes_Bodifee_gemeente_Waalre_56c9615b-991b-40b9-a87f-0a55c0ff8a37.jpg?v=1726671351" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
                 <div class="swiper-slide-content">
                     <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUfComW26QOqAmDLkl-yaUJFcXlCL64nQTgA&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
@@ -239,10 +243,120 @@
                         </div>
                     </div>
                     <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Mevrouw Bodifee - 69 jaar</p>
-                    <p style="font-style: italic; font-size: 12px;">"Ik woon alleen. Onderneem nog veel. Maar als i thuis ben, voel ik me wel meer op m'n gemak."</p>
+                    <p style="font-style: italic; font-size: 12px;">"Ik woon alleen. Onderneem nog veel. Maar als ik thuis ben, voel ik me wel meer op m'n gemak."</p>
                 </div>
             </div>
             <!-- end testimonial -->
+
+          <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Evert_Offereins_gemeente_Midden_Groningen_met_bewoner_Jan_Hoorntje_en_dochter.jpg?v=1727099420" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJKY8P69Xtc8LkrW9MFyJdY6jsDP0IEPMuNw&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important; line-height: 1.2; margin-top: 8px;">Midden <br> Groningen</p>
+                            <p style="margin: 0; font-size: 12px; margin-top: 20px;">Wethouder Evert Offereins</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Dhr. Hoorntje - 94 jaar</p>
+                    <p style="font-style: italic; font-size: 12px;">"Ik ben altijd met mijn tijd mee gegaan, daar hoort dit ook bij."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+             <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Sterks_Gemeente_Heeze_Leende_met_bewoonster_mevrouw_Cleef-Spanjers.jpg?v=1727099491" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dCquIAQAUJQkiC_-n8w_rIV9sov9-LkJVA&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important; line-height: 1.2; margin-top: 8px;">Heeze <br>Leende</p>
+                            <p style="margin: 0; font-size: 12px; margin-top: 20px;">Wethouder Paul Sterks</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Mevr. Cleef-Spanjers - 79 jaar</p>
+                    <p style="font-style: italic; font-size: 12px;">"Mijn zoon en dochter stonden er op dat ik dit ging uitproberen. En ik moet zeggen; het werkt perfect."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Bewoonster_Loes_Bodifee_gemeente_Waalre_56c9615b-991b-40b9-a87f-0a55c0ff8a37.jpg?v=1726671351" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://cdn.tsf.nl/public-production/24c775fc-7a7a-4f97-8b9a-be613175d442/organisation/1d63b72b-2fb2-46b5-0d57-08dbcb09e9b9/2f61e07b-1246-4953-b035-efba85a8702a/logo.jpg" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Heusden</p>
+                            <p style="margin: 0; font-size: 12px;">Wethouder Peter van Steen</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Mevr. Pijnenburg - 77 jaar</p>
+                    <p style="font-style: italic; font-size: 12px;">"Dankzij gemeente Heusden en woningstichting Woonveste woon ik hier nu nog veiliger."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Veronique_Zeeman_met_Wouter_van_der_Dennen_VRBZO_met_mevrouw_Zeeman.jpg?v=1727099675" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdqgI9h7EUJyVyPRILUi4Jeke3cySc6llZlg&s" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Best</p>
+                            <p style="margin: 0; font-size: 12px;">Wethouder Véronique Zeeman</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Mevr. Zeeman - 82 jaar</p>
+                    <p style="font-style: italic; font-size: 12px;">"Voel me veilig en meer in contact met mijn dochters."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Wietse_Potze_gemeente_Westerwolde_met_mevrouw_Moorlag.jpg?v=1727099769" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://cdn.tsf.nl/public-production/aa36659b-de60-415b-a5af-549e2cea3efb/organisation/276dc3d3-d983-4af9-06ed-08db3c11254d/1fbe9744-b345-4267-bd8b-8047a7e39c86/logo.jpg" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Westerwolde</p>
+                            <p style="margin: 0; font-size: 12px;">Wethouder Wietze Potze</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Mevrouw Moorlag - 89</p>
+                    <p style="font-style: italic; font-size: 12px;">"Ik woon hier nu 64 jaar en wil hier nooit meer weg."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+            <!-- testimonial -->
+            <div class="swiper-slide">
+                <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/Wethouder_Corine_van_Overdijk_gemeente_Oirschot_met_bewoner_Dhr._Meulendijk.jpg?v=1727099860" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+                <div class="swiper-slide-content">
+                    <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
+                        <img src="https://cdn.tsf.nl/public-production/6d51c463-2818-4236-baf6-aa7147db841a/organisation/2277108c-a448-404e-4594-08dbf010994d/16648cd8-9bf8-495b-af5e-030e7580bd6f/logo.jpg" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                        <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
+                            <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
+                            <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">Oirschot</p>
+                            <p style="margin: 0; font-size: 12px;">Wethouder Corine van Overdijk</p>
+                        </div>
+                    </div>
+                    <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">Dhr. Meulendijk - 78 jaar</p>
+                    <p style="font-style: italic; font-size: 12px;">"Nu kan ik weer rustig een puzzel leggen."</p>
+                </div>
+            </div>
+            <!-- end testimonial -->
+
+
 
 
         </div>
