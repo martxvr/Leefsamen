@@ -365,54 +365,9 @@
     <div class="s-cta-box" style="display: flex; flex-direction: row; gap: 20px; margin-right: auto; margin-left: 55px; margin-top: 50px;">
         <a href="pages/probeer-het-uit" style="padding: 20px; text-align: center; background-color: #D9D9D9; border-radius: 12px; font-weight: bold; color: #000; text-decoration: none;">Brochure aanvragen</a>
         <a href="/pages/alarmeringen" style="padding: 20px; text-align: center; background-color: #FF6F00; border-radius: 12px; font-weight: bold; color: #fff; text-decoration: none;">Direct aanmelden</a>
-    </div>
-            <!-- Swiper Navigatie -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Swiper Pagina-indicatoren -->
-            <div class="swiper-pagination"></div>
-</div>
+
 </section>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    // Initieer Swiper met basisinstellingen
-    let swiper = new Swiper('.swiper', {
-        loop: true,
-        slidesPerView: 2,  // Standaard: twee kaarten voor desktop
-        centeredSlides: false, // Standaard niet gecentreerd voor desktop
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-        },
-    });
-
-    // Functie om slider-instellingen aan te passen op basis van schermgrootte
-    function updateSwiperSettings() {
-        if (window.innerWidth <= 768) { // Mobiele schermgrootte (aanpassen indien nodig)
-            swiper.params.slidesPerView = 1;
-            swiper.params.centeredSlides = true;
-        } else {
-            swiper.params.slidesPerView = 2;
-            swiper.params.centeredSlides = false;
-        }
-        swiper.update(); // Pas de wijzigingen toe
-    }
-
-    // Initialiseer de instellingen bij het laden van de pagina
-    updateSwiperSettings();
-
-    // Pas instellingen aan bij het wijzigen van de schermgrootte
-    window.addEventListener('resize', updateSwiperSettings);
-</script>
    
 {% javascript %}
 
