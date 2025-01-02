@@ -11,6 +11,7 @@
   "sections": {
     "above_the_fold_yCYTNz": {
       "type": "above-the-fold",
+      "disabled": true,
       "settings": {
         "title": "Snel hulp bij iedere noodsituatie",
         "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
