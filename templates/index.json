@@ -35,13 +35,27 @@
           "settings": {
             "item_text": "Mensen ontvangen in een groep de melding. Via de app kunnen ze direct afstemmen wie actie onderneemt."
           }
+        },
+        "list_item_ExCpR3": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "De app toont 24 uur per dag of de bewoner veilig is."
+          }
+        },
+        "list_item_zmeYNA": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Alarm Thuis: eerste 3 maanden gratis, daarna vanaf €9,95 per maand."
+          }
         }
       },
       "block_order": [
         "list_item_gUUAPF",
         "list_item_77eQXC",
         "list_item_ReTpT3",
-        "list_item_rHV6bP"
+        "list_item_rHV6bP",
+        "list_item_ExCpR3",
+        "list_item_zmeYNA"
       ],
       "custom_css": [
         "li,p,ul {color: #000;}"
