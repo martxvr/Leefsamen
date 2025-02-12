@@ -173,9 +173,7 @@
         <h4>De meest complete én betaalbare alarmering die super snel werkt.</h4>
         <ul>
           {% for block in section.blocks %}
-            {% if block.type == 'list_item' %}
-              <li>{{ block.settings.item_text }}</li>
-            {% endif %}
+            <li>{{ block.settings.item_text }}</li>
           {% endfor %}
         </ul>
        <div class="above-cta-box" style="display:flex;flex-direction:row;gap:20px;justify-content:space-between:">
