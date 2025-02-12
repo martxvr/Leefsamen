@@ -190,10 +190,10 @@
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
             <div class="swiper-slide">
-              <img src="{{ block.settings.image }}" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
+              <img src="{{ block.settings.image | image_tag }}" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
               <div class="swiper-slide-content">
                 <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
-                  <img src="{{ block.settings.logo }}" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
+                  <img src="{{ block.settings.logo | image_tag }}" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
                   <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
                     <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
                     <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">{{ block.settings.city }}</p>
@@ -213,26 +213,8 @@
       </div>
     </div>
   </section>
-
    
 {% javascript %}
 
   
   {% endjavascript %}
-{% for block in section.blocks %}
-    <div class="swiper-slide">
-        <img src="{{ block.settings.image }}" alt="" width="197px" height="262px" style="border-radius: 20px; object-fit: cover;">
-        <div class="swiper-slide-content">
-            <div class="gemeente-box" style="display: flex; flex-direction: row; gap: 15px;">
-                <img src="{{ block.settings.logo }}" alt="" width="64px" height="64px" style="border-radius: 100%; border: 1px solid lightgray;">
-                <div class="gemeente-box-text" style="display: flex; flex-direction: column;">
-                    <p style="font-style: light; margin: 0; font-size: 12px; height: 12px !important;">Gemeente</p>
-                    <p style="font-weight: bold; margin: 0; font-size: 18px; height: 25px !important;">{{ block.settings.city }}</p>
-                    <p style="margin: 0; font-size: 12px;">{{ block.settings.person }}</p>
-                </div>
-            </div>
-            <p style="font-weight: bold; font-size: 18px; margin-top: 20px;">{{ block.settings.title }}</p>
-            <p style="font-style: italic; font-size: 12px;">{{ block.settings.quote }}</p>
-        </div>
-    </div>
-{% endfor %}
