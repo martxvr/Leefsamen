@@ -11,13 +11,12 @@
   "sections": {
     "above_the_fold_yCYTNz": {
       "type": "above-the-fold",
-      "disabled": true,
       "settings": {
         "title": "Snel hulp bij iedere noodsituatie",
         "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
-        "button": "Bekijk pakketten",
-        "button-container-text": "Geldt voor Basis & Plus",
-        "quote": "Probeer het uit!"
+        "quote": "Probeer het uit!",
+        "image": "shopify://shop_images/knop4.jpg",
+        "image_description": "Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop."
       }
     },
     "webkeur_dCM946": {
@@ -47,6 +46,7 @@
       "block_order": [
         "testimonial_xp6RT3"
       ],
+      "disabled": true,
       "custom_css": [
         "p {color: #000;}"
       ],
