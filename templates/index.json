@@ -47,6 +47,18 @@
           "settings": {
             "item_text": "Alarm Thuis: eerste 3 maanden gratis, daarna vanaf €9,95 per maand."
           }
+        },
+        "list_item_N9bjnq": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Alarm Onderweg: eerste maand gratis, daarna €9,95 per maand."
+          }
+        },
+        "list_item_rdWLkP": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Eenvoudig te installeren: 100% installatiegarantie."
+          }
         }
       },
       "block_order": [
@@ -55,7 +67,9 @@
         "list_item_ReTpT3",
         "list_item_rHV6bP",
         "list_item_ExCpR3",
-        "list_item_zmeYNA"
+        "list_item_zmeYNA",
+        "list_item_N9bjnq",
+        "list_item_rdWLkP"
       ],
       "custom_css": [
         "li,p,ul {color: #000;}"
