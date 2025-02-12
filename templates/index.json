@@ -31,10 +31,28 @@
     },
     "onze_gebruikers_2_Eh46YD": {
       "type": "onze-gebruikers-2",
+      "blocks": {
+        "testimonial_xp6RT3": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/VVV_bon_Leefsamen_breng_een_vriend_aan_web.jpg",
+            "logo": "shopify://shop_images/eemsdelta.jpg",
+            "city": "Eems-Delta",
+            "person": "Wethouder Kees",
+            "title": "Jantje - 73 jaar oud",
+            "quote": "Ik vind het echt geweldig!!"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_xp6RT3"
+      ],
       "custom_css": [
         "p {color: #000;}"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "Dit zeggen onze gebruikers"
+      }
     }
   },
   "order": [
