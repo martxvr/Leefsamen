@@ -17,18 +17,6 @@
     },
     {
       "type": "text",
-      "id": "button",
-      "label": "Button",
-      "default": "Bekijk pakketten"
-    },
-    {
-      "type": "text",
-      "id": "button-container-text",
-      "label": "Text naast/onder button",
-      "default": "Geldt voor Basis & Plus"
-    },
-    {
-      "type": "text",
       "id": "quote",
       "label": "Quote",
       "default": "Probeer het uit!"
@@ -43,12 +31,20 @@
       "id": "image_description",
       "label": "Image Description",
       "default": "Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop."
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "textarea",
-      "id": "list_items",
-      "label": "List Items",
-      "default": "Alarm bij val, inbraak, brand & noodsituaties thuis en onderweg."
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_text",
+          "label": "Item Text",
+          "default": "Alarm bij val, inbraak, brand & noodsituaties thuis en onderweg."
+        }
+      ]
     }
   ],
   "presets": [
@@ -91,7 +87,6 @@
     margin: 0px;
 }
 
-
 .atf-container-2 ul li {
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
 }
@@ -128,39 +123,6 @@
     width: 50%;
 }
 
-.leefsamen-btn {
-    position: relative;
-      appearance: none;
-      display: inline-flex;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      text-align: center;
-      text-decoration: none;
-      border: 0px;
-      transform: 0;
-      transition: background-color 0.18s ease-in-out 0s, box-shadow 0.18s ease 0s, border-color 0.18s ease-in-out 0s, color 0.18s ease-in-out 0s, opacity 0.18s ease-in-out 0s, transform 0.5s ease 0s;
-      overflow: hidden;
-      user-select: none;
-      font-weight: bold;
-      outline: none;
-      border-radius: 8px;
-      padding: 20px 56px;
-      font-size: 18px;
-      line-height: 22px;
-      background-color: #e96411;
-      color: #fff;
-      width: 100%;
-  }
-
-
-  .leefsamen-btn:hover {
-    box-shadow: none !important;
-    transform: scale(1.05);
-    transition: background-color 0.18s ease-in-out 0s, box-shadow 0.18s ease 0s, border-color 0.18s ease-in-out 0s, color 0.18s ease-in-out 0s, opacity 0.18s ease-in-out 0s, transform 0.5s ease 0s;
- }
-
   @media screen and (max-width: 1000px) {
     .atf-container {
         flex-direction: column;
@@ -186,10 +148,6 @@
         margin: 0px;
     }
 
-    .atf-container-2 a.leefsamen-btn {
-      margin-bottom: 20px !important;
-    }
-
     .heading-p h1 {
       font-size: 32px;
     }
@@ -208,15 +166,16 @@
     </div>
     <div class="atf-container">
       <div class="atf-container-1 scroll-trigger animate--slide-in">
-        <img src="{{ section.settings.image }}" alt="" width="100%" height="auto">
+        <img src="{{ section.settings.image | image_url }}" alt="" width="100%" height="auto">
         <p style="color: grey; font-style: italic;">{{ section.settings.image_description }}</p>
       </div>
       <div class="atf-container-2 scroll-trigger animate--slide-in">
         <h4>De meest complete én betaalbare alarmering die super snel werkt.</h4>
         <ul>
-          {% assign list_items = section.settings.list_items | split: '\n' %}
-          {% for item in list_items %}
-            <li>{{ item }}</li>
+          {% for block in section.blocks %}
+            {% if block.type == 'list_item' %}
+              <li>{{ block.settings.item_text }}</li>
+            {% endif %}
           {% endfor %}
         </ul>
        <div class="above-cta-box" style="display:flex;flex-direction:row;gap:20px;justify-content:space-between:">
