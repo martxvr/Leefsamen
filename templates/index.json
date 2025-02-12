@@ -17,17 +17,38 @@
           "settings": {
             "item_text": "Alarm bij val, inbraak, brand & noodsituaties thuis en onderweg."
           }
+        },
+        "list_item_77eQXC": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Kies wat bij u past; alarmknop thuis en onderweg, valalarm, inbraak, brand en koolmonoxide."
+          }
+        },
+        "list_item_ReTpT3": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Bij alarm thuis wordt de bewoner gebeld, bij geen reactie gaat het alarm naar de eigen contacten en optioneel een professionele hulpverlener."
+          }
+        },
+        "list_item_rHV6bP": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Mensen ontvangen in een groep de melding. Via de app kunnen ze direct afstemmen wie actie onderneemt."
+          }
         }
       },
       "block_order": [
-        "list_item_gUUAPF"
+        "list_item_gUUAPF",
+        "list_item_77eQXC",
+        "list_item_ReTpT3",
+        "list_item_rHV6bP"
       ],
       "custom_css": [
-        "li, p, ul{color: #000;}"
+        "li,p,ul {color: #000;}"
       ],
       "settings": {
-        "title": "Snel hulp bij iedere noodsituatie",
-        "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
+        "title": "De snelste hulp bij nood in huis en onderweg",
+        "text": "Binnen een paar seconden krijgen familie, buren of bekenden een alarm en komen helpen of bellen 112. Wel zo’n gerust gevoel.",
         "quote": "Probeer het uit!",
         "image": "shopify://shop_images/knop4.jpg",
         "image_description": "Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop."
