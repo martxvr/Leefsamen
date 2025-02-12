@@ -32,6 +32,23 @@
       "id": "quote",
       "label": "Quote",
       "default": "Probeer het uit!"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "image_description",
+      "label": "Image Description",
+      "default": "Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop."
+    },
+    {
+      "type": "textarea",
+      "id": "list_items",
+      "label": "List Items",
+      "default": "Alarm bij val, inbraak, brand & noodsituaties thuis en onderweg.\nKies wat bij u past; alarmknop thuis en onderweg, valalarm, inbraak, brand en koolmonoxide.\nBij alarm thuis wordt de bewoner gebeld, bij geen reactie gaat het alarm naar de eigen contacten en optioneel een professionele hulpverlener.\nMensen ontvangen in een groep de melding. Via de app kunnen ze direct afstemmen wie actie onderneemt.\nDe app toont 24 uur per dag of de bewoner veilig is.\nAlarm Thuis: eerste 3 maanden gratis, daarna vanaf €9,95 per maand.\nAlarm Onderweg: eerste maand gratis, daarna €9,95 per maand.\nEenvoudig te installeren: 100% installatiegarantie."
     }
   ],
   "presets": [
@@ -47,7 +64,7 @@
 .above-the-fold {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     padding: 20px; 
     background-color: #fff;
     max-width: 1200px;
@@ -184,25 +201,23 @@
   {%  endstylesheet %}
 
 <section class="above-the-fold">
+    <p class="scroll-trigger animate--slide-in" style="color: #000;"> <span style="font-style: italic;">"{{ section.settings.quote }}"</span> - <strong>Anja Gerards 74 jaar</strong></p>
     <div class="heading-p scroll-trigger animate--slide-in">
       <h1>{{ section.settings.title }}</h1>
       <p style="color: #000;">{{ section.settings.text }}</p>
     </div>
     <div class="atf-container">
       <div class="atf-container-1 scroll-trigger animate--slide-in">
-        <img src="https://cdn.shopify.com/s/files/1/0788/1821/4221/files/1._2.jpg?v=1726734644" alt="" width="100%" height="auto">
-        <p style="color: grey; font-style: italic;">Veiligheid 24/7 gemonitord door de unieke combinatie van slimme sensoren, een app en alarmknop.</p>
+        <img src="{{ section.settings.image }}" alt="" width="100%" height="auto">
+        <p style="color: grey; font-style: italic;">{{ section.settings.image_description }}</p>
       </div>
       <div class="atf-container-2 scroll-trigger animate--slide-in">
-        <h4>Leefsamen is het meest complete en betaalbare systeem wat bij nood een alarm stuurt naar familie of bekenden. Want gaat er iets mis in huis? Dan is snel hulp nodig. </h4>
+        <h4>De meest complete én betaalbare alarmering die super snel werkt.</h4>
         <ul>
-          <li>Alarm bij val, inbraak, brand & noodsituaties.</li>
-          <li>Kies zelf de sensoren voor in huis; alarmknop, bewegingssensor, deursensor, slimme rookmelder.</li>
-          <li>Bij alarm bellen we eerst de bewoner, daarna gaat een melding naar familie, buren of bekenden via de app en telefonisch.</li>
-          <li>Familie, buren of bekenden stemmen via de app af wie de melding opvolgt.</li>
-          <li>De app toont 24 uur per dag of de bewoner veilig is.</li>
-          <li>Eerste 3 maanden gratis, daarna vanaf €8,50 per maand.</li>
-          <li>Eenvoudig te installeren: inclusief installatiegarantie.</li>
+          {% assign list_items = section.settings.list_items | split: '\n' %}
+          {% for item in list_items %}
+            <li>{{ item }}</li>
+          {% endfor %}
         </ul>
        <div class="above-cta-box" style="display:flex;flex-direction:row;gap:20px;justify-content:space-between:">
           <a href="/pages/alarmeringen" style="display: block;padding:20px;background-color:#e96411;border-radius:12px;width:100%;text-align:center;">Naar alarm thuis</a>
