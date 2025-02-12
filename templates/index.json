@@ -11,6 +11,20 @@
   "sections": {
     "above_the_fold_yCYTNz": {
       "type": "above-the-fold",
+      "blocks": {
+        "list_item_gUUAPF": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Alarm bij val, inbraak, brand & noodsituaties thuis en onderweg."
+          }
+        }
+      },
+      "block_order": [
+        "list_item_gUUAPF"
+      ],
+      "custom_css": [
+        "li, p, ul{color: #000;}"
+      ],
       "settings": {
         "title": "Snel hulp bij iedere noodsituatie",
         "text": "Binnen enkele seconden ontvangen naasten een alarm en kunnen direct met elkaar bepalen wie gaat helpen.",
