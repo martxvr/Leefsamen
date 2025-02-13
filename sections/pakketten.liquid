@@ -1,6 +1,103 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+    "name": "Pakketten",
+    "settings": [
+        {
+            "type": "text",
+            "id": "example_text",
+            "label": "Example Text",
+            "default": "Default Value"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "pakket",
+            "name": "Pakket",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Pakket Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Pakket Description"
+                },
+                {
+                    "type": "text",
+                    "id": "price",
+                    "label": "Price",
+                    "default": "€9,95"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "most_chosen",
+                    "label": "Most Chosen",
+                    "default": false
+                },
+                {
+                    "type": "textarea",
+                    "id": "features",
+                    "label": "Features",
+                    "default": "Feature 1\nFeature 2\nFeature 3"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default",
+            "category": "Custom",
+            "blocks": [
+                {
+                    "type": "pakket"
+                },
+                {
+                    "type": "pakket"
+                },
+                {
+                    "type": "pakket"
+                }
+            ]
+        }
+    ]
+}
 {% endschema %}
+
+{% for block in section.blocks %}
+<div class="bg-[#E1E1FA] text-[#0E2756] w-full max-w-[438px] p-8 rounded-[16px] flex flex-col min-h-[375px] h-full {% if block.settings.most_chosen %}relative{% endif %}">
+    {% if block.settings.most_chosen %}
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#233AE9] text-white px-4 py-1 rounded-[8px] flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
+        </svg>
+        <span>Meest gekozen</span>
+    </div>
+    {% endif %}
+    <div class="mb-8">
+        <h3 class="text-3xl font-bold text-left font-ubuntu mt-4 mb-4">{{ block.settings.title }}</h3>
+        <p class="text-lg text-left font-ubuntu">{{ block.settings.description }}</p>
+    </div>
+    <p class="text-4xl font-bold mb-4 text-left font-ubuntu">{{ block.settings.price }} <span class="text-lg font-normal">per maand</span></p>
+    <button class="bg-[#FF9855] text-[#0E2756] py-2 w-full rounded-full mb-6 font-bold font-ubuntu">Bekijk pakket</button>
+    <ul class="text-left space-y-4 font-bold text-base">
+        {% assign features = block.settings.features | split: '\n' %}
+        {% for feature in features %}
+        <li class="flex items-center">
+            <div class="bg-[#a9b0e9] rounded-full p-1 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0E2756]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            {{ feature }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
+{% javascript %}
+{% endjavascript %}
