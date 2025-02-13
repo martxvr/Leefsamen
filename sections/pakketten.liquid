@@ -91,8 +91,8 @@
                 <ul class="text-left space-y-4 font-bold text-base">
                     {% assign features = block.settings.features | split: '\n' %}
                     {% for feature in features %}
-                    <li class="flex items-center">
-                        <div class="{% if block.settings.most_chosen %}bg-[#E1E1FA]{% else %}bg-[#a9b0e9]{% endif %} rounded-full p-1 mr-4">
+                    <li class="flex flex-col items-start">
+                        <div class="{% if block.settings.most_chosen %}bg-[#E1E1FA]{% else %}bg-[#a9b0e9]{% endif %} rounded-full p-1 mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {% if block.settings.most_chosen %}text-[#0E2756]{% else %}text-[#0E2756]{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
