@@ -73,7 +73,7 @@
         <p class="text-xl mb-10 font-ubuntu">Kies het pakket dat het beste bij je past</p>
         <div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-10 space-y-10 lg:space-y-0">
             {% for block in section.blocks %}
-            <div class="bg-[#E1E1FA] text-[#0E2756] w-full max-w-[438px] p-8 rounded-[16px] flex flex-col min-h-[375px] h-full {% if block.settings.most_chosen %}relative{% endif %}">
+            <div class="{% if block.settings.most_chosen %}relative bg-[#0E2756] text-white{% else %}bg-[#E1E1FA] text-[#0E2756]{% endif %} w-full max-w-[438px] p-8 rounded-[16px] flex flex-col min-h-[375px] h-full">
                 {% if block.settings.most_chosen %}
                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#233AE9] text-white px-4 py-1 rounded-[8px] flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,8 +92,8 @@
                     {% assign features = block.settings.features | split: '\n' %}
                     {% for feature in features %}
                     <li class="flex items-center">
-                        <div class="bg-[#a9b0e9] rounded-full p-1 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0E2756]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="{% if block.settings.most_chosen %}bg-[#E1E1FA]{% else %}bg-[#a9b0e9]{% endif %} rounded-full p-1 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {% if block.settings.most_chosen %}text-[#0E2756]{% else %}text-[#0E2756]{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>
