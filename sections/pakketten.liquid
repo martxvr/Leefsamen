@@ -21,24 +21,6 @@
                     "default": "Pakket Title"
                 },
                 {
-                    "type": "textarea",
-                    "id": "description",
-                    "label": "Description",
-                    "default": "Pakket Description"
-                },
-                {
-                    "type": "text",
-                    "id": "price",
-                    "label": "Price",
-                    "default": "€9,95"
-                },
-                {
-                    "type": "checkbox",
-                    "id": "most_chosen",
-                    "label": "Most Chosen",
-                    "default": false
-                },
-                {
                     "type": "text",
                     "id": "metaobject_handle",
                     "label": "Metaobject Handle",
@@ -56,9 +38,6 @@
                     "type": "pakket",
                     "settings": {
                         "title": "Pakket 1",
-                        "description": "Description 1",
-                        "price": "€9,95",
-                        "most_chosen": false,
                         "metaobject_handle": "pakket_1_features"
                     }
                 }
@@ -76,8 +55,9 @@
         <div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-10 space-y-10 lg:space-y-0">
             {% for block in section.blocks %}
             {% if block.type == 'pakket' %}
-            <div class="{% if block.settings.most_chosen %}relative bg-[#0E2756] text-white{% else %}bg-[#E1E1FA] text-[#0E2756]{% endif %} w-full max-w-[438px] p-8 rounded-[16px] flex flex-col min-h-[375px] h-full">
-                {% if block.settings.most_chosen %}
+            {% assign pakket_metaobject = metaobjects[block.settings.metaobject_handle] %}
+            <div class="{% if pakket_metaobject.most_chosen %}relative bg-[#0E2756] text-white{% else %}bg-[#E1E1FA] text-[#0E2756]{% endif %} w-full max-w-[438px] p-8 rounded-[16px] flex flex-col min-h-[375px] h-full">
+                {% if pakket_metaobject.most_chosen %}
                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#233AE9] text-white px-4 py-1 rounded-[8px] flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
@@ -87,20 +67,19 @@
                 {% endif %}
                 <div class="mb-8">
                     <h3 class="text-3xl font-bold text-left font-ubuntu mt-4 mb-4">{{ block.settings.title }}</h3>
-                    <p class="text-lg text-left font-ubuntu">{{ block.settings.description }}</p>
+                    <p class="text-lg text-left font-ubuntu">{{ pakket_metaobject.description }}</p>
                 </div>
-                <p class="text-4xl font-bold mb-4 text-left font-ubuntu">{{ block.settings.price }} <span class="text-lg font-normal">per maand</span></p>
+                <p class="text-4xl font-bold mb-4 text-left font-ubuntu">{{ pakket_metaobject.price }} <span class="text-lg font-normal">per maand</span></p>
                 <button class="bg-[#FF9855] text-[#0E2756] py-2 w-full rounded-full mb-6 font-bold font-ubuntu">Bekijk pakket</button>
                 <ul class="text-left space-y-4 font-bold text-base">
-                    {% assign features = metaobjects[block.settings.metaobject_handle] %}
-                    {% for feature in features %}
+                    {% for feature in pakket_metaobject.features %}
                     <li class="flex items-center">
-                        <div class="{% if block.settings.most_chosen %}bg-[#E1E1FA]{% else %}bg-[#a9b0e9]{% endif %} rounded-full p-1 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {% if block.settings.most_chosen %}text-[#0E2756]{% else %}text-[#0E2756]{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="{% if pakket_metaobject.most_chosen %}bg-[#E1E1FA]{% else %}bg-[#a9b0e9]{% endif %} rounded-full p-1 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {% if pakket_metaobject.most_chosen %}text-[#0E2756]{% else %}text-[#0E2756]{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>
-                        <span class="{% if block.settings.most_chosen %}text-white{% else %}text-[#0E2756]{% endif %}">{{ feature.feature_text }}</span>
+                        <span class="{% if pakket_metaobject.most_chosen %}text-white{% else %}text-[#0E2756]{% endif %}">{{ feature.feature_text }}</span>
                     </li>
                     {% endfor %}
                 </ul>
