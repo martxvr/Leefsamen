@@ -37,7 +37,7 @@
           "settings": {
             "title": "Pakket Title",
             "description": "Pakket Description",
-            "price": "€9,95",
+            "price": "€19,95",
             "most_chosen": true,
             "features": "Feature 1\nFeature 2\nFeature 3"
           }
