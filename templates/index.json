@@ -71,6 +71,7 @@
         "list_item_N9bjnq",
         "list_item_rdWLkP"
       ],
+      "disabled": true,
       "custom_css": [
         "li,p,ul {color: #000;}"
       ],
@@ -116,9 +117,53 @@
       "settings": {
         "heading": "Dit zeggen onze gebruikers"
       }
+    },
+    "pakketten_dpAFiY": {
+      "type": "pakketten",
+      "blocks": {
+        "pakket_bAxiM8": {
+          "type": "pakket",
+          "settings": {
+            "title": "Pakket Title",
+            "description": "Pakket Description",
+            "price": "€9,95",
+            "most_chosen": false,
+            "features": "Feature 1\nFeature 2\nFeature 3"
+          }
+        },
+        "pakket_xGe9nj": {
+          "type": "pakket",
+          "settings": {
+            "title": "Pakket Title",
+            "description": "Pakket Description",
+            "price": "€9,95",
+            "most_chosen": false,
+            "features": "Feature 1\nFeature 2\nFeature 3"
+          }
+        },
+        "pakket_zYWmqH": {
+          "type": "pakket",
+          "settings": {
+            "title": "Pakket Title",
+            "description": "Pakket Description",
+            "price": "€9,95",
+            "most_chosen": false,
+            "features": "Feature 1\nFeature 2\nFeature 3"
+          }
+        }
+      },
+      "block_order": [
+        "pakket_bAxiM8",
+        "pakket_xGe9nj",
+        "pakket_zYWmqH"
+      ],
+      "settings": {
+        "example_text": "Default Value"
+      }
     }
   },
   "order": [
+    "pakketten_dpAFiY",
     "above_the_fold_yCYTNz",
     "webkeur_dCM946",
     "onze_gebruikers_2_Eh46YD"
