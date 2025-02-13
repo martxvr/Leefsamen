@@ -16,9 +16,9 @@
           "type": "pakket",
           "source": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"] }}",
           "settings": {
-            "title": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].veilig_in_huis_inbraak.value }}",
+            "title": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].title.value }}",
             "description": "Pakket Description",
-            "price": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"]._9_95.value }}",
+            "price": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].price.value }}",
             "most_chosen": false,
             "metaobject_handle": "default_features"
           }
