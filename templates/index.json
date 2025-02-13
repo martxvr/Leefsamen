@@ -17,30 +17,30 @@
           "source": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"] }}",
           "settings": {
             "title": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].title.value }}",
-            "description": "Pakket Description",
+            "description": "<p>{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].description | metafield_tag }}</p>",
             "price": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].price.value }}",
             "most_chosen": false,
-            "metaobject_handle": "default_features"
+            "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
           }
         },
         "pakket_xGe9nj": {
           "type": "pakket",
           "settings": {
             "title": "Pakket Title",
-            "description": "Pakket Description",
+            "description": "<p>Pakket Description</p>",
             "price": "€9,95",
             "most_chosen": false,
-            "metaobject_handle": "default_features"
+            "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
           }
         },
         "pakket_zYWmqH": {
           "type": "pakket",
           "settings": {
             "title": "Pakket Title",
-            "description": "Pakket Description",
+            "description": "<p>Pakket Description</p>",
             "price": "€19,95",
             "most_chosen": true,
-            "metaobject_handle": "default_features"
+            "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
           }
         }
       },
@@ -49,9 +49,7 @@
         "pakket_xGe9nj",
         "pakket_zYWmqH"
       ],
-      "settings": {
-        "example_text": "Default Value"
-      }
+      "settings": {}
     },
     "above_the_fold_yCYTNz": {
       "type": "above-the-fold",
