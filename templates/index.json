@@ -14,12 +14,13 @@
       "blocks": {
         "pakket_bAxiM8": {
           "type": "pakket",
+          "source": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"] }}",
           "settings": {
-            "title": "Pakket Title",
+            "title": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"].veilig_in_huis_inbraak.value }}",
             "description": "Pakket Description",
-            "price": "€9,95",
+            "price": "{{ metaobjects.veilig_in_huis_inbraak[\"veilig-in-huis-inbraak\"]._9_95.value }}",
             "most_chosen": false,
-            "features": "Feature 1\nFeature 2\nFeature 3"
+            "metaobject_handle": "default_features"
           }
         },
         "pakket_xGe9nj": {
@@ -29,7 +30,7 @@
             "description": "Pakket Description",
             "price": "€9,95",
             "most_chosen": false,
-            "features": "Feature 1\nFeature 2\nFeature 3"
+            "metaobject_handle": "default_features"
           }
         },
         "pakket_zYWmqH": {
@@ -39,7 +40,7 @@
             "description": "Pakket Description",
             "price": "€19,95",
             "most_chosen": true,
-            "features": "Feature 1\nFeature 2\nFeature 3"
+            "metaobject_handle": "default_features"
           }
         }
       },
