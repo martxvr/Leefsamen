@@ -1,6 +1,173 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+    "name": "Pricing Tables",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Our Pricing Plans"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Choose the plan that best suits your needs."
+        },
+        {
+            "type": "text",
+            "id": "plan1_name",
+            "label": "Plan 1 Name",
+            "default": "Basic"
+        },
+        {
+            "type": "text",
+            "id": "plan1_price",
+            "label": "Plan 1 Price",
+            "default": "$10/month"
+        },
+        {
+            "type": "textarea",
+            "id": "plan1_features",
+            "label": "Plan 1 Features",
+            "default": "Feature 1\nFeature 2\nFeature 3"
+        },
+        {
+            "type": "text",
+            "id": "plan2_name",
+            "label": "Plan 2 Name",
+            "default": "Standard"
+        },
+        {
+            "type": "text",
+            "id": "plan2_price",
+            "label": "Plan 2 Price",
+            "default": "$20/month"
+        },
+        {
+            "type": "textarea",
+            "id": "plan2_features",
+            "label": "Plan 2 Features",
+            "default": "Feature 1\nFeature 2\nFeature 3\nFeature 4"
+        },
+        {
+            "type": "text",
+            "id": "plan3_name",
+            "label": "Plan 3 Name",
+            "default": "Premium"
+        },
+        {
+            "type": "text",
+            "id": "plan3_price",
+            "label": "Plan 3 Price",
+            "default": "$30/month"
+        },
+        {
+            "type": "textarea",
+            "id": "plan3_features",
+            "label": "Plan 3 Features",
+            "default": "Feature 1\nFeature 2\nFeature 3\nFeature 4\nFeature 5"
+        }
+    ]
+}
 {% endschema %}
+
+<style>
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.pricing-plan {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-plan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-plan .price {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-plan ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-plan button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pricing-plan button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<div class="pricing-table">
+    <div class="pricing-plan">
+        <h2>{{ section.settings.plan1_name }}</h2>
+        <div class="price">{{ section.settings.plan1_price }}</div>
+        <ul>
+            {% assign plan1_features = section.settings.plan1_features | split: '\n' %}
+            {% for feature in plan1_features %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+    <div class="pricing-plan">
+        <h2>{{ section.settings.plan2_name }}</h2>
+        <div class="price">{{ section.settings.plan2_price }}</div>
+        <ul>
+            {% assign plan2_features = section.settings.plan2_features | split: '\n' %}
+            {% for feature in plan2_features %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+    <div class="pricing-plan">
+        <h2>{{ section.settings.plan3_name }}</h2>
+        <div class="price">{{ section.settings.plan3_price }}</div>
+        <ul>
+            {% assign plan3_features = section.settings.plan3_features | split: '\n' %}
+            {% for feature in plan3_features %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.pricing-plan button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            alert('Plan chosen: ' + this.parentElement.querySelector('h2').innerText);
+        });
+    });
+});
+</script>
