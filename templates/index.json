@@ -49,7 +49,6 @@
         "pakket_xGe9nj",
         "pakket_zYWmqH"
       ],
-      "disabled": true,
       "settings": {}
     },
     "above_the_fold_yCYTNz": {
@@ -163,12 +162,13 @@
     },
     "pricing_dev_pkTbkh": {
       "type": "pricing-dev",
+      "disabled": true,
       "settings": {
         "heading": "Our Pricing Plans",
         "description": "Choose the plan that best suits your needs.",
         "plan1_name": "Basic",
         "plan1_price": "$10/month",
-        "plan1_features": "",
+        "plan1_features": "Feature 1 <br>",
         "plan2_name": "Standard",
         "plan2_price": "$20/month",
         "plan2_features": "Feature 1\nFeature 2\nFeature 3\nFeature 4",
