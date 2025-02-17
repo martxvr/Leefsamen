@@ -84,26 +84,34 @@
     justify-content: space-around;
     padding: 20px;
     background-color: #f9f9f9;
+    gap: 20px;
 }
 
 .pricing-plan {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 16px;
+    padding: 30px;
     width: 30%;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-plan h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
 .pricing-plan .price {
-    font-size: 20px;
-    color: #333;
+    font-size: 24px;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -111,23 +119,35 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 .pricing-plan ul li {
     margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pricing-plan ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #fff;
 }
 
 .pricing-plan button {
-    background-color: #007bff;
+    background-color: #ff6f61;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .pricing-plan button:hover {
-    background-color: #0056b3;
+    background-color: #ff3b2f;
 }
 </style>
 
