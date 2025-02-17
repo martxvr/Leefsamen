@@ -81,21 +81,23 @@
 <style>
 .pricing-table {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #191d23;
     gap: 20px;
 }
 
 .pricing-plan {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    border: none;
+    background: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 16px;
     padding: 30px;
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: #191d23;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -105,13 +107,14 @@
 }
 
 .pricing-plan h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 10px;
+    color: #1a94a6;
 }
 
 .pricing-plan .price {
-    font-size: 24px;
-    color: #fff;
+    font-size: 20px;
+    color: #e96411;
     margin-bottom: 20px;
 }
 
@@ -132,12 +135,12 @@
     content: '✔';
     position: absolute;
     left: 0;
-    color: #fff;
+    color: #1a94a6;
 }
 
 .pricing-plan button {
-    background-color: #ff6f61;
-    color: #fff;
+    background-color: #1a94a6;
+    color: #ffffff;
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
@@ -147,7 +150,14 @@
 }
 
 .pricing-plan button:hover {
-    background-color: #ff3b2f;
+    background-color: #e96411;
+}
+
+@media (max-width: 768px) {
+    .pricing-plan {
+        width: 100%;
+        max-width: none;
+    }
 }
 </style>
 
