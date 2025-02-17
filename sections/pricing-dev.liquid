@@ -84,13 +84,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    background-color: #191d23;
+    background-color: #fff;
     gap: 20px;
 }
 
 .pricing-plan {
     background: #ffffff;
-    border: 1px solid #ddd;
+    border: 2px solid #1a94a6;
     border-radius: 16px;
     padding: 30px;
     width: 100%;
@@ -127,19 +127,24 @@
 
 .pricing-plan ul li {
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
     position: relative;
 }
 
 .pricing-plan ul li::before {
-    content: '✔';
+    content: '';
     position: absolute;
     left: 0;
-    color: #1a94a6;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231a94a6"><path d="M9 16.2l-4.2-4.2-1.4 1.4 5.6 5.6 12-12-1.4-1.4z"/></svg>') no-repeat center center;
+    background-size: contain;
 }
 
 .pricing-plan button {
-    background-color: #1a94a6;
+    background-color: #e96411;
     color: #ffffff;
     border: none;
     padding: 12px 24px;
@@ -150,7 +155,7 @@
 }
 
 .pricing-plan button:hover {
-    background-color: #e96411;
+    background-color: #c7530e;
 }
 
 @media (max-width: 768px) {
