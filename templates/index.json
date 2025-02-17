@@ -49,6 +49,7 @@
         "pakket_xGe9nj",
         "pakket_zYWmqH"
       ],
+      "disabled": true,
       "settings": {}
     },
     "above_the_fold_yCYTNz": {
@@ -159,12 +160,29 @@
       "settings": {
         "heading": "Dit zeggen onze gebruikers"
       }
+    },
+    "pricing_dev_pkTbkh": {
+      "type": "pricing-dev",
+      "settings": {
+        "heading": "Our Pricing Plans",
+        "description": "Choose the plan that best suits your needs.",
+        "plan1_name": "Basic",
+        "plan1_price": "$10/month",
+        "plan1_features": "",
+        "plan2_name": "Standard",
+        "plan2_price": "$20/month",
+        "plan2_features": "Feature 1\nFeature 2\nFeature 3\nFeature 4",
+        "plan3_name": "Premium",
+        "plan3_price": "$30/month",
+        "plan3_features": "Feature 1\nFeature 2\nFeature 3\nFeature 4\nFeature 5"
+      }
     }
   },
   "order": [
     "pakketten_dpAFiY",
     "above_the_fold_yCYTNz",
     "webkeur_dCM946",
-    "onze_gebruikers_2_Eh46YD"
+    "onze_gebruikers_2_Eh46YD",
+    "pricing_dev_pkTbkh"
   ]
 }
